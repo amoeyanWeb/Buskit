@@ -1,21 +1,13 @@
 .con-container {
   display: flex !important;
   flex-direction: column !important;
-  align-items: flex-end !important; /* تیتر: راست‌چین */
+  align-items: flex-end !important;   /* تیتر: راست‌چین */
   text-align: right !important;
   padding: 60px 40px !important;
   width: 100% !important;
   background:
-    radial-gradient(
-      ellipse at top right,
-      rgba(180, 70, 20, 0.35) 0%,
-      transparent 60%
-    ),
-    radial-gradient(
-      ellipse at bottom left,
-      rgba(20, 80, 180, 0.35) 0%,
-      transparent 60%
-    ),
+    radial-gradient(ellipse at top right, rgba(180, 70, 20, 0.35) 0%, transparent 60%),
+    radial-gradient(ellipse at bottom left, rgba(20, 80, 180, 0.35) 0%, transparent 60%),
     #111318 !important;
 }
 
@@ -27,7 +19,7 @@
   background: #f0ede6 !important;
   border-radius: 14px !important;
   padding: 20px !important;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5) !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5) !important;
 }
 
 .bk-section *,
@@ -464,6 +456,7 @@ body {
   background: var(--buskit-dark);
   color: var(--buskit-text);
   direction: rtl;
+  overflow-x: hidden;
 }
 
 /* NAV */
@@ -656,9 +649,9 @@ nav {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  overflow: hidden;
+  overflow: visible;
   padding-top: 120px;
-  padding-bottom: 40px;
+  padding-bottom: 140px;
   background-image: url("../main.webp");
   background-size: cover;
   background-position: center center;
@@ -1373,4 +1366,16 @@ footer img {
   font-size: 1.5rem;
   color: var(--buskit-orange);
   flex-shrink: 0;
+}
+
+/* مارکی دسکتاپ — داخل .hero قرار داره */
+@media (min-width: 769px) {
+  .product-marquee-container {
+    position: absolute !important;
+    bottom: 20px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 90% !important;
+    max-width: 1000px !important;
+  }
 }

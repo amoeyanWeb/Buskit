@@ -16,6 +16,21 @@
 
     <style id="contact-styles"></style>
 
+    <style id="marquee-fix">
+      @media (min-width: 769px) {
+        .hero { overflow: visible !important; padding-bottom: 140px !important; }
+        .product-marquee-container {
+          position: absolute !important;
+          bottom: 24px !important;
+          top: auto !important;
+          left: 50% !important;
+          transform: translateX(-50%) !important;
+          width: 90% !important;
+          max-width: 1000px !important;
+        }
+      }
+    </style>
+
     <style id="gradient-overrides">
       /* ══════════════════════════════════════════════
          بخش چرا باسکیت (#why)
@@ -2892,71 +2907,12 @@
     </script>
 
     <script>
-      // مدیریت منو در موبایل و دسکتاپ
-      document
-        .querySelectorAll(".dropdown-menu li.has-dropdown > a")
-        .forEach(function (toggle) {
-          toggle.addEventListener("click", function (e) {
-            if (window.innerWidth < 992) {
-              e.preventDefault();
-              var parentLi = this.parentElement;
-              var isOpen = parentLi.classList.contains("open");
-
-              document
-                .querySelectorAll(".dropdown-menu li.has-dropdown.open")
-                .forEach(function (el) {
-                  el.classList.remove("open");
-                });
-
-              if (!isOpen) {
-                parentLi.classList.add("open");
-              }
-            }
-          });
-        });
-
-      // بستن منو بعد از کلیک و اسکرول دقیق به بالای صفحه با احتساب ارتفاع منو
-      document
-        .querySelectorAll(".dropdown-menu .dropdown-menu a")
-        .forEach(function (link) {
-          link.addEventListener("click", function (e) {
-            document
-              .querySelectorAll(".dropdown-menu li.has-dropdown.open")
-              .forEach(function (el) {
-                el.classList.remove("open");
-              });
-
-            var targetId = this.getAttribute("href");
-            if (targetId && targetId.startsWith("#")) {
-              var targetElement = document.querySelector(targetId);
-              if (targetElement) {
-                e.preventDefault();
-
-                // محاسبه موقعیت المان نسبت به بالای صفحه
-                var elementPosition =
-                  targetElement.getBoundingClientRect().top + window.scrollY;
-                // کم کردن ارتفاع منوی ناوبری (حدودا ۷۰ پیکسل) برای قرارگیری دقیق در بالای صفحه
-                var offsetPosition = elementPosition - 75;
-
-                window.scrollTo({
-                  top: offsetPosition,
-                  behavior: "smooth",
-                });
-              }
-            }
-          });
-        });
-      // اسکرول نرم به طوری که تیتر در بالا و عکس در مرکز دید قرار گیرد
-      targetElement.scrollIntoView({
-        behavior: "smooth",
-        block: "start", // شروع باکس (تیتر) از بالای صفحه تراز می‌شود و عکس وسط می‌افتد
-      });
-    </script>
-    <script>
-      (function () {
+      document.addEventListener("DOMContentLoaded", function () {
         var hamburger = document.getElementById("navHamburger");
         var navLinks = document.querySelector(".nav-links");
         var overlay = document.getElementById("navOverlay");
+
+        if (!hamburger || !navLinks || !overlay) return;
 
         function openMenu() {
           hamburger.classList.add("open");
@@ -2964,46 +2920,79 @@
           overlay.classList.add("open");
           document.body.classList.add("nav-open");
         }
+
         function closeMenu() {
           hamburger.classList.remove("open");
           navLinks.classList.remove("open");
           overlay.classList.remove("open");
           document.body.classList.remove("nav-open");
+          // بستن همه dropdown های باز
+          document.querySelectorAll(".nav-links .has-dropdown.open").forEach(function (el) {
+            el.classList.remove("open");
+          });
         }
 
+        // همبرگر
         hamburger.addEventListener("click", function () {
           navLinks.classList.contains("open") ? closeMenu() : openMenu();
         });
 
+        // کلیک روی overlay (پشت منو)
         overlay.addEventListener("click", closeMenu);
 
-        // باز/بسته کردن dropdown سطح اول در موبایل
-        document
-          .querySelectorAll(".nav-links > li.has-dropdown > a")
-          .forEach(function (link) {
-            link.addEventListener("click", function (e) {
-              if (window.innerWidth >= 992) return;
-              e.preventDefault();
-              var li = this.parentElement;
-              var isOpen = li.classList.contains("open");
-              document
-                .querySelectorAll(".nav-links > li.has-dropdown.open")
-                .forEach(function (el) {
-                  el.classList.remove("open");
-                });
-              if (!isOpen) li.classList.add("open");
-            });
-          });
+        // کلیک روی هر جای صفحه خارج از منو
+        document.addEventListener("click", function (e) {
+          if (window.innerWidth >= 992) return;
+          if (!navLinks.classList.contains("open")) return;
+          if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+            closeMenu();
+          }
+        });
 
-        // بستن منو بعد از کلیک روی لینک‌های معمولی (غیر dropdown)
-        document
-          .querySelectorAll('.nav-links a:not([href="javascript:void(0)"])')
-          .forEach(function (link) {
-            link.addEventListener("click", function () {
-              if (window.innerWidth < 992) closeMenu();
+        // dropdown سطح اول در موبایل
+        document.querySelectorAll(".nav-links > li.has-dropdown > a").forEach(function (link) {
+          link.addEventListener("click", function (e) {
+            if (window.innerWidth >= 992) return;
+            e.preventDefault();
+            var li = this.parentElement;
+            var isOpen = li.classList.contains("open");
+            document.querySelectorAll(".nav-links > li.has-dropdown.open").forEach(function (el) {
+              el.classList.remove("open");
             });
+            if (!isOpen) li.classList.add("open");
           });
-      })();
+        });
+
+        // dropdown سطح دوم در موبایل
+        document.querySelectorAll(".dropdown-menu li.has-dropdown > a").forEach(function (link) {
+          link.addEventListener("click", function (e) {
+            if (window.innerWidth >= 992) return;
+            e.preventDefault();
+            var li = this.parentElement;
+            var isOpen = li.classList.contains("open");
+            document.querySelectorAll(".dropdown-menu li.has-dropdown.open").forEach(function (el) {
+              el.classList.remove("open");
+            });
+            if (!isOpen) li.classList.add("open");
+          });
+        });
+
+        // بستن منو بعد از کلیک روی لینک نهایی + اسکرول نرم
+        document.querySelectorAll('.nav-links a[href^="#"]').forEach(function (link) {
+          link.addEventListener("click", function (e) {
+            var targetId = this.getAttribute("href");
+            var targetEl = document.querySelector(targetId);
+            if (targetEl) {
+              e.preventDefault();
+              closeMenu();
+              setTimeout(function () {
+                var pos = targetEl.getBoundingClientRect().top + window.scrollY - 75;
+                window.scrollTo({ top: pos, behavior: "smooth" });
+              }, 300);
+            }
+          });
+        });
+      });
     </script>
   </body>
 </html>
