@@ -330,7 +330,7 @@
   }
   /* عکس‌هایی که inline style="width: 950px" دارند → نصف = 475px */
   .con-container img.diagram {
-    width: 50% !important;
+    width: 100% !important;
     min-width: unset !important;
     max-width: 100% !important;
     height: auto !important;
