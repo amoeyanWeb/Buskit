@@ -1,0 +1,432 @@
+/* ══════════════════════════════════════════════════════
+   BUSKIT — موبایل رسپانسیو  (نسخه نهایی)
+   این فایل را آخر از همه لینک کنید
+   ══════════════════════════════════════════════════════ */
+
+/* ─────────────────────────────────────
+   ۱. همبرگر منو (همیشه فعال)
+───────────────────────────────────── */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 6px;
+  z-index: 1001;
+  flex-shrink: 0;
+}
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.nav-hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; }
+.nav-hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+/* ─────────────────────────────────────
+   ۲. زیر ۹۹۲px — منوی موبایل
+───────────────────────────────────── */
+@media (max-width: 991px) {
+  nav {
+    padding: 0 1rem;
+    height: 56px;
+    position: fixed;
+  }
+  .nav-hamburger { display: flex; }
+
+  .nav-links {
+    display: flex !important;
+    flex-direction: column;
+    position: fixed;
+    top: 56px;
+    right: 0;
+    width: 280px;
+    max-width: 85vw;
+    height: calc(100vh - 56px);
+    background: rgba(10, 13, 20, 0.98);
+    backdrop-filter: blur(16px);
+    border-left: 1px solid rgba(240, 122, 58, 0.25);
+    padding: 1rem 0;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 998;
+    gap: 0;
+  }
+  .nav-links.open { transform: translateX(0); }
+
+  .nav-links li { height: auto; width: 100%; }
+  .nav-links a {
+    height: auto;
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+  .nav-links a:hover { background: rgba(240, 122, 58, 0.1); }
+
+  .nav-links > li.has-dropdown > a::after { margin-right: auto; margin-left: 0; }
+  .nav-links > li.has-dropdown.open > a::after { transform: rotate(180deg); }
+
+  .dropdown-menu {
+    position: static !important;
+    display: none;
+    width: 100% !important;
+    min-width: unset !important;
+    border: none !important;
+    border-radius: 0 !important;
+    border-top: none !important;
+    background: rgba(255,255,255,0.03) !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    padding: 0 !important;
+    animation: none !important;
+  }
+  .nav-links > li.has-dropdown.open > .dropdown-menu { display: block; }
+  .dropdown-menu li a {
+    padding: 0.65rem 2rem !important;
+    font-size: 0.88rem !important;
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255,255,255,0.04) !important;
+  }
+  .dropdown-menu .dropdown-menu { background: rgba(255,255,255,0.04) !important; }
+  .dropdown-menu .dropdown-menu li a { padding: 0.6rem 3rem !important; }
+  .dropdown-menu li.has-dropdown.open > .dropdown-menu { display: block !important; }
+
+  .nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 997;
+  }
+  .nav-overlay.open { display: block; }
+
+  body.nav-open { overflow: hidden; }
+}
+
+/* ─────────────────────────────────────
+   ۳. زیر ۷۶۸px — تمام اصلاحات موبایل
+───────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* --- Hero --- */
+  .hero,
+  .hero-section {
+    height: 100svh !important;
+    min-height: 100svh !important;
+    padding-top: 70px !important;
+    /* موبایل: fixed attachment کار نمی‌کنه، scroll بذار */
+    background-attachment: scroll !important;
+    background-size: cover !important;
+    background-position: center top !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    padding-bottom: 16px !important;
+  }
+  .hero-content {
+    width: 88% !important;
+    max-width: 420px !important;
+    padding: 20px 16px 16px !important;
+    margin-top: 10px !important;
+    margin-bottom: 0 !important;
+    /* شفاف‌تر کردن کادر تا عکس پشت بهتر دیده بشه */
+    background: rgba(255,255,255,0.03) !important;
+    backdrop-filter: blur(6px) !important;
+  }
+  .hero-logo {
+    width: 85% !important;
+    max-width: 280px !important;
+  }
+  .hero-tagline {
+    font-size: clamp(1.2rem, 5vw, 1.8rem) !important;
+  }
+
+  /* --- مارکی: زیر کادر اصلی --- */
+  .product-marquee-container {
+    position: relative !important;
+    bottom: auto !important;
+    left: auto !important;
+    transform: none !important;
+    width: 90% !important;
+    max-width: 420px !important;
+    margin-top: 12px !important;
+    border-radius: 12px !important;
+    padding: 8px 0 !important;
+    flex-shrink: 0 !important;
+  }
+  .marquee-item { width: 80px; margin: 0 5px; }
+  .marquee-item img { width: 64px; height: 64px; }
+  .marquee-item span { font-size: 0.68rem; }
+
+  /* --- درباره من: فقط gap و font اصلاح میشه، grid دست نخوره --- */
+  .about-container {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    /* text-align: center حذف شد — راست‌چین بمونه */
+  }
+  .about-content {
+    text-align: right !important;
+  }
+  .about-heading {
+    font-size: 1.9rem !important;
+    text-align: right !important;
+  }
+  .about-minimal {
+    padding: 80px 1.2rem 60px !important;
+  }
+
+  /* --- محصولات --- */
+  .prod-inner {
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+  }
+  .product-section:nth-child(odd) .prod-inner {
+    flex-direction: column !important;
+  }
+  .prod-image-col {
+    flex: none !important;
+    width: 100% !important;
+    /* sticky روی موبایل: غیرفعال */
+    position: relative !important;
+    top: auto !important;
+  }
+  .prod-grid { grid-template-columns: 1fr !important; }
+  .bat-voltage-cards { flex-wrap: wrap; }
+  .bat-vcard { min-width: 70px; }
+
+  /* --- چرا باسکیت --- */
+  .why-grid { grid-template-columns: 1fr !important; }
+
+  /* --- اکوسیستم (Gstyle) --- */
+  .bk-input-grid,
+  .bk-core-outputs-row {
+    grid-template-columns: 1fr !important;
+    margin-left: 16px !important;
+    margin-right: 16px !important;
+  }
+  .bk-core-col,
+  .bk-outputs-col { margin-top: 20px !important; }
+  .bk-section { padding: 50px 16px !important; }
+  .bk-subtitle { margin-bottom: 36px; }
+
+  /* features grid */
+  .bk-features-grid {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 20px !important;
+  }
+  .bk-features-col-right { margin-right: 0 !important; }
+  .bk-features-col-left { margin-left: 0 !important; }
+  .bk-features-col-right,
+  .bk-features-col-monitor,
+  .bk-features-col-left {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+
+  /* --- دیاگرام اتصالات: اسکرول افقی --- */
+  .con-container {
+    padding: 40px 16px !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  .con-container img.diagram {
+    min-width: 580px !important;
+    width: auto !important;
+    max-width: none !important;
+  }
+
+  /* --- تماس --- */
+  .contact-body {
+    grid-template-columns: 1fr !important;
+    padding: 16px 16px 60px !important;
+    gap: 24px !important;
+  }
+  .contact-info { position: static !important; }
+  .contact-hero {
+    padding: 70px 16px 40px !important;
+    text-align: right !important;
+    padding-right: 1.2rem !important;
+  }
+  .form-row { grid-template-columns: 1fr !important; }
+  .contact-form-wrap { padding: 24px 16px !important; }
+  .social-grid { grid-template-columns: 1fr 1fr !important; }
+
+  /* --- فوتر --- */
+  .reg-banner { padding: 2rem 1.2rem !important; margin-top: 2rem !important; }
+  .reg-flags { gap: 1.5rem !important; }
+  footer { padding: 2rem 1rem !important; }
+}
+
+/* ─────────────────────────────────────
+   ۴. زیر ۴۸۰px
+───────────────────────────────────── */
+@media (max-width: 480px) {
+  .section-label::before,
+  .contact-hero-label::before,
+  .form-label-tag::before { width: 28px !important; }
+  .section-title { font-size: 1.5rem !important; }
+}
+
+/* ─────────────────────────────────────
+   ۵. سبد خرید
+───────────────────────────────────── */
+/* تبلت کوچک: عرض مشخص */
+@media (min-width: 401px) and (max-width: 768px) {
+  .cart-drawer {
+    width: 340px !important;
+    right: -340px !important;
+  }
+  .cart-drawer.open { right: 0 !important; }
+}
+/* موبایل کوچک: تمام عرض */
+@media (max-width: 400px) {
+  .cart-drawer {
+    width: 100% !important;
+    right: -100% !important;
+  }
+  .cart-drawer.open { right: 0 !important; }
+}
+@media (max-width: 600px) {
+  .cart-fab { bottom: 20px; left: 16px; width: 52px; height: 52px; }
+}
+
+/* ─────────────────────────────────────
+   ۶. مودال چک‌اوت — تاریک + فرم واضح
+───────────────────────────────────── */
+.checkout-modal {
+  background: #0d1117 !important;
+  color: var(--buskit-text) !important;
+  border: 1px solid rgba(240, 122, 58, 0.2) !important;
+}
+.checkout-modal-header {
+  background: #0d1117 !important;
+  border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+}
+.checkout-modal-header h3 { color: #ffffff !important; }
+.checkout-modal-body { background: #0d1117 !important; }
+
+.checkout-summary {
+  background: rgba(255,255,255,0.04) !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  border-radius: 10px !important;
+}
+.checkout-summary-title { color: #ffffff !important; font-weight: 700 !important; }
+.checkout-summary-row { color: var(--buskit-muted) !important; }
+.checkout-summary-total { color: #ffffff !important; }
+
+/* لیبل‌ها */
+.checkout-modal .form-group label {
+  color: #8b949e !important;
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+  display: block !important;
+  margin-bottom: 6px !important;
+  opacity: 1 !important;
+}
+
+/* اینپوت‌ها */
+.checkout-modal input[type="text"],
+.checkout-modal input[type="email"],
+.checkout-modal input[type="tel"],
+.checkout-modal input,
+.checkout-modal textarea {
+  background: rgba(255,255,255,0.06) !important;
+  border: 1.5px solid rgba(255,255,255,0.18) !important;
+  border-radius: 9px !important;
+  padding: 12px 14px !important;
+  color: #ffffff !important;
+  font-family: "Vazirmatn", sans-serif !important;
+  font-size: 0.92rem !important;
+  width: 100% !important;
+  outline: none !important;
+  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s !important;
+  direction: rtl !important;
+  display: block !important;
+}
+.checkout-modal input::placeholder,
+.checkout-modal textarea::placeholder {
+  color: rgba(139,148,158,0.55) !important;
+}
+.checkout-modal input:hover,
+.checkout-modal textarea:hover {
+  border-color: rgba(240,122,58,0.45) !important;
+  background: rgba(255,255,255,0.08) !important;
+}
+.checkout-modal input:focus,
+.checkout-modal textarea:focus {
+  border-color: var(--buskit-orange) !important;
+  background: rgba(240,122,58,0.05) !important;
+  box-shadow: 0 0 0 3px rgba(240,122,58,0.15) !important;
+}
+
+/* دکمه ارسال کد */
+.checkout-modal .btn-secondary-sm {
+  background: rgba(240,122,58,0.12) !important;
+  border: 1px solid rgba(240,122,58,0.35) !important;
+  color: var(--buskit-orange) !important;
+  border-radius: 9px !important;
+  font-family: "Vazirmatn", sans-serif !important;
+  font-size: 0.82rem !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  padding: 0 14px !important;
+  white-space: nowrap !important;
+  transition: background 0.2s !important;
+}
+.checkout-modal .btn-secondary-sm:hover {
+  background: rgba(240,122,58,0.22) !important;
+}
+.checkout-modal .btn-secondary-sm:disabled {
+  opacity: 0.45 !important;
+  cursor: not-allowed !important;
+}
+
+/* دکمه ثبت نهایی */
+#co-submitBtn {
+  background: var(--buskit-orange) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 9px !important;
+  font-family: "Vazirmatn", sans-serif !important;
+  font-size: 0.98rem !important;
+  font-weight: 700 !important;
+  width: 100% !important;
+  padding: 14px !important;
+  cursor: pointer !important;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s !important;
+  margin-top: 6px !important;
+}
+#co-submitBtn:hover {
+  background: #e06a28 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 8px 24px rgba(240,122,58,0.3) !important;
+}
+
+@media (max-width: 600px) {
+  .checkout-modal {
+    width: 96vw !important;
+    max-height: 92vh !important;
+    border-radius: 12px !important;
+  }
+  .checkout-modal-body { padding: 14px !important; }
+  .email-verify-row { flex-direction: column !important; }
+}

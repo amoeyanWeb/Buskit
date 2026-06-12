@@ -1,0 +1,68 @@
+<!-- ════════════════════════════════════════════
+   تغییرات لازم در index.html — سه بخش
+   ════════════════════════════════════════════ -->
+
+<!-- ─── ۱. در <head>، بعد از آخرین <link rel="stylesheet"> اضافه کنید ─── -->
+<link rel="stylesheet" href="mobile.css" />
+
+
+<!-- ─── ۲. در <nav>، بعد از <a href="#" class="nav-logo">... اضافه کنید ─── -->
+<!-- آوِرلی تاریک پشت منوی موبایل -->
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- دکمه همبرگر -->
+<button class="nav-hamburger" id="navHamburger" aria-label="منو">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+
+<!-- ─── ۳. قبل از </body>، این script را اضافه کنید ─── -->
+<script>
+  (function () {
+    var hamburger = document.getElementById('navHamburger');
+    var navLinks  = document.querySelector('.nav-links');
+    var overlay   = document.getElementById('navOverlay');
+
+    function openMenu() {
+      hamburger.classList.add('open');
+      navLinks.classList.add('open');
+      overlay.classList.add('open');
+      document.body.classList.add('nav-open');
+    }
+    function closeMenu() {
+      hamburger.classList.remove('open');
+      navLinks.classList.remove('open');
+      overlay.classList.remove('open');
+      document.body.classList.remove('nav-open');
+    }
+
+    hamburger.addEventListener('click', function () {
+      navLinks.classList.contains('open') ? closeMenu() : openMenu();
+    });
+
+    overlay.addEventListener('click', closeMenu);
+
+    // باز/بسته کردن dropdown سطح اول در موبایل
+    document.querySelectorAll('.nav-links > li.has-dropdown > a').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        if (window.innerWidth >= 992) return;
+        e.preventDefault();
+        var li = this.parentElement;
+        var isOpen = li.classList.contains('open');
+        document.querySelectorAll('.nav-links > li.has-dropdown.open').forEach(function (el) {
+          el.classList.remove('open');
+        });
+        if (!isOpen) li.classList.add('open');
+      });
+    });
+
+    // بستن منو بعد از کلیک روی لینک‌های معمولی (غیر dropdown)
+    document.querySelectorAll('.nav-links a:not([href="javascript:void(0)"])').forEach(function (link) {
+      link.addEventListener('click', function () {
+        if (window.innerWidth < 992) closeMenu();
+      });
+    });
+  })();
+</script>

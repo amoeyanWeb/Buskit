@@ -1,3 +1,294 @@
+/* استایل مارکی شیشه‌ای مات */ /* ==========================================================================
+   تنظیمات مارکی شیشه‌ای (محدود به عرض شعار و منتقل شده به پایین‌ترین بخش)
+   ========================================================================== */
+
+.product-marquee-container {
+  /* ۱. انتقال قطعی به لبه‌ی پایینی سکشن هیرو (روی آسفالت عکس) */
+  position: absolute !important;
+  bottom: -200px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important; /* وسط‌چین کردن دقیق باکس */
+
+  /* ۲. محدود کردن عرض باکس شیشه‌ای دقیقاً به اندازه کانتینر متن شعار */
+  width: 100% !important;
+  max-width: 1000px !important;
+  height: auto !important;
+
+  /* ۳. بازگرداندن افکت شیشه‌ای مات که تصویر زیرش را بلور کند */
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(14px) saturate(140%) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(140%) !important;
+
+  /* ۴. استایل کادر و گرد کردن لبه‌ها */
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 16px !important;
+  padding: 12px 0 !important;
+
+  /* ۵. مهار حرکت تصاویر تا فقط داخل این باکس شیشه‌ای حرکت کنند و بیرون نزنند */
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  z-index: 99 !important; /* قرارگیری روی عکس پس‌زمینه */
+  display: block !important;
+}
+
+/* مطمئن شدن از عرض کامل ریل حرکت داخل باکس */
+
+.product-marquee-track {
+  animation: marquee-scroll 26s linear infinite;
+  display: flex !important;
+  width: max-content !important;
+}
+
+.product-marquee-container:hover .product-marquee-track {
+  animation-play-state: paused;
+}
+
+.marquee-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  /* فاصله نصف شد دوباره: از 15px به 7px */
+  margin: 0 7px;
+  transition: transform 0.3s ease;
+}
+
+.marquee-item:hover {
+  transform: scale(1.08);
+}
+
+.marquee-item img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
+  margin-bottom: 6px;
+  display: block;
+}
+
+.marquee-item span {
+  font-family: "Vazirmatn", sans-serif;
+  font-size: 0.78rem;
+  color: #ffffff !important;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.9);
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+/* ۱. معرفی متغیرها به مرورگر برای امکان انیمیت کردن گرادیان‌ها */
+@property --glow1-pos-x {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 20%;
+}
+@property --glow1-pos-y {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 30%;
+}
+@property --glow1-size {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 40%;
+}
+@property --glow1-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: rgba(255, 0, 128, 0.5);
+}
+
+@property --glow2-pos-x {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 80%;
+}
+@property --glow2-pos-y {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 20%;
+}
+@property --glow2-size {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 45%;
+}
+@property --glow2-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: rgba(0, 128, 255, 0.4);
+}
+
+@property --glow3-pos-x {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 50%;
+}
+@property --glow3-pos-y {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 80%;
+}
+@property --glow3-size {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 50%;
+}
+@property --glow3-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: rgba(0, 255, 128, 0.3);
+}
+
+/* ۲. تنظیمات کادر اصلی */
+.dynamic-glow-bg {
+  width: 100%;
+  height: 100vh; /* یا هر ارتفاعی که مد نظر دارید */
+  background-color: #000000; /* پس‌زمینه کاملاً مشکی */
+
+  /* ترکیب ۳ گرادیان دایره‌ای با استفاده از متغیرها */
+  background-image:
+    radial-gradient(
+      circle at var(--glow1-pos-x) var(--glow1-pos-y),
+      var(--glow1-color) 0%,
+      transparent var(--glow1-size)
+    ),
+    radial-gradient(
+      circle at var(--glow2-pos-x) var(--glow2-pos-y),
+      var(--glow2-color) 0%,
+      transparent var(--glow2-size)
+    ),
+    radial-gradient(
+      circle at var(--glow3-pos-x) var(--glow3-pos-y),
+      var(--glow3-color) 0%,
+      transparent var(--glow3-size)
+    );
+
+  /* فراخوانی ۳ انیمیشن مجزا با زمان‌بندی‌های مختلف برای ایجاد حس تصادفی بودن */
+  animation:
+    moveGlow1 5s ease-in-out infinite alternate,
+    moveGlow2 12s ease-in-out infinite alternate,
+    moveGlow3 8s ease-in-out infinite alternate;
+}
+
+/* ۳. تعریف انیمیشن‌ها برای تغییر موقعیت، ابعاد، رنگ و اپسیتی */
+
+/* انیمیشن گرادیان اول (مثلاً صورتی/بنفش) */
+@keyframes moveGlow1 {
+  0% {
+    --glow1-pos-x: 20%;
+    --glow1-pos-y: 30%;
+    --glow1-size: 40%;
+    --glow1-color: rgba(255, 0, 128, 0.5);
+  }
+  50% {
+    --glow1-pos-x: 40%;
+    --glow1-pos-y: 60%;
+    --glow1-size: 55%;
+    --glow1-color: rgba(128, 0, 255, 0.7); /* تغییر رنگ و افزایش اپسیتی */
+  }
+  100% {
+    --glow1-pos-x: 10%;
+    --glow1-pos-y: 70%;
+    --glow1-size: 35%;
+    --glow1-color: rgba(255, 0, 128, 0.3); /* کاهش اپسیتی */
+  }
+}
+
+/* انیمیشن گرادیان دوم (مثلاً آبی) */
+@keyframes moveGlow2 {
+  0% {
+    --glow2-pos-x: 80%;
+    --glow2-pos-y: 20%;
+    --glow2-size: 45%;
+    --glow2-color: rgba(0, 128, 255, 0.4);
+  }
+  50% {
+    --glow2-pos-x: 60%;
+    --glow2-pos-y: 50%;
+    --glow2-size: 30%;
+    --glow2-color: rgba(0, 255, 255, 0.6);
+  }
+  100% {
+    --glow2-pos-x: 90%;
+    --glow2-pos-y: 70%;
+    --glow2-size: 50%;
+    --glow2-color: rgba(0, 64, 255, 0.3);
+  }
+}
+
+/* انیمیشن گرادیان سوم (مثلاً سبز/فسفری) */
+@keyframes moveGlow3 {
+  0% {
+    --glow3-pos-x: 50%;
+    --glow3-pos-y: 80%;
+    --glow3-size: 50%;
+    --glow3-color: rgba(0, 255, 128, 0.3);
+  }
+  50% {
+    --glow3-pos-x: 30%;
+    --glow3-pos-y: 40%;
+    --glow3-size: 60%;
+    --glow3-color: rgba(255, 255, 0, 0.4); /* تغییر به زرد مایل به سبز */
+  }
+  100% {
+    --glow3-pos-x: 70%;
+    --glow3-pos-y: 90%;
+    --glow3-size: 40%;
+    --glow3-color: rgba(0, 255, 128, 0.2);
+  }
+}
+/* ── New ecosystem flow layout ── */
+.bk-flow-new {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Inputs: 2-column grid, 3 rows */
+.bk-inputs-section {
+  width: 100%;
+}
+.bk-input-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 40px;
+  margin-right: 40px;
+  gap: 20px;
+}
+
+/* Core + Outputs side by side */
+.bk-core-outputs-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+.bk-core-col,
+.bk-outputs-col {
+  width: 100%;
+  margin-top: 40px;
+}
+
+@media (max-width: 640px) {
+  .bk-input-grid {
+    grid-template-columns: 1fr;
+  }
+  .bk-core-outputs-row {
+    grid-template-columns: 1fr;
+  }
+}
 /* ══════════════════════════════
          CONTACT SECTION (embedded)
       ══════════════════════════════ */

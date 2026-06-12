@@ -1,13 +1,21 @@
 .con-container {
   display: flex !important;
   flex-direction: column !important;
-  align-items: flex-end !important;   /* تیتر: راست‌چین */
+  align-items: flex-end !important; /* تیتر: راست‌چین */
   text-align: right !important;
   padding: 60px 40px !important;
   width: 100% !important;
   background:
-    radial-gradient(ellipse at top right, rgba(180, 70, 20, 0.35) 0%, transparent 60%),
-    radial-gradient(ellipse at bottom left, rgba(20, 80, 180, 0.35) 0%, transparent 60%),
+    radial-gradient(
+      ellipse at top right,
+      rgba(180, 70, 20, 0.35) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse at bottom left,
+      rgba(20, 80, 180, 0.35) 0%,
+      transparent 60%
+    ),
     #111318 !important;
 }
 
@@ -19,7 +27,7 @@
   background: #f0ede6 !important;
   border-radius: 14px !important;
   padding: 20px !important;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.5) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5) !important;
 }
 
 .bk-section *,
@@ -651,16 +659,18 @@ nav {
   overflow: hidden;
   padding-top: 120px;
   padding-bottom: 40px;
-  background-image: url("main.webp");
+  background-image: url("../main.webp");
   background-size: cover;
-  background-position: fixed;
+  background-position: center center;
+  background-attachment: fixed;
 }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url("main.webp");
+  background-image: url("../main.webp");
   background-size: cover;
-  background-position: fixed;
+  background-position: center center;
+  background-attachment: fixed;
 }
 .hero-illustration {
   position: absolute;
