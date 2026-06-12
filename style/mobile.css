@@ -299,16 +299,43 @@
     grid-row: auto !important;
   }
 
-  /* --- دیاگرام اتصالات: اسکرول افقی --- */
-  .con-container {
-    padding: 40px 16px !important;
+  /* --- بخش «در یک نگاه»: اسکرول افقی برای دیاگرام بزرگ --- */
+  /* html باید overflow-x را آزاد بگذارد؛ فقط روی body قفل می‌ماند */
+  html {
+    overflow-x: unset !important;
+  }
+  #look {
     overflow-x: auto !important;
     -webkit-overflow-scrolling: touch !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
-  .con-container img.diagram {
-    min-width: 580px !important;
-    width: auto !important;
+  #look .bk-container {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding: 24px 16px !important;
+    width: max-content !important;
+    min-width: 100% !important;
+  }
+  #look .diagram {
+    /* عکس دیاگرام را بدون فشرده‌سازی نگه دار تا اسکرول بشه */
     max-width: none !important;
+    width: auto !important;
+  }
+
+  /* --- شمایی از اتصالات: همه عکس‌ها نصف --- */
+  .con-container {
+    padding: 40px 16px !important;
+    overflow-x: hidden !important;
+  }
+  /* عکس‌هایی که inline style="width: 950px" دارند → نصف = 475px */
+  .con-container img.diagram {
+    width: 50% !important;
+    min-width: unset !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 
   /* --- تماس --- */
