@@ -21,6 +21,10 @@
   padding: 6px;
   z-index: 1001;
   flex-shrink: 0;
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
 }
 .nav-hamburger span {
   display: block;
@@ -48,6 +52,12 @@
     padding: 0 1rem;
     height: 56px;
     position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-logo {
+    grid-column: unset;
   }
   .nav-hamburger {
     display: flex;

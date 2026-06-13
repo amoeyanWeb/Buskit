@@ -3072,7 +3072,8 @@
         }
 
         // همبرگر
-        hamburger.addEventListener("click", function () {
+        hamburger.addEventListener("click", function (e) {
+          e.stopPropagation();
           navLinks.classList.contains("open") ? closeMenu() : openMenu();
         });
 
@@ -3081,7 +3082,6 @@
 
         // کلیک روی هر جای صفحه خارج از منو
         document.addEventListener("click", function (e) {
-          if (window.innerWidth >= 992) return;
           if (!navLinks.classList.contains("open")) return;
           if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
             closeMenu();
@@ -3135,7 +3135,6 @@
                 e.preventDefault();
                 closeMenu();
                 setTimeout(function () {
-                  // اسکرول به بالای section با فاصله کمی زیر هدر (هدر 50px)
                   var pos =
                     targetEl.getBoundingClientRect().top + window.scrollY - 55;
                   window.scrollTo({ top: pos, behavior: "smooth" });

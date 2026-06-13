@@ -26,11 +26,11 @@ nav {
 }
 
 .nav-logo {
-  order: 2 !important;   /* logo goes to the right */
+  order: 2 !important; /* logo goes to the right */
 }
 
 .nav-links {
-  order: 1 !important;   /* links go to the left */
+  order: 1 !important; /* links go to the left */
 }
 
 /* ──────────────────────────────────────────────
