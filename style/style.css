@@ -883,10 +883,8 @@ section {
 
 /* سکشن‌هایی که باید تیتر درست زیر هدر ظاهر شود — padding-top کم شده */
 #aboutme {
-  scroll-margin-top: 75px;
-  /**/
+  scroll-margin-top: 575px;
   padding-top: 0.5rem;
-  margin-top: 20px;
 }
 #why,
 #look,
@@ -1349,6 +1347,7 @@ footer img {
   font-family: "Vazirmatn", sans-serif;
   position: relative;
   z-index: 2;
+  margin-top: 40px;
 }
 .about-container {
   max-width: 1200px;

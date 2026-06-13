@@ -59,6 +59,13 @@
   .nav-logo {
     grid-column: unset;
   }
+  .lang-wrapper {
+    grid-column: unset;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+  }
   .nav-hamburger {
     display: flex;
   }
