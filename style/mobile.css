@@ -54,7 +54,7 @@
   }
 
   .nav-links {
-    display: flex !important;
+    display: flex;
     flex-direction: column;
     position: fixed;
     top: 56px;

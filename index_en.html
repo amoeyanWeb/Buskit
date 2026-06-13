@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="fa" dir="rtl">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Buskit — هر آنچه برای یک اجرای زنده نیاز دارید</title>
+    <title>Buskit — Everything You Need for a Live Performance</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&family=Oswald:wght@400;600;700&display=swap"
       rel="stylesheet"
@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="./style/Mstyle.css" class="css" />
 
     <link rel="stylesheet" href="./style/mobile.css" class="css" />
+
+    <link rel="stylesheet" href="./style/latin.css" />
 
     <style id="contact-styles"></style>
 
@@ -36,8 +38,8 @@
 
     <style id="gradient-overrides">
       /* ══════════════════════════════════════════════
-         بخش چرا باسکیت (#why)
-         گرادیانت آبی–نارنجی واضح‌تر
+         بخش Why Buskit (#why)
+         More vivid blue–orange gradient
       ══════════════════════════════════════════════ */
       .why-section {
         background:
@@ -65,8 +67,8 @@
       }
 
       /* ══════════════════════════════════════════════
-         بخش در یک نگاه (.bk-section #look)
-         گرادیانت طلایی–بنفش
+         بخش At a Glance (.bk-section #look)
+         Golden–purple gradient
       ══════════════════════════════════════════════ */
       .bk-section {
         background:
@@ -97,7 +99,7 @@
           #000000;
       }
       /* ══════════════════════════════════════════════
-         محصولات — هر کدام رنگ badge خودش
+         Products — هر کدام رنگ badge Placeش
       ══════════════════════════════════════════════ */
       #prod-go {
         background:
@@ -187,8 +189,8 @@
       }
 
       /* ══════════════════════════════════════════════
-         بخش ثبت پتنت (#registration)
-         گرادیانت نقره‌ای–آبی
+         بخش ثبت Patent (#registration)
+         Silver–blue gradient
       ══════════════════════════════════════════════ */
       #registration {
         background:
@@ -211,8 +213,8 @@
       }
 
       /* ══════════════════════════════════════════════
-         بخش فروشگاه (#store)
-         گرادیانت نارنجی گرم
+         بخش Store (#store)
+         Warm orange gradient
       ══════════════════════════════════════════════ */
       .store-section {
         background:
@@ -242,39 +244,41 @@
   </head>
   <body>
     <nav>
-      <div class="nav-overlay" id="navOverlay"></div>
-
-      <!-- لوگو — سمت چپ -->
       <a href="#" class="nav-logo"><img src="LOGO.png" alt="Buskit Logo" /></a>
 
-      <!-- منو — وسط -->
+      <div class="nav-overlay" id="navOverlay"></div>
+
+      <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+
       <ul class="nav-links">
-        <li><a href="#home">خانه</a></li>
-        <li><a href="#aboutme">درباره من </a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#aboutme">About Me </a></li>
         <li class="has-dropdown">
-          <a href="javascript:void(0)">باسکیت</a>
+          <a href="javascript:void(0)">Buskit</a>
           <ul class="dropdown-menu">
             <li>
               <a href="#why">
                 <span class="prod-dot" style="background: #e67e22"></span>
-                چرا؟
+                Why?
               </a>
             </li>
             <li>
               <a href="#look">
                 <span class="prod-dot" style="background: #2980b9"></span>
-                در یک نگاه
+                At a Glance
               </a>
             </li>
 
             <li>
               <a href="#ecosystem">
                 <span class="prod-dot" style="background: #e6a800"></span>
-                اکوسیستم
+                Ecosystem
               </a>
             </li>
             <li class="has-dropdown">
-              <a href="javascript:void(0)">شمایی از اتصالات</a>
+              <a href="javascript:void(0)">Connection Diagrams</a>
               <ul class="dropdown-menu">
                 <li>
                   <a href="#con-mixer"
@@ -318,7 +322,7 @@
         </li>
 
         <li class="has-dropdown">
-          <a href="javascript:void(0)">محصولات</a>
+          <a href="javascript:void(0)">Products</a>
           <ul class="dropdown-menu">
             <li>
               <a href="#prod-go"
@@ -388,118 +392,10 @@
           </ul>
         </li>
 
-        <li><a href="#registration">پتنت</a></li>
-        <li><a href="#store">فروشگاه</a></li>
-        <li><a href="#contact">تماس با من</a></li>
+        <li><a href="#registration">Patent</a></li>
+        <li><a href="#store">Store</a></li>
+        <li><a href="#contact">Contact Me</a></li>
       </ul>
-
-      <!-- سلکتور زبان custom — سمت راست -->
-      <div class="lang-wrapper">
-        <div class="custom-lang" id="customLang">
-          <button class="custom-lang-btn" id="langBtn" type="button">
-            <img
-              class="flag-icon"
-              src="https://flagcdn.com/w20/ir.png"
-              alt="IR"
-              width="20"
-              height="14"
-            />
-            <span id="langLabel">فارسی</span>
-            <span class="lang-arrow">▾</span>
-          </button>
-          <div class="custom-lang-menu" id="langMenu">
-            <a href="index.html"
-              ><img
-                class="flag-icon"
-                src="https://flagcdn.com/w20/ir.png"
-                alt="IR"
-                width="20"
-                height="14"
-              />
-              فارسی</a
-            >
-            <a href="indexEn.html"
-              ><img
-                class="flag-icon"
-                src="https://flagcdn.com/w20/gb.png"
-                alt="GB"
-                width="20"
-                height="14"
-              />
-              English</a
-            >
-            <a href="indexTr.html"
-              ><img
-                class="flag-icon"
-                src="https://flagcdn.com/w20/tr.png"
-                alt="TR"
-                width="20"
-                height="14"
-              />
-              Türkçe</a
-            >
-            <a href="indexAr.html"
-              ><img
-                class="flag-icon"
-                src="https://flagcdn.com/w20/sa.png"
-                alt="SA"
-                width="20"
-                height="14"
-              />
-              العربية</a
-            >
-            <a href="indexEs.html"
-              ><img
-                class="flag-icon"
-                src="https://flagcdn.com/w20/es.png"
-                alt="ES"
-                width="20"
-                height="14"
-              />
-              Español</a
-            >
-            <a href="indexDe.html"
-              ><img
-                class="flag-icon"
-                src="https://flagcdn.com/w20/de.png"
-                alt="DE"
-                width="20"
-                height="14"
-              />
-              Deutsch</a
-            >
-            <a href="indexIt.html"
-              ><img
-                class="flag-icon"
-                src="https://flagcdn.com/w20/it.png"
-                alt="IT"
-                width="20"
-                height="14"
-              />
-              Italiano</a
-            >
-          </div>
-        </div>
-      </div>
-
-      <button class="nav-hamburger" id="navHamburger" aria-label="منو">
-        <span></span><span></span><span></span>
-      </button>
-
-      <!-- hidden select برای سازگاری با اسکریپت قدیمی -->
-      <select
-        id="lang-select"
-        onchange="location = this.value"
-        style="display: none"
-      >
-        <option value="index.html" selected>🇮🇷 فارسی</option>
-        <option value="indexEn.html">🇬🇧 English</option>
-        <option value="indexTr.html">🇹🇷 Türkçe</option>
-        <option value="indexAr.html">🇸🇦 العربية</option>
-        <option value="indexEs.html">🇪🇸 Español</option>
-        <option value="indexDe.html">🇩🇪 Deutsch</option>
-        <option value="indexIt.html">🇮🇹 Italiano</option>
-      </select>
     </nav>
 
     <!-- HERO -->
@@ -511,17 +407,17 @@
       <!-- Street Performance SVG Illustration -->
 
       <div class="hero-content">
-        <!-- <div class="hero-eyebrow">اکوسیستم صوتی حرفه‌ای برای نوازندگان</div> -->
+        <!-- <div class="hero-eyebrow">Professional Audio Ecosystem for Musicians</div> -->
         <img src="LOGO.png" alt="Buskit" class="hero-logo" />
         <h1 class="hero-tagline blink-1s">
-          هر آنچه برای یک <span>اجرای زنده </span> نیاز دارید
+          Everything for a <span>Live Performance </span> You Need
         </h1>
       </div>
 
-      <!-- 🌟 مارکی محصولات -->
+      <!-- 🌟 مارکی Products -->
       <div class="product-marquee-container" dir="ltr">
         <div class="product-marquee-track">
-          <!-- مجموعه اول -->
+          <!-- First Set -->
           <div class="marquee-item">
             <img src="Buskit-Go.png" alt="Buskit Go" />
             <span>micro PreAmp</span>
@@ -563,7 +459,7 @@
             <span>Battery</span>
           </div>
 
-          <!-- مجموعه دوم برای چرخه بی‌نهایت -->
+          <!-- Second set for infinite loop -->
           <div class="marquee-item">
             <img src="Buskit-Go.png" alt="Buskit Go" />
             <span>micro PreAmp</span>
@@ -609,34 +505,24 @@
       <!-- marquee -->
     </section>
 
-    <!----------------------------- درباره من ------------------>
+    <!----------------------------- About Me ------------------>
     <section class="about-minimal" id="aboutme">
       <div class="about-container">
-        <!-- ستون راست: متن -->
         <div class="about-content">
           <span class="section-label">
-            <span class="blink-1s"> درباره من</span>
+            <span class="blink-1s"> About Me</span>
           </span>
-          <h2 class="about-heading">تلفیق موسیقی ، صوت و الکترونیک</h2>
-          <p class="about-text">
-            بیش از چهار دهه است که در دنیای نوازندگی انواع آلات موسیقی اعم از
-            کوبه ای ، ملودیک و هارمونیک و همچنین حوزه فنی و مهندسی الکترونیک
-            غوطه ور هستم. تمرکز من همیشه روی خلق ابزارهایی بوده که مرز میان
-            تکنولوژی و هنر را کم‌رنگ‌تر کنند.
-          </p>
-          <p class="about-text">
-            امروز، به عنوان یک نوازنده ، که درک عمیقی از کمبودهای تجهیزات
-            الکترونیکی با قایلیت های منحصر به فرد مورد نیاز برای اجراهای زنده
-            بالاخص نوازندگان خیابانی یا تمرینات گروه های کوچک، یا حتی بالابردن
-            کیفیت تمرینات شخصی نوازندگان دارد ، از تلفیق این سه حوزه، مجموعه
-            دستگاه هایی ماژولار خلق کردم که برطرف کننده همه کاستی های اجرا های
-            زنده بوده و این اکوسیستم را باسکیت نامیدم.
-          </p>
+          <h2 class="about-heading">The Fusion of Music, Sound and Electronics</h2>
         </div>
-        <!-- ستون چپ: تصویر -->
+        <p class="about-text">
+          For more than four decades, I have been immersed in the world of playing all kinds of musical instruments — percussion, melodic and harmonic — as well as technical electronics engineering. My focus has always been on creating tools that blur the line between technology and art.
+        </p>
+        <p class="about-text">
+          Today, as a musician with a deep understanding of the shortcomings of electronic equipment with the unique capabilities needed for live performances — especially street musicians or small group rehearsals — I combined these three fields to create a collection of modular devices that address all the shortcomings of live performances, and I named this ecosystem Buskit.
+        </p>
         <div class="about-image-zone">
           <div class="image-wrapper">
-            <img src="bg-rec.jpeg" alt="پرتره هنری" />
+            <img src="bg-rec.jpeg" alt="Artistic Portrait" />
           </div>
         </div>
       </div>
@@ -653,56 +539,54 @@
             </div>
             <div class="prod-content">
               <div class="section-label">
-                <span class="blink-1s"> میکرو پری امپ</span>
+                <span class="blink-1s"> Micro Preamp</span>
               </div>
               <h2 class="prod-name">Buskit microPA</h2>
-              <!-- <p class="prod-tagline">تجهیز جیبی</p> -->
+              <!-- <p class="prod-tagline">Pocket Device</p> -->
               <div class="prod-why">
-                این دستگاه حداقل ممکن برای یک پری امپ کوچک، بدون نویز با گین
-                بالاست که بوسیله آن میتوان سازهای آکوستیک یا میکروفونها را به
-                سیستم های صوتی متصل نمود
+                This device is the smallest possible form of a compact preamp — low noise with high gain — through which acoustic instruments or microphones can be connected to sound systems.
               </div>
               <div class="prod-grid">
                 <div class="prod-box">
-                  <h4>ویژگی‌ها</h4>
+                  <h4>Features</h4>
                   <ul>
-                    <li>کنترل ولوم آنالوگ</li>
-                    <li>قابلیت اتصال به ماژول بی سیم</li>
-                    <li>قابلیت اتصال به پورت آگزیلاری سیستم های صوتی</li>
-                    <li>ورودی و خروجی ۶.۳ میلی‌متر</li>
-                    <li>LED اعلام شارژ پایین</li>
-                    <li>LED نشانگر روشن بودن</li>
-                    <li>LED مجهز به باطری 9ولت</li>
-                    <li>حداکثر گین خروجی 15db</li>
-                    <li>کلید روشن/خاموش</li>
+                    <li>Analog Volume Control</li>
+                    <li>Wireless Module Connectivity</li>
+                    <li>Connection to AUX Port of Sound Systems</li>
+                    <li>6.3mm Input and Output</li>
+                    <li>LED Low Battery Indicator</li>
+                    <li>LED Power Indicator</li>
+                    <li>LED with 9V Battery</li>
+                    <li>Maximum 15dB Output Gain</li>
+                    <li>On/Off Switch</li>
                   </ul>
                 </div>
                 <div class="prod-box">
-                  <h4>کاربرد</h4>
+                  <h4>Applications</h4>
                   <ul>
-                    <li>تبدیل ساز آکوستیک به الکتریکی</li>
-                    <li>تمرین در فضای باز</li>
-                    <li>سفر و تور</li>
-                    <li>اجراهای کوچک</li>
+                    <li>Converting Acoustic Instrument to Electric</li>
+                    <li>Outdoor Practice</li>
+                    <li>Travel and Tour</li>
+                    <li>Small Performances</li>
                   </ul>
                 </div>
               </div>
               <div class="prod-box" style="margin-bottom: 1rem">
-                <h4>مزایا</h4>
+                <h4>Benefits</h4>
                 <ul
                   style="display: grid; grid-template-columns: 1fr 1fr; gap: 0"
                 >
-                  <li>ابعاد کوچک</li>
-                  <li>وزن کم</li>
-                  <li>عدم نیاز به سوراخکاری بدنه ساز</li>
+                  <li>Small Dimensions</li>
+                  <li>Low Weight</li>
+                  <li>No Need to Drill the Instrument Body</li>
                 </ul>
               </div>
               <div class="prod-reg">
-                <span><span class="flag">🇺🇸</span> آمریکا</span>
-                <span><span class="flag">🇪🇺</span> اروپا</span>
-                <span><span class="flag">🇹🇷</span> ترکیه</span>
+                <span><span class="flag">🇺🇸</span> America</span>
+                <span><span class="flag">🇪🇺</span> Europe</span>
+                <span><span class="flag">🇹🇷</span> Turkey</span>
                 <span style="color: #6b7680; font-size: 0.75rem"
-                  >ثبت بین‌المللی شده</span
+                  >Internationally Registered</span
                 >
               </div>
             </div>
@@ -720,53 +604,51 @@
             </div>
             <div class="prod-content">
               <div class="section-label">
-                <span class="blink-1s"> ماژول هدفون</span>
+                <span class="blink-1s"> Headphone Module</span>
               </div>
 
               <h2 class="prod-name">Buskit Headphone Module</h2>
-              <!-- <p class="prod-tagline">صدای خودت رو بشنو — واضح و بدون تاخیر</p> -->
+              <!-- <p class="prod-tagline">Hear Your Own Sound — Clear and Latency-Free</p> -->
               <div class="prod-why">
-                این ماژول یک تقویت کننده سیگنال برای هدفون است که رابط بین ماژول
-                مانیتورینگ و هدفون میباشد که از طریق آن امکان تنظیم صدای رسیده
-                به هدفون نوازنده موجود میباشد
+                This module is a headphone signal amplifier that serves as the interface between the monitoring module and headphones, allowing the musician to adjust the audio reaching their headphones.
               </div>
               <div class="prod-grid">
                 <div class="prod-box">
-                  <h4>ویژگی‌ها</h4>
+                  <h4>Features</h4>
                   <ul>
-                    <li>جک هدفون ۳.۵ میلی‌متری</li>
-                    <li>کنترل ولوم مستقل</li>
-                    <li>ورودی و کلید پاور جداگانه</li>
-                    <li>مجهز به باطری 9 ولت</li>
+                    <li>3.5mm Headphone Jack</li>
+                    <li>Independent Volume Control</li>
+                    <li>Separate Input and Power Switch</li>
+                    <li>Equipped with 9V Battery</li>
                   </ul>
                 </div>
                 <div class="prod-box">
-                  <h4>کاربرد</h4>
+                  <h4>Applications</h4>
                   <ul>
-                    <li>مانیتورینگ حین اجرا</li>
-                    <li>تمرین با حجم صدای کم</li>
+                    <li>Monitoring During Performance</li>
+                    <li>Practicing at Low Volume</li>
                     <li>
-                      شنیدن صدای خروجی میکسر یا مینی میکسر باسکیت از طریق هدفون
+                      Hearing the Output of Buskit Mixer or Mini Mixer Through Headphones
                     </li>
                   </ul>
                 </div>
               </div>
               <div class="prod-box" style="margin-bottom: 1rem">
-                <h4>مزایا</h4>
+                <h4>Benefits</h4>
                 <ul
                   style="display: grid; grid-template-columns: 1fr 1fr; gap: 0"
                 >
-                  <li>بدون تاخیر (zero-latency)</li>
-                  <li>امکان تغییر حجم صدا</li>
-                  <li>کوچک و جیبی</li>
+                  <li>Zero Latency</li>
+                  <li>Ability to Change Volume</li>
+                  <li>Small and Pocket-Sized</li>
                 </ul>
               </div>
               <div class="prod-reg">
-                <span><span class="flag">🇺🇸</span> آمریکا</span>
-                <span><span class="flag">🇪🇺</span> اروپا</span>
-                <span><span class="flag">🇹🇷</span> ترکیه</span>
+                <span><span class="flag">🇺🇸</span> America</span>
+                <span><span class="flag">🇪🇺</span> Europe</span>
+                <span><span class="flag">🇹🇷</span> Turkey</span>
                 <span style="color: #6b7680; font-size: 0.75rem"
-                  >ثبت بین‌المللی شده</span
+                  >Internationally Registered</span
                 >
               </div>
             </div>
@@ -784,51 +666,49 @@
             </div>
             <div class="prod-content">
               <div class="section-label">
-                <span class="blink-1s"> گسترش دهنده ورودی های لاین</span>
+                <span class="blink-1s"> Line Input Expander</span>
               </div>
               <h2 class="prod-name">Buskit LineEXP</h2>
               <!-- <p class="prod-tagline">
-                چهار لاین در یک دستگاه — گسترش بی‌پایان
+                Four Lines in One Device — Endless Expansion
               </p> -->
               <div class="prod-why">
-                از طریق این ماژول میتوان تعدد ورودیهای میکسر یا مینی میکسر
-                باسکیت را افزایش داد. ضمنا امکان سری کردن این ماژول و افزایش
-                بیشتر ورودی ها نیز وجود دارد
+                Through this module, the number of inputs on the Buskit mixer or mini mixer can be increased. It is also possible to daisy-chain these modules to add even more inputs.
               </div>
               <div class="prod-grid">
                 <div class="prod-box">
-                  <h4>ویژگی‌ها</h4>
+                  <h4>Features</h4>
                   <ul>
-                    <li>۴ ورودی لاین مستقل</li>
-                    <li>پورت اکسپنشن برای گسترش</li>
-                    <li>یک خروجی اصلی ۶.۳ میلی‌متری</li>
-                    <li>بدون نیاز به برق و باطری</li>
+                    <li>4 Independent Line Inputs</li>
+                    <li>Expansion Port for Scaling</li>
+                    <li>One Main 6.3mm Output</li>
+                    <li>No Power or Battery Required</li>
                   </ul>
                 </div>
                 <div class="prod-box">
-                  <h4>کاربرد</h4>
+                  <h4>Applications</h4>
                   <ul>
-                    <li>افزایش تعداد ورود یها</li>
-                    <li>اجرای باند چند نفره</li>
+                    <li>Increasing Number of Inputs</li>
+                    <li>Multi-Person Band Performance</li>
                   </ul>
                 </div>
               </div>
               <div class="prod-box" style="margin-bottom: 1rem">
-                <h4>مزایا</h4>
+                <h4>Benefits</h4>
                 <ul
                   style="display: grid; grid-template-columns: 1fr 1fr; gap: 0"
                 >
-                  <li>مستقل بودن ورودیها</li>
-                  <li>قابل گسترش</li>
-                  <li>بدون نیاز به برق و باطری</li>
+                  <li>Independence of Inputs</li>
+                  <li>Expandable</li>
+                  <li>No Power or Battery Required</li>
                 </ul>
               </div>
               <div class="prod-reg">
-                <span><span class="flag">🇺🇸</span> آمریکا</span>
-                <span><span class="flag">🇪🇺</span> اروپا</span>
-                <span><span class="flag">🇹🇷</span> ترکیه</span>
+                <span><span class="flag">🇺🇸</span> America</span>
+                <span><span class="flag">🇪🇺</span> Europe</span>
+                <span><span class="flag">🇹🇷</span> Turkey</span>
                 <span style="color: #6b7680; font-size: 0.75rem"
-                  >ثبت بین‌المللی شده</span
+                  >Internationally Registered</span
                 >
               </div>
             </div>
@@ -846,44 +726,44 @@
             </div>
             <div class="prod-content">
               <div class="section-label">
-                <span class="blink-1s"> واسط میکروفون خازنی</span>
+                <span class="blink-1s"> Condenser Microphone Interface</span>
               </div>
               <h2 class="prod-name">Buskit Mic Interface</h2>
-              <!-- <p class="prod-tagline">صدای خواننده رو واضح‌تر از همیشه</p> -->
+              <!-- <p class="prod-tagline">Hear the Vocalist Clearer Than Ever</p> -->
               <div class="prod-why">
-                این تجهیز واسط بین میکروفون خازنی و اکوسیستم باسکیت میباشد
+                This device serves as the interface between a condenser microphone and the Buskit ecosystem.
               </div>
               <div class="prod-grid">
                 <div class="prod-box">
-                  <h4>ویژگی‌ها</h4>
+                  <h4>Features</h4>
                   <ul>
-                    <li>ورودی میکروفون ۳.۵ میلی‌متری</li>
-                    <li>خروجی لاین برای Buskit</li>
-                    <li>مجهز به باطری 1.5 ولتی</li>
+                    <li>3.5mm Microphone Input</li>
+                    <li>Line Output for Buskit</li>
+                    <li>Equipped with 1.5V Battery</li>
                   </ul>
                 </div>
                 <div class="prod-box">
-                  <h4>کاربرد</h4>
+                  <h4>Applications</h4>
                   <ul>
-                    <li>ایجاد امکان اتصال میکروفون خازنی به باسکیت</li>
+                    <li>Enabling Condenser Microphone Connection to Buskit</li>
                   </ul>
                 </div>
               </div>
               <div class="prod-box" style="margin-bottom: 1rem">
-                <h4>مزایا</h4>
+                <h4>Benefits</h4>
                 <ul
                   style="display: grid; grid-template-columns: 1fr 1fr; gap: 0"
                 >
-                  <li>نویز بسیار پایین</li>
-                  <li>ابعاد کوچک</li>
+                  <li>Very Low Noise</li>
+                  <li>Small Dimensions</li>
                 </ul>
               </div>
               <div class="prod-reg">
-                <span><span class="flag">🇺🇸</span> آمریکا</span>
-                <span><span class="flag">🇪🇺</span> اروپا</span>
-                <span><span class="flag">🇹🇷</span> ترکیه</span>
+                <span><span class="flag">🇺🇸</span> America</span>
+                <span><span class="flag">🇪🇺</span> Europe</span>
+                <span><span class="flag">🇹🇷</span> Turkey</span>
                 <span style="color: #6b7680; font-size: 0.75rem"
-                  >ثبت بین‌المللی شده</span
+                  >Internationally Registered</span
                 >
               </div>
             </div>
@@ -901,66 +781,62 @@
             </div>
             <div class="prod-content">
               <div class="section-label">
-                <span class="blink-1s"> مینی میکسر</span>
+                <span class="blink-1s"> Mini Mixer</span>
               </div>
               <h2 class="prod-name">Buskit Mini Mixer</h2>
-              <!-- <p class="prod-tagline">کنترل EQ دو باند — صدا رو شکل بده</p> -->
+              <!-- <p class="prod-tagline">Two-Band EQ Control — Shape Your Sound</p> -->
               <div class="prod-why">
-                این تجهیز یک میکسر صوتی قدرتمند با کیفیت و گین بالاست که مستقیما
-                امکان ورود سه منبع صوتی مختلف را داشته و با کمک ماژول لاین
-                اکسپنشن میتوان تعداد ورودیهای آنرا افزایش داد . اکولایزر آن 5
-                بانده است و دارای باطری داخلی قابل شارژ میباشد
+                This device is a powerful audio mixer with high quality and high gain that directly accepts three different audio sources, and with the help of the LineEXP module, its input count can be increased. It has a 5-band EQ and a rechargeable built-in battery.
               </div>
               <div class="prod-grid">
                 <div class="prod-box">
-                  <h4>ویژگی‌ها</h4>
+                  <h4>Features</h4>
                   <ul>
                     <li>
-                      مجهز به دو اکولایزر 5 باند با کنترل مجزای حجم سیگنال
+                      Equipped with Two 5-Band EQs with Independent Signal Volume Control
                     </li>
-                    <li>EQ باند پایین: ۱۲۰، ۵۰۰، ۱۵۰۰، ۳۰۰۰، ۶۰۰۰ Hz</li>
+                    <li>Low Band EQ: 120, 500, 1500, 3000, 6000 Hz</li>
                     <li>
-                      دارای دو ورودی پیزو، یک ورودی لاین و یک ورودی آگزیلاری
+                      Two Piezo Inputs, One Line Input and One AUX Input
                     </li>
-                    <li>مجهز به ولوم گین و درایو برای هر دو پری امپ</li>
-                    <li>خروجی آمپ و آگزیلاری AUX</li>
-                    <li>امکان ورود بکینگ ترک</li>
+                    <li>Gain and Drive Volume Control for Both Preamps</li>
+                    <li>Amp and AUX Output</li>
+                    <li>Backing Track Input Capability</li>
                     <li>
-                      امکان مانیتورینگ با استفاده از ماژول باسکیت مانیتورینگ
+                      Monitoring Capability Using Buskit Monitoring Module
                     </li>
-                    <li>امکان اتصال به هدفون از طریق ماژول هدفون</li>
+                    <li>Headphone Connection via Headphone Module</li>
                     <li>
-                      امکان اتصال میکروفون دینامیک و یا خازنی(با استفاده از
-                      ماژول میکروفون)
+                      Dynamic or Condenser Microphone Connection (Using Microphone Module)
                     </li>
-                    <li>شارژ USB-C 5V/1A</li>
+                    <li>USB-C 5V/1A Charging</li>
                   </ul>
                 </div>
                 <div class="prod-box">
-                  <h4>کاربرد</h4>
+                  <h4>Applications</h4>
                   <ul>
-                    <li>استفاده در تمرینال گروهی</li>
-                    <li>استفاده در اجراهای خیابانی</li>
+                    <li>Use in Group Practice</li>
+                    <li>Use in Street Performances</li>
                   </ul>
                 </div>
               </div>
               <div class="prod-box" style="margin-bottom: 1rem">
-                <h4>مزایا</h4>
+                <h4>Benefits</h4>
                 <ul
                   style="display: grid; grid-template-columns: 1fr 1fr; gap: 0"
                 >
-                  <li>ابعاد کوچک و سبک</li>
-                  <li>دو ورودی پری امپ مجزا مجهز به اکولایزر</li>
-                  <li>دارای باطری داخلی قابل شارژ</li>
-                  <li>قابلیت افزایش تعداد ورودیها</li>
+                  <li>Small and Lightweight Dimensions</li>
+                  <li>Two Separate Preamp Inputs with EQ</li>
+                  <li>Rechargeable Built-in Battery</li>
+                  <li>Input Count Expansion Capability</li>
                 </ul>
               </div>
               <div class="prod-reg">
-                <span><span class="flag">🇺🇸</span> آمریکا</span>
-                <span><span class="flag">🇪🇺</span> اروپا</span>
-                <span><span class="flag">🇹🇷</span> ترکیه</span>
+                <span><span class="flag">🇺🇸</span> America</span>
+                <span><span class="flag">🇪🇺</span> Europe</span>
+                <span><span class="flag">🇹🇷</span> Turkey</span>
                 <span style="color: #6b7680; font-size: 0.75rem"
-                  >ثبت بین‌المللی شده</span
+                  >Internationally Registered</span
                 >
               </div>
             </div>
@@ -978,60 +854,57 @@
             </div>
             <div class="prod-content">
               <div class="section-label">
-                <span class="blink-1s"> میکسر + مانیتورینگ</span>
+                <span class="blink-1s"> Mixer + Monitoring</span>
               </div>
               <h2 class="prod-name">Buskit Mixer</h2>
-              <!-- <p class="prod-tagline">EQ هشت باند · صدای استودیویی در خیابان</p> -->
+              <!-- <p class="prod-tagline">8-Band EQ · Studio Sound on the Street</p> -->
               <div class="prod-why">
-                این تجهیز علی رغم ابعاد کوچک، کارآیی فوق العاده ای دارد و هر
-                آنچه یک اجرای زنده نیاز دارد در خود جمع کرده است اعم از سیستم
-                مانیتورینگ یا ضبط صدای خروجی. اکولایزر آن 8 بانده حرفه ای میباشد
+                Despite its small size, this device has extraordinary performance and includes everything a live performance needs — from a monitoring system to output audio recording. Its EQ is a professional 8-band.
               </div>
               <div class="prod-grid">
                 <div class="prod-box">
-                  <h4>ویژگی‌ها</h4>
+                  <h4>Features</h4>
                   <ul>
-                    <li>EQ هشت باند: ۷۵–۸۰۰۰ Hz</li>
-                    <li>مجهز به ولوم گین و درایو برای پری امپ</li>
+                    <li>8-Band EQ: 75–8000 Hz</li>
+                    <li>Gain and Drive Volume Control for Preamp</li>
                     <li>
-                      مجهز به سیستم مانیتورینگ داخلی با امکان افزایش خطوط
-                      مانیتوری از طریق ماژول مانیتور اکپنشن
+                      Built-in Monitoring System with Monitor Lines Expandable via Monitor Expansion Module
                     </li>
-                    <li>ورودیهای پری امپ ، آگزیلاری ، 2 خط لاین</li>
+                    <li>Preamp, AUX, 2 Line Inputs</li>
                     <li>
-                      قابلیت اتصال به ماژول لاین اکسپنشن برای افزایش تعداد
+                      LineEXP Module Connectivity to Increase Input Count
                     </li>
-                    <li>شارژ USB-C 5V/2A</li>
+                    <li>USB-C 5V/2A Charging</li>
                   </ul>
                 </div>
                 <div class="prod-box">
-                  <h4>کاربرد</h4>
+                  <h4>Applications</h4>
                   <ul>
-                    <li>باند چند نفره زنده</li>
-                    <li>PA حرفه‌ای خیابانی</li>
-                    <li>اجرای استادیومی کوچک</li>
-                    <li>رویداد و فستیوال</li>
+                    <li>Live Multi-Person Band</li>
+                    <li>Professional Street PA</li>
+                    <li>Small Stadium Performance</li>
+                    <li>Event and Festival</li>
                   </ul>
                 </div>
               </div>
               <div class="prod-box" style="margin-bottom: 1rem">
-                <h4>مزایا</h4>
+                <h4>Benefits</h4>
                 <ul
                   style="display: grid; grid-template-columns: 1fr 1fr; gap: 0"
                 >
-                  <li>اکولایزر حرفه ای 8 باند</li>
-                  <li>دارای باطری داخلی قابل شارژ</li>
-                  <li>سیستم مانیتورینگ داخلی</li>
-                  <li>ابعاد کوچک و سبک</li>
-                  <li>امکان افزایش ورودیها</li>
+                  <li>Professional 8-Band EQ</li>
+                  <li>Rechargeable Built-in Battery</li>
+                  <li>Built-in Monitoring System</li>
+                  <li>Small and Lightweight Dimensions</li>
+                  <li>Input Expansion Capability</li>
                 </ul>
               </div>
               <div class="prod-reg">
-                <span><span class="flag">🇺🇸</span> آمریکا</span>
-                <span><span class="flag">🇪🇺</span> اروپا</span>
-                <span><span class="flag">🇹🇷</span> ترکیه</span>
+                <span><span class="flag">🇺🇸</span> America</span>
+                <span><span class="flag">🇪🇺</span> Europe</span>
+                <span><span class="flag">🇹🇷</span> Turkey</span>
                 <span style="color: #6b7680; font-size: 0.75rem"
-                  >ثبت بین‌المللی شده</span
+                  >Internationally Registered</span
                 >
               </div>
             </div>
@@ -1049,53 +922,50 @@
             </div>
             <div class="prod-content">
               <div class="section-label">
-                <span class="blink-1s"> مانیتورینگ صوتی</span>
+                <span class="blink-1s"> Audio Monitoring</span>
               </div>
               <h2 class="prod-name">Buskit Monitoring</h2>
               <!-- <p class="prod-tagline">
-                مرکز کنترل اکوسیستم — چهار مانیتور، یک خروجی
+                مرکز کنترل Ecosystem — چهار مانیتور، یک خروجی
               </p> -->
               <div class="prod-why">
-                این دستگاه یک تقویت کننده جریان صوتی است که به خروجی هر سیستم
-                صوتی امکان اتصال داشته و در خروجی 4 لاین اتصال به هدفون میدهد
-                توضیح اینکه به کمک ماژول مانیتورینگ اکسپنشن امکان افزایش این
-                تعداد به دو برابر و یا بیشتر نیز میباشد
+                This device is an audio current amplifier that can connect to the output of any sound system and provides 4-line headphone connectivity at the output. With the Monitoring Expansion Module, this number can be doubled or more.
               </div>
               <div class="prod-grid">
                 <div class="prod-box">
-                  <h4>ویژگی‌ها</h4>
+                  <h4>Features</h4>
                   <ul>
-                    <li>۴ خروجی مانیتور (MON 1-4)</li>
-                    <li>کنترل Output Level با پتانسیومتر</li>
-                    <li>ورودی و خروجی ۶.۳ میلی‌متری</li>
-                    <li>نشانگرهای BAT LOW/CHARGE/POWER</li>
-                    <li>شارژ USB-C 5V/2A</li>
+                    <li>4 Monitor Outputs (MON 1-4)</li>
+                    <li>Output Level Control with Potentiometer</li>
+                    <li>6.3mm Input and Output</li>
+                    <li>BAT LOW/CHARGE/POWER Indicators</li>
+                    <li>USB-C 5V/2A Charging</li>
                   </ul>
                 </div>
                 <div class="prod-box">
-                  <h4>کاربرد</h4>
+                  <h4>Applications</h4>
                   <ul>
-                    <li>قابلیت اتصال هر خروجی صوتی به هدفون</li>
-                    <li>مانیتورینگ چهار نفره(یا بیشتر )</li>
+                    <li>Ability to Connect Any Audio Output to Headphones</li>
+                    <li>Four-Person (or More) Monitoring</li>
                   </ul>
                 </div>
               </div>
               <div class="prod-box" style="margin-bottom: 1rem">
-                <h4>مزایا</h4>
+                <h4>Benefits</h4>
                 <ul
                   style="display: grid; grid-template-columns: 1fr 1fr; gap: 0"
                 >
-                  <li>ابعاد کوچک و سبک</li>
-                  <li>ایجاد امکان اتصال هر سیستم صوتی به هدفون</li>
-                  <li>دارای باطری داخلی قابل شارژ</li>
+                  <li>Small and Lightweight Dimensions</li>
+                  <li>Enabling Any Sound System to Connect to Headphones</li>
+                  <li>Rechargeable Built-in Battery</li>
                 </ul>
               </div>
               <div class="prod-reg">
-                <span><span class="flag">🇺🇸</span> آمریکا</span>
-                <span><span class="flag">🇪🇺</span> اروپا</span>
-                <span><span class="flag">🇹🇷</span> ترکیه</span>
+                <span><span class="flag">🇺🇸</span> America</span>
+                <span><span class="flag">🇪🇺</span> Europe</span>
+                <span><span class="flag">🇹🇷</span> Turkey</span>
                 <span style="color: #6b7680; font-size: 0.75rem"
-                  >ثبت بین‌المللی شده</span
+                  >Internationally Registered</span
                 >
               </div>
             </div>
@@ -1113,54 +983,51 @@
             </div>
             <div class="prod-content">
               <div class="section-label">
-                <span class="blink-1s"> پری امپ</span>
+                <span class="blink-1s"> Preamp</span>
               </div>
 
               <h2 class="prod-name">Buskit Preamp</h2>
-              <!-- <p class="prod-tagline">تقویت و شکل‌دهی صدا — قبل از آمپ</p> -->
+              <!-- <p class="prod-tagline">Amplify and Shape Sound — Before the Amp</p> -->
               <div class="prod-why">
-                این دستگاه یک پری امپ با اکولایزر 5 بانده میباشد. نویز بسیار
-                پایین و گین آن بسیار بالاست . ضمنا مجهز به باطری داخلی قابل شارژ
-                نیز مباشد
+                This device is a preamp with a 5-band EQ. Its noise is very low and its gain is very high. It is also equipped with a rechargeable built-in battery.
               </div>
               <div class="prod-grid">
                 <div class="prod-box">
-                  <h4>ویژگی‌ها</h4>
+                  <h4>Features</h4>
                   <ul>
-                    <li>EQ پنج باند: ۱۲۰–۶۰۰۰ Hz</li>
-                    <li>مجهز به درایو و گین کنترل</li>
-                    <li>خروجی AMP OUT</li>
-                    <li>ورودی و خروجی AUX</li>
-                    <li>امکان پخش بکینگ ترک</li>
-                    <li>شارژ USB-C</li>
+                    <li>5-Band EQ: 120–6000 Hz</li>
+                    <li>Equipped with Drive and Gain Control</li>
+                    <li>AMP OUT Output</li>
+                    <li>AUX Input and Output</li>
+                    <li>Backing Track Playback Capability</li>
+                    <li>USB-C Charging</li>
                   </ul>
                 </div>
                 <div class="prod-box">
-                  <h4>کاربرد</h4>
+                  <h4>Applications</h4>
                   <ul>
-                    <li>قابل اتصال به کلیه سازها</li>
+                    <li>Compatible with All Instruments</li>
                   </ul>
                 </div>
               </div>
               <div class="prod-box" style="margin-bottom: 1rem">
-                <h4>مزایا</h4>
+                <h4>Benefits</h4>
                 <ul
                   style="display: grid; grid-template-columns: 1fr 1fr; gap: 0"
                 >
-                  <li>EQ ۵ باند دقیق</li>
+                  <li>Precise 5-Band EQ</li>
                   <li>
-                    دارای ورودی آگزیلاری و امکان اتصال به ورودی آگزیلاری سیستم
-                    های صوتی
+                    Has AUX Input and Can Connect to AUX Input of Sound Systems
                   </li>
-                  <li>ابعاد کوچک و سبک</li>
+                  <li>Small and Lightweight Dimensions</li>
                 </ul>
               </div>
               <div class="prod-reg">
-                <span><span class="flag">🇺🇸</span> آمریکا</span>
-                <span><span class="flag">🇪🇺</span> اروپا</span>
-                <span><span class="flag">🇹🇷</span> ترکیه</span>
+                <span><span class="flag">🇺🇸</span> America</span>
+                <span><span class="flag">🇪🇺</span> Europe</span>
+                <span><span class="flag">🇹🇷</span> Turkey</span>
                 <span style="color: #6b7680; font-size: 0.75rem"
-                  >ثبت بین‌المللی شده</span
+                  >Internationally Registered</span
                 >
               </div>
             </div>
@@ -1177,52 +1044,50 @@
             </div>
             <div class="prod-content">
               <div class="section-label">
-                <span class="blink-1s"> مینی پری امپ</span>
+                <span class="blink-1s"> Mini Preamp</span>
               </div>
 
               <h2 class="prod-name">Buskit Mini Preamp</h2>
-              <!-- <p class="prod-tagline">تقویت و شکل‌دهی صدا — قبل از آمپ</p> -->
+              <!-- <p class="prod-tagline">Amplify and Shape Sound — Before the Amp</p> -->
               <div class="prod-why">
-                این دستگاه یک پری امپ مجهز به تون کنترل دو لاینه باس و تریبل
-                است. نویز بسیار پایین و گین آن بسیار بالاست .
+                This device is a preamp equipped with a two-line bass and treble tone control. Its noise is very low and its gain is very high.
               </div>
               <div class="prod-grid">
                 <div class="prod-box">
-                  <h4>ویژگی‌ها</h4>
+                  <h4>Features</h4>
                   <ul>
-                    <li>تون کنترل باس و تریبل</li>
-                    <li>مجهز به درایو و گین کنترل</li>
-                    <li>خروجی AMP OUT</li>
-                    <li>ورودی و خروجی AUX</li>
-                    <li>امکان پخش بکینگ ترک</li>
-                    <li>باطری 9 ولت</li>
+                    <li>Bass and Treble Tone Control</li>
+                    <li>Equipped with Drive and Gain Control</li>
+                    <li>AMP OUT Output</li>
+                    <li>AUX Input and Output</li>
+                    <li>Backing Track Playback Capability</li>
+                    <li>9V Battery</li>
                   </ul>
                 </div>
                 <div class="prod-box">
-                  <h4>کاربرد</h4>
+                  <h4>Applications</h4>
                   <ul>
-                    <li>قابل اتصال به کلیه سازها</li>
+                    <li>Compatible with All Instruments</li>
                   </ul>
                 </div>
               </div>
               <div class="prod-box" style="margin-bottom: 1rem">
-                <h4>مزایا</h4>
+                <h4>Benefits</h4>
                 <ul
                   style="display: grid; grid-template-columns: 1fr 1fr; gap: 0"
                 >
                   <li>
-                    دارای ورودی آگزیلاری و امکان اتصال به ورودی آگزیلاری سیستم
-                    های صوتی
+                    Has AUX Input and Can Connect to AUX Input of Sound Systems
                   </li>
-                  <li>ابعاد کوچک و سبک</li>
+                  <li>Small and Lightweight Dimensions</li>
                 </ul>
               </div>
               <div class="prod-reg">
-                <span><span class="flag">🇺🇸</span> آمریکا</span>
-                <span><span class="flag">🇪🇺</span> اروپا</span>
-                <span><span class="flag">🇹🇷</span> ترکیه</span>
+                <span><span class="flag">🇺🇸</span> America</span>
+                <span><span class="flag">🇪🇺</span> Europe</span>
+                <span><span class="flag">🇹🇷</span> Turkey</span>
                 <span style="color: #6b7680; font-size: 0.75rem"
-                  >ثبت بین‌المللی شده</span
+                  >Internationally Registered</span
                 >
               </div>
             </div>
@@ -1239,47 +1104,44 @@
             </div>
             <div class="prod-content">
               <div class="section-label">
-                <span class="blink-1s"> باطری ظرفیت بالا</span>
+                <span class="blink-1s"> High-Capacity Battery</span>
               </div>
               <h2 class="prod-name">Buskit-Bat</h2>
-              <!-- <p class="prod-tagline">منبع تغذیه سه‌گانه برای هر اجرا</p> -->
+              <!-- <p class="prod-tagline">Triple Power Supply for Every Performance</p> -->
               <div class="prod-why">
-                این دستگاه باطری پرتابل کم وزن و کم حجم با ظرفیت بالاست که امکان
-                تامین ولتاژهای 12 و 9 و پنج ولت را دارد با قابلیت تعویض پلاریته
-                ولتاژاز این دستگاه برای راه اندازی کلیه تجهیزات صوتی مرتبط با
-                اجرای موسیقی اعم از آمپلی فایر و یا پدالها و غیره
+                This device is a lightweight, compact, high-capacity portable battery that can supply 12V, 9V and 5V with voltage polarity reversal capability. It can be used to power all music performance-related audio equipment including amplifiers, pedals, and more.
               </div>
 
-              <!-- ولتاژ کارت‌ها -->
+              <!-- Voltage Cards -->
               <div class="bat-voltage-cards">
                 <div class="bat-vcard" style="--vc: #f07a3a">
                   <div class="bat-vcard-volt">5V</div>
-                  <div class="bat-vcard-label">USB · شارژ دستگاه</div>
+                  <div class="bat-vcard-label">USB · Device Charging</div>
                 </div>
                 <div class="bat-vcard" style="--vc: #3b6cb7">
                   <div class="bat-vcard-volt">9V</div>
-                  <div class="bat-vcard-label">پدال افکت · میکسر</div>
+                  <div class="bat-vcard-label">Effect Pedal · Mixer</div>
                 </div>
                 <div class="bat-vcard" style="--vc: #1a6b2a">
                   <div class="bat-vcard-volt">12V</div>
-                  <div class="bat-vcard-label">پری‌آمپ · آمپلی‌فایر</div>
+                  <div class="bat-vcard-label">Preamp · Amplifier</div>
                 </div>
               </div>
 
-              <!-- پلاریته نمایشگر -->
+              <!-- Polarity Indicator -->
               <div class="bat-polarity-demo">
-                <div class="bat-polarity-title">⚡ تغییر پلاریته خروجی</div>
+                <div class="bat-polarity-title">⚡ Output Polarity Reversal</div>
                 <div class="bat-polarity-row">
                   <div class="bat-polarity-box">
                     <span class="bat-pol-plus">+</span>
-                    <span class="bat-pol-label">مرکز مثبت</span>
+                    <span class="bat-pol-label">Center Positive</span>
                     <span class="bat-pol-minus">−</span>
                     <span class="bat-pol-desc">Center Positive</span>
                   </div>
                   <div class="bat-polarity-arrow">⇄</div>
                   <div class="bat-polarity-box bat-polarity-box--alt">
                     <span class="bat-pol-minus">−</span>
-                    <span class="bat-pol-label">مرکز منفی</span>
+                    <span class="bat-pol-label">Center Negative</span>
                     <span class="bat-pol-plus">+</span>
                     <span class="bat-pol-desc">Center Negative</span>
                   </div>
@@ -1288,41 +1150,41 @@
 
               <div class="prod-grid">
                 <div class="prod-box">
-                  <h4>ویژگی‌ها</h4>
+                  <h4>Features</h4>
                   <ul>
-                    <li>خروجی ۵ ولت — USB-A</li>
-                    <li>خروجی ۹ ولت — DC جک</li>
-                    <li>خروجی ۱۲ ولت — DC جک</li>
-                    <li>تغییر پلاریته هر خروجی</li>
-                    <li>شارژ ورودی USB-C</li>
+                    <li>5V Output — USB-A</li>
+                    <li>9V Output — DC Jack</li>
+                    <li>12V Output — DC Jack</li>
+                    <li>Change Polarity of Each Output</li>
+                    <li>USB-C Input Charging</li>
                   </ul>
                 </div>
                 <div class="prod-box">
-                  <h4>کاربرد</h4>
+                  <h4>Applications</h4>
                   <ul>
-                    <li>تغذیه پدال‌های افکت</li>
-                    <li>تغذیه پری‌آمپ Buskit</li>
-                    <li>اجرای بدون برق شهری</li>
+                    <li>Powering Effect Pedals</li>
+                    <li>Powering Buskit Preamp</li>
+                    <li>Performance Without Mains Power</li>
                   </ul>
                 </div>
               </div>
               <div class="prod-box" style="margin-bottom: 1rem">
-                <h4>مزایا</h4>
+                <h4>Benefits</h4>
                 <ul
                   style="display: grid; grid-template-columns: 1fr 1fr; gap: 0"
                 >
-                  <li>سه ولتاژ مستقل</li>
-                  <li>پلاریته قابل تغییر</li>
-                  <li>کوچک و سبک</li>
-                  <li>سازگار با اکثر دستگاه‌ها</li>
+                  <li>Three Independent Voltages</li>
+                  <li>Changeable Polarity</li>
+                  <li>Small and Lightweight</li>
+                  <li>Compatible with Most Devices</li>
                 </ul>
               </div>
               <div class="prod-reg">
-                <span><span class="flag">🇺🇸</span> آمریکا</span>
-                <span><span class="flag">🇪🇺</span> اروپا</span>
-                <span><span class="flag">🇹🇷</span> ترکیه</span>
+                <span><span class="flag">🇺🇸</span> America</span>
+                <span><span class="flag">🇪🇺</span> Europe</span>
+                <span><span class="flag">🇹🇷</span> Turkey</span>
                 <span style="color: #6b7680; font-size: 0.75rem"
-                  >ثبت بین‌المللی شده</span
+                  >Internationally Registered</span
                 >
               </div>
             </div>
@@ -1341,44 +1203,43 @@
           <div class="prod-content">
             <div class="section-label">
               <span class="blink-1s">
-                ماژول افزاش تعداد خروجی های مانیتورینگ</span
+                Monitoring Output Count Expansion Module</span
               >
             </div>
 
             <h2 class="prod-name">Buskit MonEXP</h2>
-            <!-- <p class="prod-tagline">تقویت و شکل‌دهی صدا — قبل از آمپ</p> -->
+            <!-- <p class="prod-tagline">Amplify and Shape Sound — Before the Amp</p> -->
             <div class="prod-why">
-              این ماژول نیز یک اکسپنشن ماژول بوده و برای افزایش تعداد خروجی های
-              مانیتورینگ استفاده میشود
+              This module is also an expansion module used to increase the number of monitoring outputs.
             </div>
             <div class="prod-grid">
               <div class="prod-box">
-                <h4>ویژگی‌ها</h4>
+                <h4>Features</h4>
                 <ul>
-                  <li>دارای یک ورودی از دستگاه مانیتورینگ و چهار خروجی</li>
-                  <li>بدون نیاز به برق و باطری</li>
+                  <li>Has One Input from the Monitoring Device and Four Outputs</li>
+                  <li>No Power or Battery Required</li>
                 </ul>
               </div>
               <div class="prod-box">
-                <h4>کاربرد</h4>
+                <h4>Applications</h4>
                 <ul>
-                  <li>قابل اتصال به کلیه سازها</li>
+                  <li>Compatible with All Instruments</li>
                 </ul>
               </div>
             </div>
             <div class="prod-box" style="margin-bottom: 1rem">
-              <h4>مزایا</h4>
+              <h4>Benefits</h4>
               <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 0">
-                <li>افزایش تعداد خروجی های هدفون</li>
-                <li>ابعاد کوچک و سبک</li>
+                <li>Increasing the Number of Headphone Outputs</li>
+                <li>Small and Lightweight Dimensions</li>
               </ul>
             </div>
             <div class="prod-reg">
-              <span><span class="flag">🇺🇸</span> آمریکا</span>
-              <span><span class="flag">🇪🇺</span> اروپا</span>
-              <span><span class="flag">🇹🇷</span> ترکیه</span>
+              <span><span class="flag">🇺🇸</span> America</span>
+              <span><span class="flag">🇪🇺</span> Europe</span>
+              <span><span class="flag">🇹🇷</span> Turkey</span>
               <span style="color: #6b7680; font-size: 0.75rem"
-                >ثبت بین‌المللی شده</span
+                >Internationally Registered</span
               >
             </div>
           </div>
@@ -1396,14 +1257,11 @@
     >
       <div class="container">
         <div class="section-label">
-          <span class="blink-1s"> چرا باسکیت</span>
+          <span class="blink-1s"> Why Buskit</span>
         </div>
-        <h2 class="section-title">مشکلات واقعی، راهکارهای اجرایی</h2>
+        <h2 class="section-title">Real Problems, Practical Solutions</h2>
         <p class="section-desc" style="text-align: justify">
-          هر نوازنده ای برای اجرا چه خصوصی و چه عمومی ، چه بصورت سولو و چه گروهی
-          نیازمند ملزوماتی است که بسته به شرایط تسهیلاتی برای اجرا در اختیارش
-          بگذارد. مجموعه دستگاه های Buskit کلیه احتیاجات وی را بصورتی موثر و
-          کارآمد برآورده مینماید.
+          Every musician — whether for private or public, solo or group performances — needs equipment that provides the right facilities for their situation. The Buskit device collection meets all their needs effectively and efficiently.
         </p>
 
         <div class="why-grid">
@@ -1411,54 +1269,52 @@
           <div class="why-card why-card-problems">
             <div class="why-card-header">
               <div class="why-card-icon">⚠️</div>
-              <h3>مشکلات موجود</h3>
+              <h3>Existing Problems</h3>
             </div>
             <ul class="why-list">
               <li>
                 <span class="dot"></span>
                 <span
                   ><strong
-                    >وابستگی به برق شهری یا باطریهای سنگین و حجیم</strong
+                    >Dependence on Mains Power or Heavy, Bulky Batteries</strong
                   ></span
                 >
               </li>
               <li>
                 <span class="dot"></span>
                 <span
-                  ><strong>محدود بودن تعداد ورودیهای آمپلی فایرها</strong></span
+                  ><strong>Limited Number of Amplifier Inputs</strong></span
                 >
               </li>
               <li>
                 <span class="dot"></span>
                 <span
                   ><strong
-                    >برای اجرای زنده بیش از دو نفر نیاز به بیش از چند آمپلی
-                    فایر</strong
+                    >Live Performance for More Than Two People Requires Multiple Amplifiers</strong
                   >
                 </span>
               </li>
               <li>
                 <span class="dot"></span>
-                <span><strong> نیاز به سیستم مانیتورینگ صدا</strong> </span>
+                <span><strong> Need for an Audio Monitoring System</strong> </span>
               </li>
               <li>
                 <span class="dot"></span>
                 <span
                   ><strong
-                    >نیاز به سوراخکاری سازها جهت نصب میکروفونهای زیر
-                    خرکی</strong
+                    >Need to Drill Instruments to Install Under-Bridge Microphones</strong
                   ></span
                 >
               </li>
               <li>
                 <span class="dot"></span>
-                <span><strong>نبود اکوسیستم یکپارچه</strong></span>
+                <span><strong>Lack of an Integrated Ecosystem</strong></span>
               </li>
               <li>
                 <span class="dot"></span>
                 <span
                   ><strong
-                    >وجود عدم تعادل صوتی مناسب در تمرینهای گروهی
+                    >Inadequate Audio Balance in Group Rehearsals
                   </strong></span
                 >
               </li>
@@ -1466,7 +1322,7 @@
                 <span class="dot"></span>
                 <span
                   ><strong
-                    >نیاز به اکولایزر جهت تنظیم زیری و بمی صدای ساز یا خواننده
+                    >Need for EQ to Adjust Treble and Bass of Instrument or Vocalist
                   </strong></span
                 >
               </li>
@@ -1474,7 +1330,7 @@
                 <span class="dot"></span>
                 <span
                   ><strong
-                    >امکان اتصال هر گونه تجهیز صوتی به اجرا
+                    >Ability to Connect Any Audio Equipment to the Performance
                   </strong></span
                 >
               </li>
@@ -1482,7 +1338,7 @@
                 <span class="dot"></span>
                 <span
                   ><strong
-                    >عدم امکان استفاده از آمپلی فایرهای آماتور
+                    >Inability to Use Amateur Amplifiers
                   </strong></span
                 >
               </li>
@@ -1493,152 +1349,121 @@
           <div class="why-card why-card-solutions">
             <div class="why-card-header">
               <div class="why-card-icon">✅</div>
-              <h3>راهکار اکوسیستم Buskit</h3>
+              <h3>Buskit Ecosystem Solution</h3>
             </div>
             <ul class="why-list">
               <li>
                 <span class="dot"></span>
                 <span
                   ><strong>
-                    ارائه دو مدل میکسر صوتی با قابلیت های منحصر به فرد</strong
+                    Offering Two Audio Mixer Models with Unique Capabilities</strong
                   >
-                  برای هر سلیقه و هر نیاز، دستگاهی در نظرگرفته شده تا بدون
-                  محدودیت تعدادی، کلیه منابع صوتی ورودی را با یکدیگر میکس و
-                  صدایی شفاف در خروجی ایجاد نماید</span
+                  For every taste and every need, a device has been designed to mix all audio input sources together without quantity limitations and produce a clear sound at the output.</span
                 >
               </li>
               <li>
                 <span class="dot"></span>
                 <span
-                  ><strong> مجهز بودن به باطری قابل شارژ داخلی</strong> — اکثر
-                  محصولات Buskit با باتری قابل شارژ USB-C طراحی شده‌اند؛ اجرا در
-                  هر نقطه‌ای از شهر بدون نیاز به برق شهری.</span
+                  ><strong> Equipped with Rechargeable Built-in Battery</strong> — Most Buskit products are designed with USB-C rechargeable batteries; perform anywhere in the city without needing mains power.</span
                 >
               </li>
               <li>
                 <span class="dot"></span>
                 <span
-                  ><strong> ابعاد کوچک، جیبی و سبک</strong> کل سیستم چند نفره را
-                  می‌توان با دست حمل کرد و به سختی وزن آن به یک کیلو گرم
-                  میرسد.</span
+                  ><strong> Small, Pocket-Sized and Lightweight</strong> The entire multi-person system can be carried by hand and its weight barely reaches one kilogram.</span
                 >
               </li>
               <li>
                 <span class="dot"></span>
                 <span
-                  ><strong>معماری ماژولار و قابل توسعه</strong> بسته به نیاز
-                  میتوان از ماژولهایی مناسب با سطح کاراستفاده نمود و در صورت
-                  گسترش ، با تهیه ماژولهای اکسپنشن نسبت به توسعه دستگاه ها اقدام
-                  نمود</span
+                  ><strong>Modular and Expandable Architecture</strong> Depending on needs, modules appropriate to the work level can be used, and when expanding, expansion modules can be purchased to develop the devices.</span
                 >
               </li>
               <li>
                 <span class="dot"></span>
                 <span
-                  ><strong> مجهز به سیستم مانیتورینگ صدا </strong> قابلیت
-                  مانیتورینگ صدا در بالابردن کیفیت اجرا نقش اساسی دارد</span
+                  ><strong> Equipped with Audio Monitoring System </strong> Audio monitoring capability plays a fundamental role in improving performance quality.</span
                 >
               </li>
               <li>
                 <span class="dot"></span>
                 <span
-                  ><strong> مجهز به اکولایزر صوتی تا 8 باند</strong> طیف
-                  اکولایزرهای از دو باند ، 5 باند و 8 باند در مجموعه دستگاه های
-                  باسکیت قابل تهیه میباشد که برای شکل دهی به صدی ساز یا خواننده
-                  نقش اساسی دارد</span
+                  ><strong> Equipped with Up to 8-Band Audio EQ</strong> A range of two-band, 5-band and 8-band equalizers are available in the Buskit device collection, playing a fundamental role in shaping the sound of an instrument or vocalist.</span
                 >
               </li>
               <li>
                 <span class="dot"></span>
                 <span
                   ><strong>
-                    عدم نیاز به سوراخکاری سازها و نصب میکروفونهای زیر
-                    خرکی</strong
+                    No Need to Drill Instruments or Install Under-Bridge Microphones</strong
                   ></span
                 >
               </li>
               <li>
                 <span class="dot"></span>
                 <span
-                  ><strong>یک اکوسیستم، یک استاندارد</strong> — همه محصولات
-                  Buskit با هم سازگار هستند؛ از کوچک‌ترین Mic Interface تا
-                  Mixer، همه یک زبان صحبت می‌کنند.</span
+                  ><strong>One Ecosystem, One Standard</strong> — All Buskit products are compatible with each other; from the smallest Mic Interface to the Mixer, they all speak the same language.</span
                 >
               </li>
               <li>
                 <span class="dot"></span>
                 <span
-                  ><strong>استفاده از آمپلی فایر های آماتور</strong> — با توجه
-                  به قابلیتهای مجموعهBuskit امکان اتصال سازها به ورودیهای
-                  آگزیلاری آمپلی فایر ها نیز مهیاست لذا میتوان یک گروه بزرگ را
-                  تنها با استفاده از یک آمپلی فایر معمولی آماتور راه اندازی
-                  کرد</span
+                  ><strong>Using Amateur Amplifiers</strong> — Given the capabilities of the Buskit collection, connecting instruments to the AUX inputs of amplifiers is also possible, so a large group can be set up using just one ordinary amateur amplifier.</span
                 >
               </li>
               <li>
                 <span class="dot"></span>
                 <span>
                   <strong>
-                    مجهز به سیستم اتصال به ورودی آگزیلاری هر گونه سیستم صوتی
-                    -</strong
-                  >این قابلیت موجب میشود تا بتوان از هر نوع دستگاه صوتی برای
-                  اتصال ساز یا خروجی صدای کل گروه استفاده نموید
+                    Equipped with System to Connect to AUX Input of Any Sound System —</strong
+                  >This capability allows any type of audio device to be used to connect an instrument or the full group's sound output.
                 </span>
               </li>
               <li>
                 <span class="dot"></span>
                 <span>
                   <strong>
-                    مجهز به سیستم ضبط مستقیم صدای میکس شده خروجی روی دستگاه تلفن
-                    همراه
+                    Equipped with System for Direct Recording of Mixed Output Audio on Mobile Phone
                   </strong>
                 </span>
               </li>
               <li>
                 <span class="dot"></span>
                 <span>
-                  <strong> مجهز به پری امپ با گین بالا و نویز پایین</strong>
+                  <strong> Equipped with High-Gain, Low-Noise Preamp</strong>
                 </span>
               </li>
             </ul>
 
             <div class="why-quote">
-              Buskit تنها برند در جهان است که اکوسیستم صوتی کاملاً ماژولار و
-              باتری‌دار را مخصوص نوازندگان خیابانی طراحی و به ثبت رسانده است.
+              Buskit is the only brand in the world that has designed and registered a fully modular and battery-powered audio ecosystem specifically for street musicians.
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-----------------------------  در یک نگاه ----------------->
+    <!-----------------------------  At a Glance ----------------->
     <section class="bk-section" id="look">
       <div
         class="dynamic-glow-bg bk-container"
-        style="
-          width: 100%;
-          max-width: 1100px;
-          height: auto;
-          padding: 60px 40px;
-          box-sizing: border-box;
-        "
+        style="height: auto"
       >
         <p class="section-label">
-          <span class="blink-1s"> دیاگرام محیطی باسکیت</span>
+          <span class="blink-1s"> Buskit Environmental Diagram</span>
         </p>
-        <h2 class="bk-title-md">ورودی/خروجیهای متعدد و ماژولار</h2>
+        <h2 class="bk-title-md">Multiple Modular Inputs/Outputs</h2>
         <p class="bk-subtitle" style="margin-bottom: 0">
-          مجموعه Buskit منعطف، ماژولار و قابلیت اتصال به اکثر ورودی یا خروجی های
-          معمول در دنیای موسیقی را دارد
+          The Buskit collection is flexible, modular and capable of connecting to most standard inputs and outputs in the music world.
         </p>
         <img class="diagram" src="diagram.svg" alt="diagram" />
       </div>
     </section>
 
-    <!-- ECOSYSTEM SECTION — بدون کادر bk-section -->
+    <!-- ECOSYSTEM SECTION — no bk-section wrapper -->
     <section
       style="
         background: #0e0f14;
-        direction: rtl;
+        direction: ltr;
         font-family: &quot;Vazirmatn&quot;, sans-serif;
         color: #e8e6df;
       "
@@ -1650,27 +1475,25 @@
       >
         <!-- Header -->
         <p class="section-label">
-          <span class="blink-1s"> اکوسیستم صوتی</span>
+          <span class="blink-1s"> Audio Ecosystem</span>
         </p>
-        <h2 class="section-title">هر المان درست در <span>جای </span>خود</h2>
+        <h2 class="section-title">Every Element Exactly in <span>Its </span>Place</h2>
         <p class="bk-subtitle">
-          دستگاه‌های BUSKIT برای هر نوع ساز و هر شرایط اجرا طراحی شده‌اند — از
-          استودیو تا خیابان. ورودی‌های متنوع، پردازش حرفه‌ای، و خروجی‌های
-          انعطاف‌پذیر در یک اکوسیستم یکپارچه.
+          BUSKIT devices are designed for any instrument and any performance condition — from studio to street. Diverse inputs, professional processing, and flexible outputs in one integrated ecosystem.
         </p>
 
         <!-- Flow: Inputs (2-col grid) → then Core + Outputs side by side -->
         <div class="bk-flow-new">
           <!-- INPUTS ROW — 2-column grid -->
           <div class="bk-inputs-section">
-            <p class="bk-col-label" style="padding-right: 40px">ورودی‌ها</p>
+            <p class="bk-col-label" style="padding-right: 40px">Inputs</p>
             <div class="bk-input-grid">
               <div class="bk-input-card">
                 <div class="bk-input-icon ic-blue">🎹</div>
                 <div class="bk-input-text">
-                  <p class="bk-input-name">سازهای الکترونیکی</p>
+                  <p class="bk-input-name">Electronic Instruments</p>
                   <p class="bk-input-desc">
-                    پیانو الکتریک، خروجی آمپ، پری‌امپ سازهای دیگر
+                    Electric Piano, Amp Output, Preamps of Other Instruments
                   </p>
                 </div>
                 <span class="bk-badge badge-line">Line</span>
@@ -1679,8 +1502,8 @@
               <div class="bk-input-card">
                 <div class="bk-input-icon ic-blue">🔊</div>
                 <div class="bk-input-text">
-                  <p class="bk-input-name">سیستم‌های صوتی</p>
-                  <p class="bk-input-desc">خروجی مستقیم میکسر یا سیستم PA</p>
+                  <p class="bk-input-name">Sound Systems</p>
+                  <p class="bk-input-desc">Direct Output from Mixer or PA System</p>
                 </div>
                 <span class="bk-badge badge-line">Line</span>
               </div>
@@ -1688,9 +1511,9 @@
               <div class="bk-input-card">
                 <div class="bk-input-icon ic-teal">🎙</div>
                 <div class="bk-input-text">
-                  <p class="bk-input-name">میکروفون داینامیک</p>
+                  <p class="bk-input-name">Dynamic Microphone</p>
                   <p class="bk-input-desc">
-                    اتصال مستقیم بدون نیاز به ماژول جانبی
+                    Direct Connection Without Auxiliary Module
                   </p>
                 </div>
                 <span class="bk-badge badge-mic">Mic</span>
@@ -1699,8 +1522,8 @@
               <div class="bk-input-card">
                 <div class="bk-input-icon ic-teal">🎚</div>
                 <div class="bk-input-text">
-                  <p class="bk-input-name">میکروفون خازنی</p>
-                  <p class="bk-input-desc">از طریق ماژول اینترفیس میکروفون</p>
+                  <p class="bk-input-name">Condenser Microphone</p>
+                  <p class="bk-input-desc">Via Microphone Interface Module</p>
                 </div>
                 <span class="bk-badge badge-mic">Condenser</span>
               </div>
@@ -1723,9 +1546,9 @@
                   🎸
                 </div>
                 <div class="bk-input-text">
-                  <p class="bk-input-name">پیکاپ پیزو / زیرخرک</p>
+                  <p class="bk-input-name">Piezo Pickup / Under-Bridge</p>
                   <p class="bk-input-desc">
-                    پری‌امپ گین بالا، نویز پایین — اکولایزر ۲ تا ۷ باند
+                    High-Gain, Low-Noise Preamp — 2 to 7-Band EQ
                   </p>
                 </div>
                 <span class="bk-badge badge-piezo">Piezo</span>
@@ -1734,9 +1557,9 @@
               <div class="bk-input-card">
                 <div class="bk-input-icon ic-gold">➕</div>
                 <div class="bk-input-text">
-                  <p class="bk-input-name">ماژول LineEXP</p>
+                  <p class="bk-input-name">LineEXP Module</p>
                   <p class="bk-input-desc">
-                    افزایش نامحدود تعداد ورودی‌ها — بدون محدودیت فنی
+                    Unlimited Input Expansion — No Technical Limit
                   </p>
                 </div>
                 <span class="bk-badge badge-exp">Expandable</span>
@@ -1748,36 +1571,36 @@
           <div class="bk-core-outputs-row">
             <!-- CORE -->
             <div class="bk-core-col">
-              <p class="bk-col-label">پردازش مرکزی</p>
+              <p class="bk-col-label">Central Processing</p>
               <div class="bk-core">
                 <div class="bk-core-logo">BUS<span>KIT</span></div>
                 <div class="bk-core-tagline">Professional Audio Ecosystem</div>
                 <ul class="bk-core-features">
-                  <li>اکولایزر ۲ تا ۷ باند (بسته به مدل)</li>
-                  <li>میکس استریو چند کاناله</li>
-                  <li>پری‌امپ پیزو با نویز پایین</li>
-                  <li>مانیتورینگ هدفون خروجی</li>
-                  <li>باتری داخلی USB شارژی</li>
-                  <li>اتصال به ماژول‌های جانبی</li>
+                  <li>2 to 7-Band EQ (Depending on Model)</li>
+                  <li>Multi-Channel Stereo Mix</li>
+                  <li>Low-Noise Piezo Preamp</li>
+                  <li>Output Headphone Monitoring</li>
+                  <li>USB Rechargeable Built-in Battery</li>
+                  <li>Connection to Auxiliary Modules</li>
                 </ul>
                 <div class="bk-core-divider"></div>
                 <div class="bk-bat-badge">
                   <strong>⚡ BUSKIT-bat</strong>
-                  انقلابی در تامین انرژی تجهیزات صوتی
+                  A Revolution in Powering Audio Equipment
                 </div>
               </div>
             </div>
 
             <!-- OUTPUTS -->
             <div class="bk-outputs-col">
-              <p class="bk-col-label">خروجی‌ها</p>
+              <p class="bk-col-label">Outputs</p>
               <div class="bk-output-list">
                 <div class="bk-output-card">
                   <div class="bk-input-icon ic-coral">🔌</div>
                   <div class="bk-input-text">
-                    <p class="bk-input-name">آمپلی‌فایر (سیمی)</p>
+                    <p class="bk-input-name">Amplifier (Wired)</p>
                     <p class="bk-input-desc">
-                      خروجی استاندارد به هر آمپلی‌فایر
+                      Standard Output to Any Amplifier
                     </p>
                   </div>
                 </div>
@@ -1799,36 +1622,36 @@
                     📡
                   </div>
                   <div class="bk-input-text">
-                    <p class="bk-input-name">ماژول بی‌سیم</p>
+                    <p class="bk-input-name">Wireless Module</p>
                     <p class="bk-input-desc">
-                      مهیا کردن شرایط برقراری ارتباط بی‌سیم ساز به آمپلی‌فایر
+                      Enabling Wireless Connection from Instrument to Amplifier
                     </p>
                   </div>
                 </div>
                 <div class="bk-output-card">
                   <div class="bk-input-icon ic-coral">🔗</div>
                   <div class="bk-input-text">
-                    <p class="bk-input-name">خروجی AUX</p>
+                    <p class="bk-input-name">AUX Output</p>
                     <p class="bk-input-desc">
-                      اتصال به AUX in تجهیزات صوتی موجود
+                      Connection to AUX In of Existing Audio Equipment
                     </p>
                   </div>
                 </div>
                 <div class="bk-output-card">
                   <div class="bk-input-icon ic-green">🎧</div>
                   <div class="bk-input-text">
-                    <p class="bk-input-name">مانیتورینگ</p>
+                    <p class="bk-input-name">Monitoring</p>
                     <p class="bk-input-desc">
-                      شنیدن مستقیم میکس خروجی برای نوازنده
+                      Direct Listening of Output Mix for the Musician
                     </p>
                   </div>
                 </div>
                 <div class="bk-output-card">
                   <div class="bk-input-icon ic-green">🎧</div>
                   <div class="bk-input-text">
-                    <p class="bk-input-name">ضبط صدای میکس شده</p>
+                    <p class="bk-input-name">Recording Mixed Audio</p>
                     <p class="bk-input-desc">
-                      امکان ضبط صدای میکس خروجی مستقیما روی موبایل
+                      Ability to Record Output Mix Directly on Mobile Phone
                     </p>
                   </div>
                 </div>
@@ -1838,69 +1661,66 @@
           </div>
         </div>
 
-        <!-- Specs Strip — مستقیم زیر bk-container، خارج از bk-flow-new -->
+        <!-- Specs Strip — directly below bk-container, outside bk-flow-new -->
         <div style="margin-top: 40px; margin-bottom: 40px; padding: 0 40px">
           <p class="bk-col-label" style="margin-bottom: 20px">
-            ویژگی‌های کلیدی
+            Key Features
           </p>
           <div class="bk-features-grid">
-            <!-- ستون راست: اکولایزر چندباند + اتصال بی‌سیم -->
+            <!-- ستون راست: Multi-Band EQ + Wireless Connectivity -->
             <div class="bk-features-col-right">
               <div class="bk-spec-card">
                 <div class="bk-spec-icon">🎛</div>
                 <div>
-                  <p class="bk-spec-name">اکولایزر چندباند</p>
+                  <p class="bk-spec-name">Multi-Band EQ</p>
                   <p class="bk-spec-desc">
-                    ۲ تا ۷ باند EQ بسته به مدل دستگاه، برای شکل‌دهی دقیق صدا
+                    2 to 7-Band EQ depending on device model, for precise sound shaping
                   </p>
                 </div>
               </div>
               <div class="bk-spec-card">
                 <div class="bk-spec-icon">📡</div>
                 <div>
-                  <p class="bk-spec-name">اتصال بی‌سیم</p>
+                  <p class="bk-spec-name">Wireless Connectivity</p>
                   <p class="bk-spec-desc">
-                    ماژول ارتباط بی‌سیم برای جدا شدن ساز از آمپلی‌فایر
+                    Wireless Communication Module to Separate Instrument from Amplifier
                   </p>
                 </div>
               </div>
             </div>
 
-            <!-- وسط: مانیتورینگ حرفه‌ای -->
+            <!-- وسط: Monitoring Professional -->
             <div class="bk-features-col-monitor">
               <div class="bk-monitor bk-monitor-tall">
                 <div class="bk-monitor-icon">🎧</div>
                 <div class="bk-monitor-text">
                   <h3 class="bk-monitor-title">
-                    مانیتورینگ <span>حرفه‌ای</span> در لحظه اجرا
+                    Monitoring <span>Professional</span> In the Moment of Performance
                   </h3>
                   <p class="bk-monitor-desc">
-                    نوازندگان می‌توانند صدای میکس‌شده خروجی را مستقیماً از طریق
-                    هدفون بشنوند — بدون تأخیر، بدون واسطه. این قابلیت نقش حیاتی
-                    در بالا بردن کیفیت اجرا دارد و به نوازنده امکان می‌دهد در
-                    لحظه صدای خود را کنترل کند.
+                    Musicians can hear the mixed output directly through headphones — without delay, without intermediary. This capability plays a vital role in improving performance quality and allows the musician to control their sound in the moment.
                   </p>
                 </div>
               </div>
             </div>
 
-            <!-- ستون چپ: باتری داخلی + توسعه‌پذیر -->
+            <!-- ستون چپ: Built-in Battery + Expandable -->
             <div class="bk-features-col-left">
               <div class="bk-spec-card">
                 <div class="bk-spec-icon">⚡</div>
                 <div>
-                  <p class="bk-spec-name">باتری داخلی</p>
+                  <p class="bk-spec-name">Built-in Battery</p>
                   <p class="bk-spec-desc">
-                    شارژ از طریق USB — اجرا بدون نیاز به برق شهری
+                    Charge via USB — Perform Without Mains Power
                   </p>
                 </div>
               </div>
               <div class="bk-spec-card">
                 <div class="bk-spec-icon">➕</div>
                 <div>
-                  <p class="bk-spec-name">توسعه‌پذیر</p>
+                  <p class="bk-spec-name">Expandable</p>
                   <p class="bk-spec-desc">
-                    افزایش ورودی از طریق ماژول LineEXP — بدون محدودیت فنی
+                    Input Expansion via LineEXP Module — No Technical Limit
                   </p>
                 </div>
               </div>
@@ -1911,12 +1731,12 @@
     </section>
 
     <!-- class="dynamic-glow-bg bk-container" -->
-    <!-----------------------------  شمایی از اتصالات- --------------->
-    <!-- شمایی از اتصالات -->
+    <!-----------------------------  Connection Diagrams- --------------->
+    <!-- Connection Diagrams -->
     <section class="con-container">
       <div class="bk-container">
         <p class="section-label" id="con-mixer" style="scroll-margin-top: 70px">
-          <span class="blink-1s">اتصالات نمونه باسکیت میکسر</span>
+          <span class="blink-1s">Buskit Mixer Sample Connections</span>
         </p>
         <img
           class="diagram"
@@ -1930,7 +1750,7 @@
           id="con-minimixer"
           style="scroll-margin-top: 70px"
         >
-          <span class="blink-1s">اتصالات نمونه باسکیت مینی میکسر</span>
+          <span class="blink-1s">Buskit Mini Mixer Sample Connections</span>
         </p>
         <img
           class="diagram"
@@ -1939,13 +1759,13 @@
           style="width: 950px; display: block; margin-bottom: 3rem"
         />
 
-        <!-- عکس سوم -->
+        <!-- Third Image -->
         <p
           class="section-label"
           id="con-microPA"
           style="scroll-margin-top: 70px"
         >
-          <span class="blink-1s"> اتصالات نمونه باسکیت میکرو پری امپ</span>
+          <span class="blink-1s"> Buskit Micro Preamp Sample Connections</span>
         </p>
         <img
           class="diagram"
@@ -1954,13 +1774,13 @@
           style="width: 250px; display: block; margin: 0 auto 3rem auto"
         />
 
-        <!-- عکس چهارم -->
+        <!-- Fourth Image -->
         <p
           class="section-label"
           id="con-miniPA"
           style="scroll-margin-top: 70px"
         >
-          <span class="blink-1s">اتصالات نمونه مینی پری امپ</span>
+          <span class="blink-1s">Mini Preamp Sample Connections</span>
         </p>
         <img
           class="diagram"
@@ -1969,9 +1789,9 @@
           style="width: 450px; display: block; margin: 0 auto 3rem auto"
         />
 
-        <!-- عکس پنجم -->
+        <!-- Fifth Image -->
         <p class="section-label" id="con-PA" style="scroll-margin-top: 70px">
-          <span class="blink-1s">اتصالات نمونه پری امپ</span>
+          <span class="blink-1s">Preamp Sample Connections</span>
         </p>
         <img
           class="diagram"
@@ -1979,9 +1799,9 @@
           alt="diagram"
           style="width: 450px; display: block; margin: 0 auto 3rem auto"
         />
-        <!-- عکس ششم -->
+        <!-- Sixth Image -->
         <p class="section-label" id="con-Mon" style="scroll-margin-top: 70px">
-          <span class="blink-1s">اتصالات نمونه باسکیت مانیتورینگ</span>
+          <span class="blink-1s">Buskit Monitoring Sample Connections</span>
         </p>
         <img
           class="diagram"
@@ -1997,27 +1817,26 @@
       <div class="container">
         <div class="reg-banner fade-in">
           <div class="section-label" style="margin-right: auto">
-            <span class="blink-1s"> ثبت جهانی</span>
+            <span class="blink-1s"> Global Registration</span>
           </div>
-          <h2 style="text-align: center">Buskit در سه قاره ثبت شده است</h2>
+          <h2 style="text-align: center">Buskit is Registered on Three Continents</h2>
           <p style="text-align: center">
-            تمامی محصولات Buskit در آمریکا، اروپا و ترکیه به صورت رسمی ثبت و
-            محافظت قانونی شده‌اند.
+            All Buskit products are officially registered and legally protected in America, Europe and Turkey.
           </p>
           <div class="reg-flags">
             <div class="reg-flag-item">
               <span class="flag-emoji">🇺🇸</span>
-              <strong>ایالات متحده آمریکا</strong>
+              <strong>United States of America</strong>
               <span>United States Patent & Trademark Office</span>
             </div>
             <div class="reg-flag-item">
               <span class="flag-emoji">🇪🇺</span>
-              <strong>اتحادیه اروپا</strong>
+              <strong>European Union</strong>
               <span>European Union Intellectual Property Office</span>
             </div>
             <div class="reg-flag-item">
               <span class="flag-emoji">🇹🇷</span>
-              <strong>ترکیه</strong>
+              <strong>Turkey</strong>
               <span>Türk Patent ve Marka Kurumu</span>
             </div>
           </div>
@@ -2029,11 +1848,11 @@
     <section id="store" class="store-section">
       <div class="container">
         <div class="section-label">
-          <span class="blink-1s"> فروشگاه</span>
+          <span class="blink-1s"> Store</span>
         </div>
-        <h2 class="section-title">محصولات Buskit</h2>
+        <h2 class="section-title">Buskit Products</h2>
         <p class="section-desc">
-          اکوسیستم کامل صوتی برای نوازندگان زنده — از ساده تا حرفه‌ای
+          Complete Audio Ecosystem for Live Musicians — From Simple to Professional
         </p>
 
         <div class="store-grid">
@@ -2049,7 +1868,7 @@
                 data-name="Buskit Go"
                 data-price="25"
                 data-img="Buskit-Go.png"
-                >افزودن به سبد</a
+                >Add to Cart</a
               >
             </div>
           </div>
@@ -2069,7 +1888,7 @@
                 data-name="Monitor Expansion"
                 data-price="10"
                 data-img="Buskit-MonEXP.png"
-                >افزودن به سبد</a
+                >Add to Cart</a
               >
             </div>
           </div>
@@ -2089,7 +1908,7 @@
                 data-name="Headphone Module"
                 data-price="15"
                 data-img="Buskit-HPmodule.png"
-                >افزودن به سبد</a
+                >Add to Cart</a
               >
             </div>
           </div>
@@ -2109,7 +1928,7 @@
                 data-name="mini PreAmp"
                 data-price="30"
                 data-img="Buskit-miniPA.png"
-                >افزودن به سبد</a
+                >Add to Cart</a
               >
             </div>
           </div>
@@ -2129,7 +1948,7 @@
                 data-name="Line Expansion"
                 data-price="10"
                 data-img="Buskit-LineEXP.png"
-                >افزودن به سبد</a
+                >Add to Cart</a
               >
             </div>
           </div>
@@ -2149,7 +1968,7 @@
                 data-name="Mic Interface"
                 data-price="10"
                 data-img="Buskit-MicInterface.png"
-                >افزودن به سبد</a
+                >Add to Cart</a
               >
             </div>
           </div>
@@ -2169,7 +1988,7 @@
                 data-name="Mini Mixer"
                 data-price="40"
                 data-img="Buskit-MiniMixer.png"
-                >افزودن به سبد</a
+                >Add to Cart</a
               >
             </div>
           </div>
@@ -2190,7 +2009,7 @@
                 data-name="Mixer"
                 data-price="50"
                 data-img="Buskit-Mixer.png"
-                >افزودن به سبد</a
+                >Add to Cart</a
               >
             </div>
           </div>
@@ -2206,7 +2025,7 @@
                 data-name="Preamp"
                 data-price="199"
                 data-img="Buskit-PreAmp.png"
-                >افزودن به سبد</a
+                >Add to Cart</a
               >
             </div>
           </div>
@@ -2226,7 +2045,7 @@
                 data-name="Battery"
                 data-price="65"
                 data-img="Buskit-bat.png"
-                >افزودن به سبد</a
+                >Add to Cart</a
               >
             </div>
           </div>
@@ -2246,7 +2065,7 @@
                 data-name="Monitoring module"
                 data-price="50"
                 data-img="Buskit-Monitoring.png"
-                >افزودن به سبد</a
+                >Add to Cart</a
               >
             </div>
           </div>
@@ -2261,21 +2080,20 @@
       <div class="contact-hero">
         <div>
           <div class="contact-hero-label" style="text-align: auto">
-            تماس با من
+            Contact Me
           </div>
         </div>
-        <h1 style="text-align: center">بیایید <span>صحبت کنیم</span></h1>
+        <h1 style="text-align: center">Let's <span>Talk</span></h1>
         <p>
-          برای مشاوره، سفارش، همکاری یا هر سؤالی درباره محصولات Buskit، منتظر
-          پیامتان هستم.
+          For consultation, orders, collaboration, or any question about Buskit products, I am waiting for your message.
         </p>
       </div>
 
       <div class="contact-body">
-        <!-- ستون راست: اطلاعات تماس -->
+        <!-- Right Column: Contact Info -->
         <div class="contact-info">
           <div class="contact-info-block">
-            <div class="contact-info-block-title">ارتباط مستقیم</div>
+            <div class="contact-info-block-title">Direct Contact</div>
 
             <a href="tel & whatsapp:+905312691609" class="contact-info-item">
               <div class="contact-info-icon">
@@ -2287,7 +2105,7 @@
               </div>
               <div class="contact-info-text">
                 <strong dir="ltr">+90 5312691609</strong>
-                <span>شماره تماس</span>
+                <span>Phone Number</span>
               </div>
             </a>
 
@@ -2300,14 +2118,14 @@
               </div>
               <div class="contact-info-text">
                 <strong dir="ltr">amoeyan.music@gmail.com</strong>
-                <span>آدرس ایمیل</span>
+                <span>Email Address</span>
               </div>
             </a>
           </div>
 
           <div class="contact-divider"></div>
 
-          <div class="social-title">شبکه‌های اجتماعی</div>
+          <div class="social-title">Social Media</div>
           <div class="social-grid">
             <a href="#" class="social-btn youtube">
               <div class="social-icon">
@@ -2322,7 +2140,7 @@
                   />
                 </svg>
               </div>
-              یوتیوب
+              YouTube
             </a>
 
             <a
@@ -2344,7 +2162,7 @@
                   <circle cx="17.5" cy="6.5" r="0.5" fill="#E1306C" />
                 </svg>
               </div>
-              اینستاگرام
+              Instagram
             </a>
 
             <a
@@ -2359,7 +2177,7 @@
                   />
                 </svg>
               </div>
-              گیت‌هاب
+              GitHub
             </a>
 
             <a
@@ -2374,42 +2192,42 @@
                   />
                 </svg>
               </div>
-              واتس‌اپ
+              WhatsApp
             </a>
           </div>
         </div>
 
-        <!-- ستون چپ: فرم -->
+        <!-- Left Column: Form -->
         <div class="contact-form-wrap">
           <div class="form-header">
-            <div class="form-label-tag">پیام به من</div>
-            <h2>چطور می‌توانم کمک کنم؟</h2>
-            <p>پیام شما ظرف ۲۴ ساعت پاسخ داده می‌شود.</p>
+            <div class="form-label-tag">Message Me</div>
+            <h2>How Can I Help You?</h2>
+            <p>Your message will be answered within 24 hours.</p>
           </div>
 
           <form id="contactForm" novalidate>
             <div class="form-group">
-              <label for="subject">موضوع</label>
+              <label for="subject">Subject</label>
               <input
                 type="text"
                 id="subject"
                 name="subject"
-                placeholder="مثلاً: سفارش محصول، همکاری، سؤال فنی..."
+                placeholder="E.g.: Product order, collaboration, technical question..."
               />
             </div>
 
             <div class="form-row">
               <div class="form-group" style="margin-bottom: 0">
-                <label for="fullname">نام و نام خانوادگی</label>
+                <label for="fullname">Full Name</label>
                 <input
                   type="text"
                   id="fullname"
                   name="fullname"
-                  placeholder="نام کامل شما"
+                  placeholder="Your full name"
                 />
               </div>
               <div class="form-group" style="margin-bottom: 0">
-                <label for="email">ایمیل</label>
+                <label for="email">Email</label>
                 <input
                   type="email"
                   id="email"
@@ -2421,11 +2239,11 @@
             </div>
 
             <div class="form-group" style="margin-top: 14px">
-              <label for="message">پیام</label>
+              <label for="message">Message</label>
               <textarea
                 id="message"
                 name="message"
-                placeholder="پیام خود را اینجا بنویسید..."
+                placeholder="Message Place را اینجا بنویسید..."
               ></textarea>
             </div>
 
@@ -2434,7 +2252,7 @@
                 <line x1="22" y1="2" x2="11" y2="13" />
                 <polygon points="22 2 15 22 11 13 2 9 22 2" />
               </svg>
-              ارسال پیام
+              Send Message
             </button>
 
             <div class="form-status" id="formStatus"></div>
@@ -2445,9 +2263,9 @@
 
     <footer>
       <img src="LOGO.png" alt="Buskit" />
-      <p>© 2025 Buskit — هر آنچه برای یک اجرای زنده نیاز دارید</p>
+      <p>© 2025 Buskit — Everything You Need for a Live Performance</p>
       <p style="margin-top: 0.5rem; font-size: 0.75rem">
-        ثبت شده در آمریکا · اروپا · ترکیه
+        Registered in America · Europe · Turkey
       </p>
     </footer>
 
@@ -2468,7 +2286,7 @@
     <!-- EmailJS SDK -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
-      // Public Key خود را از EmailJS داشبورد بگیرید
+      // Public Key Place را از EmailJS داشبورد بگیرید
       emailjs.init("YOUR_PUBLIC_KEY");
 
       document
@@ -2486,13 +2304,13 @@
 
           if (!subject || !fullname || !email || !message) {
             status.className = "form-status error";
-            status.innerHTML = "⚠️ لطفاً همه فیلدها را پر کنید.";
+            status.innerHTML = "⚠️ Please fill in all fields.";
             status.style.display = "flex";
             return;
           }
           if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
             status.className = "form-status error";
-            status.innerHTML = "⚠️ آدرس ایمیل معتبر نیست.";
+            status.innerHTML = "⚠️ Email Address معتبر نیست.";
             status.style.display = "flex";
             return;
           }
@@ -2511,24 +2329,24 @@
             });
             status.className = "form-status success";
             status.innerHTML =
-              "✅ پیام شما با موفقیت ارسال شد. به زودی پاسخ می‌دهم!";
+              "✅ Message شما با موفقیت ارسال شد. به زودی پاسخ می‌دهم!";
             status.style.display = "flex";
             document.getElementById("contactForm").reset();
           } catch (err) {
             const body = encodeURIComponent(
-              `نام: ${fullname}\nایمیل: ${email}\n\n${message}`,
+              `نام: ${fullname}\nEmail: ${email}\n\n${message}`,
             );
             window.location.href = `mailto:amoeyan.music@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
           }
 
           btn.disabled = false;
-          btn.innerHTML = `<svg viewBox="0 0 24 24" style="stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> ارسال پیام`;
+          btn.innerHTML = `<svg viewBox="0 0 24 24" style="stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Send Message`;
         });
     </script>
     <!-- ══════════════════════════════
          CART WIDGET
     ══════════════════════════════ -->
-    <button id="cartFab" class="cart-fab" aria-label="سبد خرید">
+    <button id="cartFab" class="cart-fab" aria-label="Shopping Cart">
       <svg
         viewBox="0 0 24 24"
         fill="none"
@@ -2550,19 +2368,19 @@
 
     <aside id="cartDrawer" class="cart-drawer">
       <div class="cart-drawer-header">
-        <h3>سبد خرید</h3>
-        <button id="cartCloseBtn" class="cart-close-btn" aria-label="بستن">
+        <h3>Shopping Cart</h3>
+        <button id="cartCloseBtn" class="cart-close-btn" aria-label="Close">
           &times;
         </button>
       </div>
       <div id="cartItems" class="cart-items"></div>
       <div class="cart-drawer-footer">
         <div class="cart-total-row">
-          <span>جمع کل</span>
+          <span>Total</span>
           <strong id="cartTotal">$0</strong>
         </div>
         <button id="cartCheckoutBtn" class="btn-submit cart-checkout-btn">
-          ثبت سفارش و پرداخت
+          Place Order and Pay
         </button>
       </div>
     </aside>
@@ -2573,8 +2391,8 @@
     <div id="checkoutOverlay" class="cart-overlay"></div>
     <div id="checkoutModal" class="checkout-modal">
       <div class="checkout-modal-header">
-        <h3>تکمیل اطلاعات خرید</h3>
-        <button id="checkoutCloseBtn" class="cart-close-btn" aria-label="بستن">
+        <h3>Complete Purchase Information</h3>
+        <button id="checkoutCloseBtn" class="cart-close-btn" aria-label="Close">
           &times;
         </button>
       </div>
@@ -2585,16 +2403,16 @@
         <form id="checkoutForm" novalidate>
           <div class="form-row">
             <div class="form-group" style="margin-bottom: 0">
-              <label for="co-fullname">نام و نام خانوادگی</label>
+              <label for="co-fullname">Full Name</label>
               <input
                 type="text"
                 id="co-fullname"
                 name="fullname"
-                placeholder="نام کامل"
+                placeholder="Full name"
               />
             </div>
             <div class="form-group" style="margin-bottom: 0">
-              <label for="co-phone">شماره تماس</label>
+              <label for="co-phone">Phone Number</label>
               <input
                 type="tel"
                 id="co-phone"
@@ -2606,16 +2424,16 @@
           </div>
 
           <div class="form-group" style="margin-top: 14px">
-            <label for="co-address">آدرس کامل</label>
+            <label for="co-address">Full Address</label>
             <textarea
               id="co-address"
               name="address"
-              placeholder="آدرس دقیق برای ارسال"
+              placeholder="Exact address for delivery"
             ></textarea>
           </div>
 
           <div class="form-group" style="margin-top: 14px">
-            <label for="co-email">ایمیل</label>
+            <label for="co-email">Email</label>
             <div class="email-verify-row">
               <input
                 type="email"
@@ -2625,7 +2443,7 @@
                 dir="ltr"
               />
               <button type="button" id="co-sendCode" class="btn-secondary-sm">
-                ارسال کد تایید
+                Send Verification Code
               </button>
             </div>
           </div>
@@ -2635,25 +2453,25 @@
             id="co-codeGroup"
             style="margin-top: 14px; display: none"
           >
-            <label for="co-code">کد تایید ارسال‌شده به ایمیل</label>
+            <label for="co-code">Verification Code Sent to Email</label>
             <div class="email-verify-row">
               <input
                 type="text"
                 id="co-code"
                 name="code"
-                placeholder="کد ۶ رقمی"
+                placeholder="6-digit code"
                 dir="ltr"
                 inputmode="numeric"
               />
               <button type="button" id="co-verifyCode" class="btn-secondary-sm">
-                تایید کد
+                Verify Code
               </button>
             </div>
             <span
               id="co-emailVerified"
               class="verified-badge"
               style="display: none"
-              >✅ ایمیل تایید شد</span
+              >✅ Email Verified</span
             >
           </div>
 
@@ -2663,7 +2481,7 @@
             id="co-submitBtn"
             style="margin-top: 18px"
           >
-            ثبت نهایی سفارش
+            Finalize Order
           </button>
 
           <div class="form-status" id="checkoutStatus"></div>
@@ -2708,7 +2526,7 @@
 
           if (cart.length === 0) {
             itemsEl.innerHTML =
-              '<div class="cart-empty">سبد خرید شما خالی است.</div>';
+              '<div class="cart-empty">Shopping Cart شما خالی است.</div>';
           }
 
           cart.forEach((item) => {
@@ -2726,7 +2544,7 @@
                   <button class="qty-btn" data-action="dec" data-id="${item.id}">−</button>
                   <span class="qty-value">${item.qty}</span>
                   <button class="qty-btn" data-action="inc" data-id="${item.id}">+</button>
-                  <button class="cart-remove-btn" data-action="remove" data-id="${item.id}">حذف</button>
+                  <button class="cart-remove-btn" data-action="remove" data-id="${item.id}">Remove</button>
                 </div>
               </div>
             `;
@@ -2813,7 +2631,7 @@
           // Build order summary
           const summaryEl = document.getElementById("checkoutOrderSummary");
           let total = 0;
-          let html = '<div class="checkout-summary-title">سفارش شما</div>';
+          let html = '<div class="checkout-summary-title">Your Order</div>';
           cart.forEach((item) => {
             total += item.price * item.qty;
             html += `<div class="checkout-summary-row">
@@ -2822,7 +2640,7 @@
             </div>`;
           });
           html += `<div class="checkout-summary-row checkout-summary-total">
-            <span>جمع کل</span><span>${fmtPrice(total)}</span>
+            <span>Total</span><span>${fmtPrice(total)}</span>
           </div>`;
           summaryEl.innerHTML = html;
 
@@ -2866,7 +2684,7 @@
         sendCodeBtn.addEventListener("click", async function () {
           const email = emailInput.value.trim();
           if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-            showStatus("⚠️ لطفاً یک ایمیل معتبر وارد کنید.", "error");
+            showStatus("⚠️ لطفاً یک Email معتبر وارد کنید.", "error");
             return;
           }
 
@@ -2875,10 +2693,10 @@
           verifiedBadge.style.display = "none";
 
           sendCodeBtn.disabled = true;
-          sendCodeBtn.textContent = "در حال ارسال...";
+          sendCodeBtn.textContent = "Sending...";
 
           try {
-            // در محیط واقعی: ارسال کد از طریق EmailJS
+            // In real environment: send code via EmailJS
             if (window.emailjs) {
               await emailjs.send("YOUR_SERVICE_ID", "YOUR_VERIFY_TEMPLATE_ID", {
                 from_email: FROM_EMAIL,
@@ -2888,7 +2706,7 @@
             }
             codeGroup.style.display = "block";
             showStatus(
-              "📧 یک کد تایید ۶ رقمی به ایمیل شما ارسال شد. (در حالت تست: " +
+              "📧 یک کد تایید ۶ رقمی به Email شما ارسال شد. (در حالت تست: " +
                 generatedCode +
                 ")",
               "success",
@@ -2896,29 +2714,29 @@
           } catch (err) {
             codeGroup.style.display = "block";
             showStatus(
-              "📧 کد تایید (حالت تست، ارسال ایمیل واقعی پیکربندی نشده): " +
+              "📧 کد تایید (حالت تست، ارسال Email واقعی پیکربندی نشده): " +
                 generatedCode,
               "success",
             );
           }
 
           sendCodeBtn.disabled = false;
-          sendCodeBtn.textContent = "ارسال مجدد کد";
+          sendCodeBtn.textContent = "Resend code";
         });
 
         verifyCodeBtn.addEventListener("click", function () {
           const entered = codeInput.value.trim();
           if (!generatedCode) {
-            showStatus("⚠️ ابتدا کد تایید را درخواست کنید.", "error");
+            showStatus("⚠️ Request the verification code first.", "error");
             return;
           }
           if (entered === generatedCode) {
             emailVerified = true;
             verifiedBadge.style.display = "inline-block";
-            showStatus("✅ ایمیل با موفقیت تایید شد.", "success");
+            showStatus("✅ Email با موفقیت تایید شد.", "success");
           } else {
             emailVerified = false;
-            showStatus("⚠️ کد وارد شده صحیح نیست.", "error");
+            showStatus("⚠️ The entered code is incorrect.", "error");
           }
         });
 
@@ -2936,16 +2754,16 @@
             const email = emailInput.value.trim();
 
             if (!fullname || !phone || !address || !email) {
-              showStatus("⚠️ لطفاً همه فیلدها را تکمیل کنید.", "error");
+              showStatus("⚠️ Please complete all fields.", "error");
               return;
             }
             if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-              showStatus("⚠️ آدرس ایمیل معتبر نیست.", "error");
+              showStatus("⚠️ Email Address معتبر نیست.", "error");
               return;
             }
             if (!emailVerified) {
               showStatus(
-                "⚠️ لطفاً ابتدا ایمیل خود را با کد تایید، تایید کنید.",
+                "⚠️ لطفاً ابتدا Email Place را با کد تایید، تایید کنید.",
                 "error",
               );
               return;
@@ -2953,13 +2771,13 @@
 
             const cart = loadCart();
             if (cart.length === 0) {
-              showStatus("⚠️ سبد خرید شما خالی است.", "error");
+              showStatus("⚠️ Shopping Cart شما خالی است.", "error");
               return;
             }
 
             const submitBtn = document.getElementById("co-submitBtn");
             submitBtn.disabled = true;
-            submitBtn.textContent = "در حال ثبت سفارش...";
+            submitBtn.textContent = "Placing order...";
 
             let total = 0;
             let itemsList = "";
@@ -2969,13 +2787,13 @@
             });
 
             const orderMessage =
-              `سفارش جدید از فروشگاه Buskit\n\n` +
-              `نام و نام خانوادگی: ${fullname}\n` +
-              `ایمیل: ${email}\n` +
-              `شماره تماس: ${phone}\n` +
-              `آدرس: ${address}\n\n` +
-              `اقلام سفارش:\n${itemsList}\n` +
-              `جمع کل: ${fmtPrice(total)}`;
+              `سفارش جدید از Store Buskit\n\n` +
+              `Full Name: ${fullname}\n` +
+              `Email: ${email}\n` +
+              `Phone Number: ${phone}\n` +
+              `Address: ${address}\n\n` +
+              `Order Items:\n${itemsList}\n` +
+              `Total: ${fmtPrice(total)}`;
 
             try {
               if (window.emailjs) {
@@ -2996,7 +2814,7 @@
                 );
               }
               showStatus(
-                "✅ سفارش شما با موفقیت ثبت شد و اطلاعات آن برای پیگیری ارسال گردید.",
+                "✅ Your order was placed successfully and tracking information has been sent.",
                 "success",
               );
               localStorage.removeItem(CART_KEY);
@@ -3009,37 +2827,17 @@
               setTimeout(closeCheckout, 2500);
             } catch (err) {
               showStatus(
-                "⚠️ ارسال خودکار سفارش انجام نشد، لطفاً از طریق اطلاعات تماس با ما در ارتباط باشید.",
+                "⚠️ ارسال Placeکار سفارش انجام نشد، لطفاً از طریق اطلاعات تماس با ما در ارتباط باشید.",
                 "error",
               );
             }
 
             submitBtn.disabled = false;
-            submitBtn.textContent = "ثبت نهایی سفارش";
+            submitBtn.textContent = "Finalize Order";
           });
 
         // Initial render
         renderCart();
-      })();
-    </script>
-
-    <!-- اسکریپت custom language dropdown -->
-    <script>
-      (function () {
-        var langWidget = document.getElementById("customLang");
-        var langBtn = document.getElementById("langBtn");
-        var langMenu = document.getElementById("langMenu");
-        if (!langWidget || !langBtn) return;
-
-        langBtn.addEventListener("click", function (e) {
-          e.stopPropagation();
-          langWidget.classList.toggle("open");
-        });
-        document.addEventListener("click", function (e) {
-          if (!langWidget.contains(e.target)) {
-            langWidget.classList.remove("open");
-          }
-        });
       })();
     </script>
 
@@ -3063,7 +2861,7 @@
           navLinks.classList.remove("open");
           overlay.classList.remove("open");
           document.body.classList.remove("nav-open");
-          // بستن همه dropdown های باز
+          // Close all open dropdowns
           document
             .querySelectorAll(".nav-links .has-dropdown.open")
             .forEach(function (el) {
@@ -3071,15 +2869,15 @@
             });
         }
 
-        // همبرگر
+        // Hamburger
         hamburger.addEventListener("click", function () {
           navLinks.classList.contains("open") ? closeMenu() : openMenu();
         });
 
-        // کلیک روی overlay (پشت منو)
+        // Click on overlay (behind menu)
         overlay.addEventListener("click", closeMenu);
 
-        // کلیک روی هر جای صفحه خارج از منو
+        // کلیک روی هر Its صفحه خارج از منو
         document.addEventListener("click", function (e) {
           if (window.innerWidth >= 992) return;
           if (!navLinks.classList.contains("open")) return;
@@ -3088,7 +2886,7 @@
           }
         });
 
-        // dropdown سطح اول در موبایل
+        // First level dropdown on mobile
         document
           .querySelectorAll(".nav-links > li.has-dropdown > a")
           .forEach(function (link) {
@@ -3106,7 +2904,7 @@
             });
           });
 
-        // dropdown سطح دوم در موبایل
+        // Second level dropdown on mobile
         document
           .querySelectorAll(".dropdown-menu li.has-dropdown > a")
           .forEach(function (link) {
@@ -3124,7 +2922,7 @@
             });
           });
 
-        // بستن منو بعد از کلیک روی لینک نهایی + اسکرول نرم
+        // Close menu after clicking final link + smooth scroll
         document
           .querySelectorAll('.nav-links a[href^="#"]')
           .forEach(function (link) {
@@ -3135,9 +2933,8 @@
                 e.preventDefault();
                 closeMenu();
                 setTimeout(function () {
-                  // اسکرول به بالای section با فاصله کمی زیر هدر (هدر 50px)
                   var pos =
-                    targetEl.getBoundingClientRect().top + window.scrollY - 55;
+                    targetEl.getBoundingClientRect().top + window.scrollY - 75;
                   window.scrollTo({ top: pos, behavior: "smooth" });
                 }, 300);
               }

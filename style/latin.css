@@ -1,0 +1,301 @@
+/* ══════════════════════════════════════════════════════════════════
+   latin.css — LTR overrides for English and Turkish pages
+   Link this AFTER style.css, Mstyle.css, mobile.css in EN/TR files
+   ══════════════════════════════════════════════════════════════════ */
+
+/* ──────────────────────────────────────────────
+   1. GLOBAL DIRECTION & ALIGNMENT
+   ────────────────────────────────────────────── */
+body,
+section,
+.container,
+.bk-section,
+.bk-container,
+.con-container {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* ──────────────────────────────────────────────
+   2. NAV — logo RIGHT, links LEFT
+   (original RTL: logo right, links left — same order
+    but space-between flips in RTL, so we force order)
+   ────────────────────────────────────────────── */
+nav {
+  direction: ltr !important;
+}
+
+.nav-logo {
+  order: 2 !important;   /* logo goes to the right */
+}
+
+.nav-links {
+  order: 1 !important;   /* links go to the left */
+}
+
+/* ──────────────────────────────────────────────
+   3. SECTION LABELS
+   Original RTL: line extends LEFT  (right:100%, width~100%)
+   LTR fix:      line extends RIGHT (left:100%, width→right edge)
+   Key fix: use calc(100vw - 100%) so the line fills from box
+   edge all the way to the right side of the viewport
+   ────────────────────────────────────────────── */
+.section-label {
+  text-align: left;
+}
+
+.section-label::before {
+  right: auto !important;
+  left: 100% !important;
+  width: calc(100vw - 100%) !important;
+}
+
+/* ──────────────────────────────────────────────
+   4. SECTION TITLES & DESCRIPTIONS
+   ────────────────────────────────────────────── */
+.section-title,
+.section-desc {
+  text-align: left !important;
+}
+
+/* ──────────────────────────────────────────────
+   5. ABOUT SECTION
+   ────────────────────────────────────────────── */
+.about-heading {
+  text-align: left !important;
+}
+
+.about-text {
+  text-align: left !important;
+  text-indent: 0 !important;
+}
+
+.about-content {
+  align-items: flex-start !important;
+  text-align: left !important;
+}
+
+/* ──────────────────────────────────────────────
+   6. PRODUCT SECTIONS
+   ────────────────────────────────────────────── */
+.prod-content {
+  text-align: left !important;
+}
+
+.prod-name {
+  text-align: left !important;
+}
+
+/* prod-why: RTL has border-right → flip to border-left */
+.prod-why {
+  border-right: none !important;
+  border-left: 3px solid var(--buskit-blue) !important;
+  border-radius: 8px 0 0 8px !important;
+  text-align: left !important;
+  direction: ltr !important;
+}
+
+.prod-box h4 {
+  text-align: left !important;
+}
+
+.prod-box ul {
+  text-align: left !important;
+}
+
+.prod-box ul li {
+  padding-right: 0 !important;
+  padding-left: 1rem !important;
+  text-align: left !important;
+}
+
+/* bullet (›) was at right:0, move to left:0 */
+.prod-box ul li::before {
+  right: auto !important;
+  left: 0 !important;
+}
+
+.prod-reg {
+  text-align: left !important;
+  direction: ltr !important;
+}
+
+/* ──────────────────────────────────────────────
+   7. WHY BUSKIT SECTION
+   ────────────────────────────────────────────── */
+.why-card h3 {
+  text-align: left !important;
+}
+
+.why-card-header {
+  flex-direction: row !important;
+}
+
+.why-list {
+  text-align: left !important;
+}
+
+.why-list li {
+  flex-direction: row !important;
+  text-align: left !important;
+}
+
+/* why-quote: RTL has border-right → flip to border-left */
+.why-quote {
+  border-right: none !important;
+  border-left: 3px solid var(--buskit-orange) !important;
+  border-radius: 10px 0 0 10px !important;
+  text-align: left !important;
+  direction: ltr !important;
+}
+
+/* ──────────────────────────────────────────────
+   8. AT A GLANCE (bk-section #look)
+   Remove the fixed-width box, let it fill full width
+   ────────────────────────────────────────────── */
+.bk-section#look .dynamic-glow-bg,
+.bk-section#look .bk-container {
+  width: 100% !important;
+  max-width: 1100px !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* ──────────────────────────────────────────────
+   9. BK ECOSYSTEM SECTION
+   ────────────────────────────────────────────── */
+.bk-title-md,
+.bk-subtitle,
+.bk-col-label,
+.bk-input-name,
+.bk-input-desc {
+  text-align: left !important;
+}
+
+.bk-core-features {
+  text-align: left !important;
+}
+
+.bk-core-features li {
+  flex-direction: row !important;
+}
+
+.bk-monitor-tall {
+  text-align: left !important;
+}
+
+/* ──────────────────────────────────────────────
+   10. CONNECTION DIAGRAMS (con-container)
+   ────────────────────────────────────────────── */
+.con-container {
+  align-items: flex-start !important;
+  text-align: left !important;
+}
+
+.con-container h2,
+.con-container .con-header,
+.con-container .text-section,
+#con-mixer h2,
+#con-minimixer h2,
+#con-TinyPA h2,
+#con-miniPA h2,
+#con-PA h2,
+#con-Mon h2 {
+  align-self: flex-start !important;
+  text-align: left !important;
+}
+
+/* ──────────────────────────────────────────────
+   11. REGISTRATION SECTION
+   ────────────────────────────────────────────── */
+.reg-banner {
+  text-align: left !important;
+}
+
+.reg-banner h2,
+.reg-banner p {
+  text-align: left !important;
+}
+
+/* ──────────────────────────────────────────────
+   12. STORE SECTION
+   ────────────────────────────────────────────── */
+.store-card-name,
+.store-card-price {
+  text-align: left !important;
+}
+
+/* ──────────────────────────────────────────────
+   13. CONTACT SECTION
+   section-label::before fix: line must go RIGHT, not LEFT
+   ────────────────────────────────────────────── */
+.contact-hero {
+  text-align: left !important;
+  padding-right: 0 !important;
+  padding-left: 10% !important;
+}
+
+.contact-hero h1,
+.contact-hero p {
+  text-align: left !important;
+}
+
+/* "Message Me" label inside contact card — same line fix */
+.contact-form-card .section-label::before,
+.contact-card .section-label::before,
+[class*="contact"] .section-label::before {
+  right: auto !important;
+  left: 100% !important;
+  width: calc(100vw - 100%) !important;
+}
+
+.contact-info-text strong {
+  text-align: left !important;
+}
+
+.contact-divider {
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  ) !important;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* ──────────────────────────────────────────────
+   14. MOBILE OVERRIDES
+   ────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  body,
+  section {
+    direction: ltr !important;
+  }
+
+  .prod-content,
+  .prod-name,
+  .prod-why,
+  .prod-box h4,
+  .prod-box ul li,
+  .about-text,
+  .about-heading,
+  .section-title,
+  .section-desc,
+  .why-list li,
+  .why-quote,
+  .bk-subtitle,
+  .contact-hero {
+    text-align: left !important;
+  }
+
+  .about-container {
+    text-align: left !important;
+  }
+}
