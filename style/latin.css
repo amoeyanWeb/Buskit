@@ -24,15 +24,10 @@ section,
 nav {
   direction: ltr !important;
 }
-
-.nav-logo {
-  order: 2 !important; /* logo goes to the right */
+.nav-overlay {
+  position: fixed !important;
+  display: none;
 }
-
-.nav-links {
-  order: 1 !important; /* links go to the left */
-}
-
 /* ──────────────────────────────────────────────
    3. SECTION LABELS
    Original RTL: line extends LEFT  (right:100%, width~100%)
@@ -47,9 +42,13 @@ nav {
 .section-label::before {
   right: auto !important;
   left: 100% !important;
-  width: calc(100vw - 100%) !important;
+  width: calc(70vw - 100%) !important;
 }
-
+#contact .section-label::before {
+  right: auto !important;
+  left: 100% !important;
+  width: calc(70vw - 100%) !important;
+}
 /* ──────────────────────────────────────────────
    4. SECTION TITLES & DESCRIPTIONS
    ────────────────────────────────────────────── */
@@ -277,6 +276,16 @@ nav {
   body,
   section {
     direction: ltr !important;
+  }
+
+  .nav-hamburger {
+    left: 1rem !important;
+    right: auto !important;
+  }
+
+  .lang-wrapper {
+    right: 1rem !important;
+    left: auto !important;
   }
 
   .prod-content,

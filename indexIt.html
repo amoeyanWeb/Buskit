@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="it" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Buskit — Everything You Need for a Live Performance</title>
+    <title>Buskit — Tutto il Necessario per un'Esibizione dal Vivo</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&family=Oswald:wght@400;600;700&display=swap"
       rel="stylesheet"
@@ -244,41 +244,39 @@
   </head>
   <body>
     <nav>
-      <a href="#" class="nav-logo"><img src="LOGO.png" alt="Buskit Logo" /></a>
+      <a href="#" class="nav-logo"
+        ><img src="./pics/LOGO.png" alt="Buskit Logo"
+      /></a>
 
       <div class="nav-overlay" id="navOverlay"></div>
 
-      <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
-        <li><a href="#aboutme">About Me </a></li>
+        <li><a href="#aboutme">Chi Sono </a></li>
         <li class="has-dropdown">
           <a href="javascript:void(0)">Buskit</a>
           <ul class="dropdown-menu">
             <li>
               <a href="#why">
                 <span class="prod-dot" style="background: #e67e22"></span>
-                Why?
+                Perché?
               </a>
             </li>
             <li>
               <a href="#look">
                 <span class="prod-dot" style="background: #2980b9"></span>
-                At a Glance
+                Panoramica
               </a>
             </li>
 
             <li>
               <a href="#ecosystem">
                 <span class="prod-dot" style="background: #e6a800"></span>
-                Ecosystem
+                Ecosistema
               </a>
             </li>
             <li class="has-dropdown">
-              <a href="javascript:void(0)">Connection Diagrams</a>
+              <a href="javascript:void(0)">Schemi di Connessione</a>
               <ul class="dropdown-menu">
                 <li>
                   <a href="#con-mixer"
@@ -313,7 +311,7 @@
                 <li>
                   <a href="#con-Mon"
                     ><span class="prod-dot" style="background: #8b5e3c"></span
-                    >Monitoring
+                    >Monitoraggio
                   </a>
                 </li>
               </ul>
@@ -322,7 +320,7 @@
         </li>
 
         <li class="has-dropdown">
-          <a href="javascript:void(0)">Products</a>
+          <a href="javascript:void(0)">Prodotti</a>
           <ul class="dropdown-menu">
             <li>
               <a href="#prod-go"
@@ -392,10 +390,117 @@
           </ul>
         </li>
 
-        <li><a href="#registration">Patent</a></li>
-        <li><a href="#store">Store</a></li>
-        <li><a href="#contact">Contact Me</a></li>
+        <li><a href="#registration">Brevetto</a></li>
+        <li><a href="#store">Negozio</a></li>
+        <li><a href="#contact">Contattami</a></li>
       </ul>
+
+      <!-- Language Selector -->
+      <div class="lang-wrapper">
+        <div class="custom-lang" id="customLang">
+          <button class="custom-lang-btn" id="langBtn" type="button">
+            <img
+              class="flag-icon"
+              src="https://flagcdn.com/w20/gb.png"
+              alt="GB"
+              width="20"
+              height="14"
+            />
+            <span id="langLabel">Italiano</span>
+            <span class="lang-arrow">▾</span>
+          </button>
+          <div class="custom-lang-menu" id="langMenu">
+            <a href="index.html"
+              ><img
+                class="flag-icon"
+                src="https://flagcdn.com/w20/ir.png"
+                alt="IR"
+                width="20"
+                height="14"
+              />
+              فارسی</a
+            >
+            <a href="indexEn.html"
+              ><img
+                class="flag-icon"
+                src="https://flagcdn.com/w20/gb.png"
+                alt="GB"
+                width="20"
+                height="14"
+              />
+              English</a
+            >
+            <a href="indexTr.html"
+              ><img
+                class="flag-icon"
+                src="https://flagcdn.com/w20/tr.png"
+                alt="TR"
+                width="20"
+                height="14"
+              />
+              Türkçe</a
+            >
+            <a href="indexAr.html"
+              ><img
+                class="flag-icon"
+                src="https://flagcdn.com/w20/sa.png"
+                alt="SA"
+                width="20"
+                height="14"
+              />
+              العربية</a
+            >
+            <a href="indexEs.html"
+              ><img
+                class="flag-icon"
+                src="https://flagcdn.com/w20/es.png"
+                alt="ES"
+                width="20"
+                height="14"
+              />
+              Español</a
+            >
+            <a href="indexDe.html"
+              ><img
+                class="flag-icon"
+                src="https://flagcdn.com/w20/de.png"
+                alt="DE"
+                width="20"
+                height="14"
+              />
+              Deutsch</a
+            >
+            <a href="indexIt.html"
+              ><img
+                class="flag-icon"
+                src="https://flagcdn.com/w20/it.png"
+                alt="IT"
+                width="20"
+                height="14"
+              />
+              Italiano</a
+            >
+          </div>
+
+          <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+      <!-- hidden select برای سازگاری با اسکریپت قدیمی -->
+      <select
+        id="lang-select"
+        onchange="location = this.value"
+        style="display: none"
+      >
+        <option value="index.html">🇮🇷 فارسی</option>
+        <option value="indexEn.html">🇬🇧 English</option>
+        <option value="indexTr.html">🇹🇷 Türkçe</option>
+        <option value="indexAr.html">🇸🇦 العربية</option>
+        <option value="indexEs.html">🇪🇸 Español</option>
+        <option value="indexDe.html">🇩🇪 Deutsch</option>
+        <option value="indexIt.html" selected>🇮🇹 Italiano</option>
+      </select>
     </nav>
 
     <!-- HERO -->
@@ -408,9 +513,9 @@
 
       <div class="hero-content">
         <!-- <div class="hero-eyebrow">Professional Audio Ecosystem for Musicians</div> -->
-        <img src="LOGO.png" alt="Buskit" class="hero-logo" />
+        <img src="./pics/LOGO.png" alt="Buskit" class="hero-logo" />
         <h1 class="hero-tagline blink-1s">
-          Everything for a <span>Live Performance </span> You Need
+          Tutto ciò che ti Serve per un'<span>Esibizione dal Vivo</span>
         </h1>
       </div>
 
@@ -419,85 +524,85 @@
         <div class="product-marquee-track">
           <!-- First Set -->
           <div class="marquee-item">
-            <img src="Buskit-Go.png" alt="Buskit Go" />
+            <img src="./pics/Buskit-Go.png" alt="Buskit Go" />
             <span>micro PreAmp</span>
           </div>
           <div class="marquee-item">
-            <img src="Buskit-HPmodule.png" alt="Headphone Module" />
+            <img src="./pics/Buskit-HPmodule.png" alt="Headphone Module" />
             <span>Headphone Module</span>
           </div>
           <div class="marquee-item">
-            <img src="Buskit-LineEXP.png" alt="Line EXPansion" />
+            <img src="./pics/Buskit-LineEXP.png" alt="Line EXPansion" />
             <span>Line EXPansion</span>
           </div>
           <div class="marquee-item">
-            <img src="Buskit-MicInterface.png" alt="Mic Interface" />
+            <img src="./pics/Buskit-MicInterface.png" alt="Mic Interface" />
             <span>Mic Interface</span>
           </div>
           <div class="marquee-item">
-            <img src="Buskit-Mixer.png" alt="Mixer" />
+            <img src="./pics/Buskit-Mixer.png" alt="Mixer" />
             <span>Mixer</span>
           </div>
           <div class="marquee-item">
-            <img src="Buskit-MiniMixer.png" alt="mini Mixer" />
+            <img src="./pics/Buskit-MiniMixer.png" alt="mini Mixer" />
             <span>Mini Mixer</span>
           </div>
           <div class="marquee-item">
-            <img src="Buskit-miniPA.png" alt="mini PreAmp" />
+            <img src="./pics/Buskit-miniPA.png" alt="mini PreAmp" />
             <span>mini PreAmp</span>
           </div>
           <div class="marquee-item">
-            <img src="Buskit-PreAmp.png" alt="Pre Amp" />
+            <img src="./pics/Buskit-PreAmp.png" alt="Pre Amp" />
             <span>Pre Amp</span>
           </div>
           <div class="marquee-item">
-            <img src="Buskit-Monitoring.png" alt="Monitoring" />
+            <img src="./pics/Buskit-Monitoring.png" alt="Monitoring" />
             <span>Monitoring</span>
           </div>
           <div class="marquee-item">
-            <img src="Buskit-bat.png" alt="Battery" />
+            <img src="./pics/Buskit-bat.png" alt="Battery" />
             <span>Battery</span>
           </div>
 
           <!-- Second set for infinite loop -->
           <div class="marquee-item">
-            <img src="Buskit-Go.png" alt="Buskit Go" />
+            <img src="./pics/Buskit-Go.png" alt="Buskit Go" />
             <span>micro PreAmp</span>
           </div>
           <div class="marquee-item">
-            <img src="Buskit-HPmodule.png" alt="Headphone Module" />
+            <img src="./pics/Buskit-HPmodule.png" alt="Headphone Module" />
             <span>Headphone Module</span>
           </div>
           <div class="marquee-item">
-            <img src="Buskit-LineEXP.png" alt="Line EXPansion" />
+            <img src="./pics/Buskit-LineEXP.png" alt="Line EXPansion" />
             <span>Line EXPansion</span>
           </div>
           <div class="marquee-item">
-            <img src="Buskit-MicInterface.png" alt="Mic Interface" />
+            <img src="./pics/Buskit-MicInterface.png" alt="Mic Interface" />
             <span>Mic Interface</span>
           </div>
           <div class="marquee-item">
-            <img src="Buskit-Mixer.png" alt="Mixer" />
+            <img src="./pics/Buskit-Mixer.png" alt="Mixer" />
             <span>Mixer</span>
           </div>
           <div class="marquee-item">
-            <img src="Buskit-MiniMixer.png" alt="mini Mixer" />
+            <img src="./pics/Buskit-MiniMixer.png" alt="mini Mixer" />
             <span>Mini Mixer</span>
           </div>
           <div class="marquee-item">
-            <img src="Buskit-miniPA.png" alt="mini PreAmp" />
+            <img src="./pics/Buskit-miniPA.png" alt="mini PreAmp" />
             <span>mini PreAmp</span>
           </div>
           <div class="marquee-item">
-            <img src="Buskit-PreAmp.png" alt="Pre Amp" />
+            <img src="./pics/Buskit-PreAmp.png" alt="Pre Amp" />
             <span>Pre Amp</span>
           </div>
           <div class="marquee-item">
-            <img src="Buskit-Monitoring.png" alt="Monitoring" />
+            <img src="./pics/Buskit-Monitoring.png" alt="Monitoring" />
             <span>Monitoring</span>
           </div>
           <div class="marquee-item">
-            <img src="Buskit-bat.png" alt="Battery" />
+            <img src="./pics/Buskit-bat.png" alt="Battery" />
             <span>Battery</span>
           </div>
         </div>
@@ -510,19 +615,32 @@
       <div class="about-container">
         <div class="about-content">
           <span class="section-label">
-            <span class="blink-1s"> About Me</span>
+            <span class="blink-1s"> Chi Sono</span>
           </span>
-          <h2 class="about-heading">The Fusion of Music, Sound and Electronics</h2>
+          <h2 class="about-heading">
+            La Fusione di Musica, Suono ed Elettronica
+          </h2>
+
+          <p class="about-text">
+            Per più di quattro decenni, sono stato immerso nel mondo della
+            musica, suonando ogni tipo di strumento musicale — percussioni,
+            melodici e armonici — oltre all'ingegneria elettronica. Il mio
+            obiettivo è sempre stato creare strumenti che sfumino il confine tra
+            tecnologia e arte.
+          </p>
+          <p class="about-text">
+            Oggi, come musicista con una profonda comprensione delle carenze
+            delle apparecchiature elettroniche e delle capacità uniche
+            necessarie per le esibizioni dal vivo — in particolare i musicisti
+            di strada o le prove di piccoli gruppi — ho combinato questi tre
+            campi per creare una raccolta di dispositivi modulari che affrontano
+            tutte le carenze delle esibizioni dal vivo, e ho chiamato questo
+            ecosistema Buskit.
+          </p>
         </div>
-        <p class="about-text">
-          For more than four decades, I have been immersed in the world of playing all kinds of musical instruments — percussion, melodic and harmonic — as well as technical electronics engineering. My focus has always been on creating tools that blur the line between technology and art.
-        </p>
-        <p class="about-text">
-          Today, as a musician with a deep understanding of the shortcomings of electronic equipment with the unique capabilities needed for live performances — especially street musicians or small group rehearsals — I combined these three fields to create a collection of modular devices that address all the shortcomings of live performances, and I named this ecosystem Buskit.
-        </p>
         <div class="about-image-zone">
           <div class="image-wrapper">
-            <img src="bg-rec.jpeg" alt="Artistic Portrait" />
+            <img src="./pics/bg-rec.jpeg" alt="Artistic Portrait" />
           </div>
         </div>
       </div>
@@ -534,7 +652,7 @@
         <div class="container">
           <div class="prod-inner">
             <div class="prod-image-col">
-              <img src="Buskit-Go.png" alt="Buskit Go" />
+              <img src="./pics/Buskit-Go.png" alt="Buskit Go" />
               <div class="prod-color-badge" style="background: #8b5e3c"></div>
             </div>
             <div class="prod-content">
@@ -544,41 +662,44 @@
               <h2 class="prod-name">Buskit microPA</h2>
               <!-- <p class="prod-tagline">Pocket Device</p> -->
               <div class="prod-why">
-                This device is the smallest possible form of a compact preamp — low noise with high gain — through which acoustic instruments or microphones can be connected to sound systems.
+                Questo dispositivo è la forma più compatta possibile di un
+                preamplificatore — basso rumore con alto guadagno — tramite il
+                quale strumenti acustici o microfoni possono essere collegati ai
+                sistemi audio.
               </div>
               <div class="prod-grid">
                 <div class="prod-box">
-                  <h4>Features</h4>
+                  <h4>Caratteristiche</h4>
                   <ul>
-                    <li>Analog Volume Control</li>
-                    <li>Wireless Module Connectivity</li>
-                    <li>Connection to AUX Port of Sound Systems</li>
-                    <li>6.3mm Input and Output</li>
-                    <li>LED Low Battery Indicator</li>
-                    <li>LED Power Indicator</li>
-                    <li>LED with 9V Battery</li>
-                    <li>Maximum 15dB Output Gain</li>
-                    <li>On/Off Switch</li>
+                    <li>Controllo Volume Analogico</li>
+                    <li>Connettività Modulo Wireless</li>
+                    <li>Connessione alla Porta AUX dei Sistemi Audio</li>
+                    <li>Ingresso e Uscita da 6,3mm</li>
+                    <li>Indicatore LED Batteria Scarica</li>
+                    <li>Indicatore LED di Accensione</li>
+                    <li>LED con Batteria 9V</li>
+                    <li>Guadagno di Uscita Massimo 15dB</li>
+                    <li>Interruttore On/Off</li>
                   </ul>
                 </div>
                 <div class="prod-box">
-                  <h4>Applications</h4>
+                  <h4>Applicazioni</h4>
                   <ul>
-                    <li>Converting Acoustic Instrument to Electric</li>
-                    <li>Outdoor Practice</li>
-                    <li>Travel and Tour</li>
-                    <li>Small Performances</li>
+                    <li>Conversione Strumento Acustico in Elettrico</li>
+                    <li>Pratica all'Aperto</li>
+                    <li>Viaggio e Tour</li>
+                    <li>Piccole Esibizioni</li>
                   </ul>
                 </div>
               </div>
               <div class="prod-box" style="margin-bottom: 1rem">
-                <h4>Benefits</h4>
+                <h4>Vantaggi</h4>
                 <ul
                   style="display: grid; grid-template-columns: 1fr 1fr; gap: 0"
                 >
-                  <li>Small Dimensions</li>
-                  <li>Low Weight</li>
-                  <li>No Need to Drill the Instrument Body</li>
+                  <li>Dimensioni Compatte</li>
+                  <li>Peso Ridotto</li>
+                  <li>Nessuna Necessità di Forare il Corpo dello Strumento</li>
                 </ul>
               </div>
               <div class="prod-reg">
@@ -586,7 +707,7 @@
                 <span><span class="flag">🇪🇺</span> Europe</span>
                 <span><span class="flag">🇹🇷</span> Turkey</span>
                 <span style="color: #6b7680; font-size: 0.75rem"
-                  >Internationally Registered</span
+                  >Registrato Internazionalmente</span
                 >
               </div>
             </div>
@@ -599,48 +720,55 @@
         <div class="container">
           <div class="prod-inner">
             <div class="prod-image-col">
-              <img src="Buskit-HPmodule.png" alt="Buskit Headphone Module" />
+              <img
+                src="./pics/Buskit-HPmodule.png"
+                alt="Buskit Headphone Module"
+              />
               <div class="prod-color-badge" style="background: #e6a800"></div>
             </div>
             <div class="prod-content">
               <div class="section-label">
-                <span class="blink-1s"> Headphone Module</span>
+                <span class="blink-1s"> Modulo Cuffie</span>
               </div>
 
-              <h2 class="prod-name">Buskit Headphone Module</h2>
+              <h2 class="prod-name">Buskit Modulo Cuffie</h2>
               <!-- <p class="prod-tagline">Hear Your Own Sound — Clear and Latency-Free</p> -->
               <div class="prod-why">
-                This module is a headphone signal amplifier that serves as the interface between the monitoring module and headphones, allowing the musician to adjust the audio reaching their headphones.
+                Questo modulo è un amplificatore del segnale per cuffie che
+                funge da interfaccia tra il modulo di monitoraggio e le cuffie,
+                consentendo al musicista di regolare l'audio che raggiunge le
+                cuffie.
               </div>
               <div class="prod-grid">
                 <div class="prod-box">
-                  <h4>Features</h4>
+                  <h4>Caratteristiche</h4>
                   <ul>
-                    <li>3.5mm Headphone Jack</li>
-                    <li>Independent Volume Control</li>
-                    <li>Separate Input and Power Switch</li>
-                    <li>Equipped with 9V Battery</li>
+                    <li>Jack Cuffie da 3,5mm</li>
+                    <li>Controllo Volume Indipendente</li>
+                    <li>Interruttore di Ingresso e Alimentazione Separati</li>
+                    <li>Dotato di Batteria 9V</li>
                   </ul>
                 </div>
                 <div class="prod-box">
-                  <h4>Applications</h4>
+                  <h4>Applicazioni</h4>
                   <ul>
-                    <li>Monitoring During Performance</li>
-                    <li>Practicing at Low Volume</li>
+                    <li>Monitoraggio Durante l'Esibizione</li>
+                    <li>Pratica a Volume Basso</li>
                     <li>
-                      Hearing the Output of Buskit Mixer or Mini Mixer Through Headphones
+                      Ascolto dell'Uscita del Mixer o Mini Mixer Buskit Tramite
+                      Cuffie
                     </li>
                   </ul>
                 </div>
               </div>
               <div class="prod-box" style="margin-bottom: 1rem">
-                <h4>Benefits</h4>
+                <h4>Vantaggi</h4>
                 <ul
                   style="display: grid; grid-template-columns: 1fr 1fr; gap: 0"
                 >
-                  <li>Zero Latency</li>
-                  <li>Ability to Change Volume</li>
-                  <li>Small and Pocket-Sized</li>
+                  <li>Zero Latenza</li>
+                  <li>Possibilità di Cambiare Volume</li>
+                  <li>Piccolo e Tascabile</li>
                 </ul>
               </div>
               <div class="prod-reg">
@@ -648,7 +776,7 @@
                 <span><span class="flag">🇪🇺</span> Europe</span>
                 <span><span class="flag">🇹🇷</span> Turkey</span>
                 <span style="color: #6b7680; font-size: 0.75rem"
-                  >Internationally Registered</span
+                  >Registrato Internazionalmente</span
                 >
               </div>
             </div>
@@ -661,46 +789,48 @@
         <div class="container">
           <div class="prod-inner">
             <div class="prod-image-col">
-              <img src="Buskit-LineEXP.png" alt="Buskit LineEXP" />
+              <img src="./pics/Buskit-LineEXP.png" alt="Buskit LineEXP" />
               <div class="prod-color-badge" style="background: #7b2fbe"></div>
             </div>
             <div class="prod-content">
               <div class="section-label">
-                <span class="blink-1s"> Line Input Expander</span>
+                <span class="blink-1s"> Espansore Ingressi di Linea</span>
               </div>
               <h2 class="prod-name">Buskit LineEXP</h2>
               <!-- <p class="prod-tagline">
                 Four Lines in One Device — Endless Expansion
               </p> -->
               <div class="prod-why">
-                Through this module, the number of inputs on the Buskit mixer or mini mixer can be increased. It is also possible to daisy-chain these modules to add even more inputs.
+                Through this module, the number of inputs on the Buskit mixer or
+                mini mixer can be increased. It is also possible to daisy-chain
+                these modules to add even more inputs.
               </div>
               <div class="prod-grid">
                 <div class="prod-box">
-                  <h4>Features</h4>
+                  <h4>Caratteristiche</h4>
                   <ul>
-                    <li>4 Independent Line Inputs</li>
-                    <li>Expansion Port for Scaling</li>
-                    <li>One Main 6.3mm Output</li>
-                    <li>No Power or Battery Required</li>
+                    <li>4 Ingressi di Linea Indipendenti</li>
+                    <li>Porta di Espansione per il Dimensionamento</li>
+                    <li>Un'Uscita Principale da 6,3mm</li>
+                    <li>Nessuna Alimentazione o Batteria Necessaria</li>
                   </ul>
                 </div>
                 <div class="prod-box">
-                  <h4>Applications</h4>
+                  <h4>Applicazioni</h4>
                   <ul>
-                    <li>Increasing Number of Inputs</li>
-                    <li>Multi-Person Band Performance</li>
+                    <li>Aumento del Numero di Ingressi</li>
+                    <li>Esibizione di Gruppo con Più Persone</li>
                   </ul>
                 </div>
               </div>
               <div class="prod-box" style="margin-bottom: 1rem">
-                <h4>Benefits</h4>
+                <h4>Vantaggi</h4>
                 <ul
                   style="display: grid; grid-template-columns: 1fr 1fr; gap: 0"
                 >
-                  <li>Independence of Inputs</li>
-                  <li>Expandable</li>
-                  <li>No Power or Battery Required</li>
+                  <li>Indipendenza degli Ingressi</li>
+                  <li>Espandibile</li>
+                  <li>Nessuna Alimentazione o Batteria Necessaria</li>
                 </ul>
               </div>
               <div class="prod-reg">
@@ -708,7 +838,7 @@
                 <span><span class="flag">🇪🇺</span> Europe</span>
                 <span><span class="flag">🇹🇷</span> Turkey</span>
                 <span style="color: #6b7680; font-size: 0.75rem"
-                  >Internationally Registered</span
+                  >Registrato Internazionalmente</span
                 >
               </div>
             </div>
@@ -721,41 +851,50 @@
         <div class="container">
           <div class="prod-inner">
             <div class="prod-image-col">
-              <img src="Buskit-MicInterface.png" alt="Buskit Mic Interface" />
+              <img
+                src="./pics/Buskit-MicInterface.png"
+                alt="Buskit Mic Interface"
+              />
               <div class="prod-color-badge" style="background: #e0387a"></div>
             </div>
             <div class="prod-content">
               <div class="section-label">
-                <span class="blink-1s"> Condenser Microphone Interface</span>
+                <span class="blink-1s">
+                  Interfaccia Microfono a Condensatore</span
+                >
               </div>
               <h2 class="prod-name">Buskit Mic Interface</h2>
               <!-- <p class="prod-tagline">Hear the Vocalist Clearer Than Ever</p> -->
               <div class="prod-why">
-                This device serves as the interface between a condenser microphone and the Buskit ecosystem.
+                Questo dispositivo funge da interfaccia tra un microfono a
+                condensatore e l'ecosistema Buskit.
               </div>
               <div class="prod-grid">
                 <div class="prod-box">
-                  <h4>Features</h4>
+                  <h4>Caratteristiche</h4>
                   <ul>
-                    <li>3.5mm Microphone Input</li>
-                    <li>Line Output for Buskit</li>
-                    <li>Equipped with 1.5V Battery</li>
+                    <li>Ingresso Microfono da 3,5mm</li>
+                    <li>Uscita di Linea per Buskit</li>
+                    <li>Dotato di Batteria 1,5V</li>
                   </ul>
                 </div>
                 <div class="prod-box">
-                  <h4>Applications</h4>
+                  <h4>Applicazioni</h4>
                   <ul>
-                    <li>Enabling Condenser Microphone Connection to Buskit</li>
+                    <li>
+                      Abilitazione della Connessione del Microfono a
+                      Condensatore a Buskit
+                    </li>
                   </ul>
                 </div>
               </div>
               <div class="prod-box" style="margin-bottom: 1rem">
-                <h4>Benefits</h4>
+                <h4>Vantaggi</h4>
                 <ul
                   style="display: grid; grid-template-columns: 1fr 1fr; gap: 0"
                 >
-                  <li>Very Low Noise</li>
-                  <li>Small Dimensions</li>
+                  <li>Rumore Molto Basso</li>
+                  <li>Dimensioni Compatte</li>
                 </ul>
               </div>
               <div class="prod-reg">
@@ -763,7 +902,7 @@
                 <span><span class="flag">🇪🇺</span> Europe</span>
                 <span><span class="flag">🇹🇷</span> Turkey</span>
                 <span style="color: #6b7680; font-size: 0.75rem"
-                  >Internationally Registered</span
+                  >Registrato Internazionalmente</span
                 >
               </div>
             </div>
@@ -776,7 +915,7 @@
         <div class="container">
           <div class="prod-inner">
             <div class="prod-image-col">
-              <img src="Buskit-MiniMixer.png" alt="Buskit Mini Mixer" />
+              <img src="./pics/Buskit-MiniMixer.png" alt="Buskit Mini Mixer" />
               <div class="prod-color-badge" style="background: #1a6bb5"></div>
             </div>
             <div class="prod-content">
@@ -786,49 +925,59 @@
               <h2 class="prod-name">Buskit Mini Mixer</h2>
               <!-- <p class="prod-tagline">Two-Band EQ Control — Shape Your Sound</p> -->
               <div class="prod-why">
-                This device is a powerful audio mixer with high quality and high gain that directly accepts three different audio sources, and with the help of the LineEXP module, its input count can be increased. It has a 5-band EQ and a rechargeable built-in battery.
+                Questo dispositivo è un potente mixer audio di alta qualità e
+                alto guadagno che accetta direttamente tre diverse sorgenti
+                audio, e con l'aiuto del modulo LineEXP, il numero di ingressi
+                può essere aumentato. Ha un EQ a 5 bande e una batteria
+                integrata ricaricabile.
               </div>
               <div class="prod-grid">
                 <div class="prod-box">
-                  <h4>Features</h4>
+                  <h4>Caratteristiche</h4>
                   <ul>
                     <li>
-                      Equipped with Two 5-Band EQs with Independent Signal Volume Control
+                      Dotato di Due EQ a 5 Bande con Controllo Volume del
+                      Segnale Indipendente
                     </li>
-                    <li>Low Band EQ: 120, 500, 1500, 3000, 6000 Hz</li>
+                    <li>EQ Bassa Banda: 120, 500, 1500, 3000, 6000 Hz</li>
                     <li>
-                      Two Piezo Inputs, One Line Input and One AUX Input
+                      Due Ingressi Piezo, Un Ingresso di Linea e Un Ingresso AUX
                     </li>
-                    <li>Gain and Drive Volume Control for Both Preamps</li>
-                    <li>Amp and AUX Output</li>
-                    <li>Backing Track Input Capability</li>
                     <li>
-                      Monitoring Capability Using Buskit Monitoring Module
+                      Controllo Guadagno e Volume Drive per Entrambi i
+                      Preamplificatori
                     </li>
-                    <li>Headphone Connection via Headphone Module</li>
+                    <li>Uscita Amp e AUX</li>
+                    <li>Capacità di Ingresso Backing Track</li>
                     <li>
-                      Dynamic or Condenser Microphone Connection (Using Microphone Module)
+                      Capacità di Monitoraggio Tramite il Modulo di Monitoraggio
+                      Buskit
                     </li>
-                    <li>USB-C 5V/1A Charging</li>
+                    <li>Connessione Cuffie Tramite Modulo Cuffie</li>
+                    <li>
+                      Connessione Microfono Dinamico o a Condensatore
+                      (Utilizzando il Modulo Microfono)
+                    </li>
+                    <li>Ricarica USB-C 5V/1A</li>
                   </ul>
                 </div>
                 <div class="prod-box">
-                  <h4>Applications</h4>
+                  <h4>Applicazioni</h4>
                   <ul>
-                    <li>Use in Group Practice</li>
-                    <li>Use in Street Performances</li>
+                    <li>Uso nelle Prove di Gruppo</li>
+                    <li>Uso nelle Esibizioni di Strada</li>
                   </ul>
                 </div>
               </div>
               <div class="prod-box" style="margin-bottom: 1rem">
-                <h4>Benefits</h4>
+                <h4>Vantaggi</h4>
                 <ul
                   style="display: grid; grid-template-columns: 1fr 1fr; gap: 0"
                 >
-                  <li>Small and Lightweight Dimensions</li>
-                  <li>Two Separate Preamp Inputs with EQ</li>
-                  <li>Rechargeable Built-in Battery</li>
-                  <li>Input Count Expansion Capability</li>
+                  <li>Dimensioni Compatte e Leggere</li>
+                  <li>Due Ingressi Preamplificatori Separati con EQ</li>
+                  <li>Batteria Integrata Ricaricabile</li>
+                  <li>Capacità di Espansione del Numero di Ingressi</li>
                 </ul>
               </div>
               <div class="prod-reg">
@@ -836,7 +985,7 @@
                 <span><span class="flag">🇪🇺</span> Europe</span>
                 <span><span class="flag">🇹🇷</span> Turkey</span>
                 <span style="color: #6b7680; font-size: 0.75rem"
-                  >Internationally Registered</span
+                  >Registrato Internazionalmente</span
                 >
               </div>
             </div>
@@ -849,54 +998,62 @@
         <div class="container">
           <div class="prod-inner">
             <div class="prod-image-col">
-              <img src="Buskit-Mixer.png" alt="Buskit Mixer" />
+              <img src="./pics/Buskit-Mixer.png" alt="Buskit Mixer" />
               <div class="prod-color-badge" style="background: #8b1a1a"></div>
             </div>
             <div class="prod-content">
               <div class="section-label">
-                <span class="blink-1s"> Mixer + Monitoring</span>
+                <span class="blink-1s"> Mixer + Monitoraggio</span>
               </div>
               <h2 class="prod-name">Buskit Mixer</h2>
               <!-- <p class="prod-tagline">8-Band EQ · Studio Sound on the Street</p> -->
               <div class="prod-why">
-                Despite its small size, this device has extraordinary performance and includes everything a live performance needs — from a monitoring system to output audio recording. Its EQ is a professional 8-band.
+                Nonostante le sue dimensioni ridotte, questo dispositivo ha
+                prestazioni straordinarie e include tutto ciò di cui
+                un'esibizione dal vivo ha bisogno — da un sistema di
+                monitoraggio alla registrazione audio in uscita. Il suo EQ è un
+                professionale a 8 bande.
               </div>
               <div class="prod-grid">
                 <div class="prod-box">
-                  <h4>Features</h4>
+                  <h4>Caratteristiche</h4>
                   <ul>
-                    <li>8-Band EQ: 75–8000 Hz</li>
-                    <li>Gain and Drive Volume Control for Preamp</li>
+                    <li>EQ a 8 Bande: 75–8000 Hz</li>
                     <li>
-                      Built-in Monitoring System with Monitor Lines Expandable via Monitor Expansion Module
+                      Controllo Guadagno e Volume Drive per Preamplificatore
                     </li>
-                    <li>Preamp, AUX, 2 Line Inputs</li>
                     <li>
-                      LineEXP Module Connectivity to Increase Input Count
+                      Sistema di Monitoraggio Integrato con Linee Monitor
+                      Espandibili tramite Modulo di Espansione Monitor
                     </li>
-                    <li>USB-C 5V/2A Charging</li>
+                    <li>Preamplificatore, AUX, 2 Ingressi di Linea</li>
+                    <li>
+                      Connettività Modulo LineEXP per Aumentare il Numero di
+                      Ingressi
+                    </li>
+                    <li>Ricarica USB-C 5V/2A</li>
                   </ul>
                 </div>
                 <div class="prod-box">
-                  <h4>Applications</h4>
+                  <h4>Applicazioni</h4>
                   <ul>
-                    <li>Live Multi-Person Band</li>
-                    <li>Professional Street PA</li>
-                    <li>Small Stadium Performance</li>
-                    <li>Event and Festival</li>
+                    <li>Band dal Vivo con Più Persone</li>
+                    <li>PA di Strada Professionale</li>
+                    <li>Esibizione in Piccolo Stadio</li>
+                    <li>Evento e Festival</li>
                   </ul>
                 </div>
               </div>
               <div class="prod-box" style="margin-bottom: 1rem">
-                <h4>Benefits</h4>
+                <h4>Vantaggi</h4>
                 <ul
                   style="display: grid; grid-template-columns: 1fr 1fr; gap: 0"
                 >
-                  <li>Professional 8-Band EQ</li>
-                  <li>Rechargeable Built-in Battery</li>
-                  <li>Built-in Monitoring System</li>
-                  <li>Small and Lightweight Dimensions</li>
-                  <li>Input Expansion Capability</li>
+                  <li>EQ Professionale a 8 Bande</li>
+                  <li>Batteria Integrata Ricaricabile</li>
+                  <li>Sistema di Monitoraggio Integrato</li>
+                  <li>Dimensioni Compatte e Leggere</li>
+                  <li>Capacità di Espansione degli Ingressi</li>
                 </ul>
               </div>
               <div class="prod-reg">
@@ -904,7 +1061,7 @@
                 <span><span class="flag">🇪🇺</span> Europe</span>
                 <span><span class="flag">🇹🇷</span> Turkey</span>
                 <span style="color: #6b7680; font-size: 0.75rem"
-                  >Internationally Registered</span
+                  >Registrato Internazionalmente</span
                 >
               </div>
             </div>
@@ -917,47 +1074,57 @@
         <div class="container">
           <div class="prod-inner">
             <div class="prod-image-col">
-              <img src="Buskit-Monitoring.png" alt="Buskit Monitoring" />
+              <img src="./pics/Buskit-Monitoring.png" alt="Buskit Monitoring" />
               <div class="prod-color-badge" style="background: #d4600a"></div>
             </div>
             <div class="prod-content">
               <div class="section-label">
-                <span class="blink-1s"> Audio Monitoring</span>
+                <span class="blink-1s"> Monitoraggio Audio</span>
               </div>
-              <h2 class="prod-name">Buskit Monitoring</h2>
+              <h2 class="prod-name">Buskit Monitoraggio</h2>
               <!-- <p class="prod-tagline">
                 مرکز کنترل Ecosystem — چهار مانیتور، یک خروجی
               </p> -->
               <div class="prod-why">
-                This device is an audio current amplifier that can connect to the output of any sound system and provides 4-line headphone connectivity at the output. With the Monitoring Expansion Module, this number can be doubled or more.
+                Questo dispositivo è un amplificatore di corrente audio che può
+                connettersi all'uscita di qualsiasi sistema audio e fornisce
+                connettività per cuffie a 4 linee in uscita. Con il Modulo di
+                Espansione Monitoraggio, questo numero può essere raddoppiato o
+                più.
               </div>
               <div class="prod-grid">
                 <div class="prod-box">
-                  <h4>Features</h4>
+                  <h4>Caratteristiche</h4>
                   <ul>
-                    <li>4 Monitor Outputs (MON 1-4)</li>
-                    <li>Output Level Control with Potentiometer</li>
-                    <li>6.3mm Input and Output</li>
-                    <li>BAT LOW/CHARGE/POWER Indicators</li>
-                    <li>USB-C 5V/2A Charging</li>
+                    <li>4 Uscite Monitor (MON 1-4)</li>
+                    <li>Controllo Livello di Uscita con Potenziometro</li>
+                    <li>Ingresso e Uscita da 6,3mm</li>
+                    <li>Indicatori BAT LOW/CHARGE/POWER</li>
+                    <li>Ricarica USB-C 5V/2A</li>
                   </ul>
                 </div>
                 <div class="prod-box">
-                  <h4>Applications</h4>
+                  <h4>Applicazioni</h4>
                   <ul>
-                    <li>Ability to Connect Any Audio Output to Headphones</li>
-                    <li>Four-Person (or More) Monitoring</li>
+                    <li>
+                      Possibilità di Connettere Qualsiasi Uscita Audio alle
+                      Cuffie
+                    </li>
+                    <li>Monitoraggio per Quattro Persone (o Più)</li>
                   </ul>
                 </div>
               </div>
               <div class="prod-box" style="margin-bottom: 1rem">
-                <h4>Benefits</h4>
+                <h4>Vantaggi</h4>
                 <ul
                   style="display: grid; grid-template-columns: 1fr 1fr; gap: 0"
                 >
-                  <li>Small and Lightweight Dimensions</li>
-                  <li>Enabling Any Sound System to Connect to Headphones</li>
-                  <li>Rechargeable Built-in Battery</li>
+                  <li>Dimensioni Compatte e Leggere</li>
+                  <li>
+                    Abilitazione di Qualsiasi Sistema Audio alla Connessione con
+                    le Cuffie
+                  </li>
+                  <li>Batteria Integrata Ricaricabile</li>
                 </ul>
               </div>
               <div class="prod-reg">
@@ -965,7 +1132,7 @@
                 <span><span class="flag">🇪🇺</span> Europe</span>
                 <span><span class="flag">🇹🇷</span> Turkey</span>
                 <span style="color: #6b7680; font-size: 0.75rem"
-                  >Internationally Registered</span
+                  >Registrato Internazionalmente</span
                 >
               </div>
             </div>
@@ -978,48 +1145,51 @@
         <div class="container">
           <div class="prod-inner">
             <div class="prod-image-col">
-              <img src="Buskit-PreAmp.png" alt="Buskit PreAmp" />
+              <img src="./pics/Buskit-PreAmp.png" alt="Buskit PreAmp" />
               <div class="prod-color-badge" style="background: #3a6b35"></div>
             </div>
             <div class="prod-content">
               <div class="section-label">
-                <span class="blink-1s"> Preamp</span>
+                <span class="blink-1s"> Preamplificatore</span>
               </div>
 
-              <h2 class="prod-name">Buskit Preamp</h2>
+              <h2 class="prod-name">Buskit Preamplificatore</h2>
               <!-- <p class="prod-tagline">Amplify and Shape Sound — Before the Amp</p> -->
               <div class="prod-why">
-                This device is a preamp with a 5-band EQ. Its noise is very low and its gain is very high. It is also equipped with a rechargeable built-in battery.
+                Questo dispositivo è un preamplificatore con EQ a 5 bande. Il
+                suo rumore è molto basso e il suo guadagno è molto alto. È anche
+                dotato di una batteria integrata ricaricabile.
               </div>
               <div class="prod-grid">
                 <div class="prod-box">
-                  <h4>Features</h4>
+                  <h4>Caratteristiche</h4>
                   <ul>
-                    <li>5-Band EQ: 120–6000 Hz</li>
-                    <li>Equipped with Drive and Gain Control</li>
-                    <li>AMP OUT Output</li>
-                    <li>AUX Input and Output</li>
-                    <li>Backing Track Playback Capability</li>
-                    <li>USB-C Charging</li>
+                    <li>EQ a 5 Bande: 120–6000 Hz</li>
+                    <li>Dotato di Controllo Drive e Guadagno</li>
+                    <li>Uscita AMP OUT</li>
+                    <li>Ingresso e Uscita AUX</li>
+                    <li>Capacità di Riproduzione Backing Track</li>
+                    <li>Ricarica USB-C</li>
                   </ul>
                 </div>
                 <div class="prod-box">
-                  <h4>Applications</h4>
+                  <h4>Applicazioni</h4>
                   <ul>
-                    <li>Compatible with All Instruments</li>
+                    <li>Compatibile con Tutti gli Strumenti</li>
                   </ul>
                 </div>
               </div>
               <div class="prod-box" style="margin-bottom: 1rem">
-                <h4>Benefits</h4>
+                <h4>Vantaggi</h4>
                 <ul
                   style="display: grid; grid-template-columns: 1fr 1fr; gap: 0"
                 >
-                  <li>Precise 5-Band EQ</li>
+                  <li>EQ Preciso a 5 Bande</li>
                   <li>
-                    Has AUX Input and Can Connect to AUX Input of Sound Systems
+                    Ha Ingresso AUX e Può Connettersi all'Ingresso AUX dei
+                    Sistemi Audio
                   </li>
-                  <li>Small and Lightweight Dimensions</li>
+                  <li>Dimensioni Compatte e Leggere</li>
                 </ul>
               </div>
               <div class="prod-reg">
@@ -1027,7 +1197,7 @@
                 <span><span class="flag">🇪🇺</span> Europe</span>
                 <span><span class="flag">🇹🇷</span> Turkey</span>
                 <span style="color: #6b7680; font-size: 0.75rem"
-                  >Internationally Registered</span
+                  >Registrato Internazionalmente</span
                 >
               </div>
             </div>
@@ -1039,47 +1209,50 @@
         <div class="container">
           <div class="prod-inner">
             <div class="prod-image-col">
-              <img src="Buskit-MiniPA.png" alt="Buskit mini PreAmp" />
+              <img src="./pics/Buskit-MiniPA.png" alt="Buskit mini PreAmp" />
               <div class="prod-color-badge" style="background: #3a6b35"></div>
             </div>
             <div class="prod-content">
               <div class="section-label">
-                <span class="blink-1s"> Mini Preamp</span>
+                <span class="blink-1s"> Mini Preamplificatore</span>
               </div>
 
-              <h2 class="prod-name">Buskit Mini Preamp</h2>
+              <h2 class="prod-name">Buskit Mini Preamplificatore</h2>
               <!-- <p class="prod-tagline">Amplify and Shape Sound — Before the Amp</p> -->
               <div class="prod-why">
-                This device is a preamp equipped with a two-line bass and treble tone control. Its noise is very low and its gain is very high.
+                Questo dispositivo è un preamplificatore dotato di controllo del
+                tono bassi e alti a due linee. Il suo rumore è molto basso e il
+                suo guadagno è molto alto.
               </div>
               <div class="prod-grid">
                 <div class="prod-box">
-                  <h4>Features</h4>
+                  <h4>Caratteristiche</h4>
                   <ul>
-                    <li>Bass and Treble Tone Control</li>
-                    <li>Equipped with Drive and Gain Control</li>
-                    <li>AMP OUT Output</li>
-                    <li>AUX Input and Output</li>
-                    <li>Backing Track Playback Capability</li>
-                    <li>9V Battery</li>
+                    <li>Controllo Tono Bassi e Alti</li>
+                    <li>Dotato di Controllo Drive e Guadagno</li>
+                    <li>Uscita AMP OUT</li>
+                    <li>Ingresso e Uscita AUX</li>
+                    <li>Capacità di Riproduzione Backing Track</li>
+                    <li>Batteria 9V</li>
                   </ul>
                 </div>
                 <div class="prod-box">
-                  <h4>Applications</h4>
+                  <h4>Applicazioni</h4>
                   <ul>
-                    <li>Compatible with All Instruments</li>
+                    <li>Compatibile con Tutti gli Strumenti</li>
                   </ul>
                 </div>
               </div>
               <div class="prod-box" style="margin-bottom: 1rem">
-                <h4>Benefits</h4>
+                <h4>Vantaggi</h4>
                 <ul
                   style="display: grid; grid-template-columns: 1fr 1fr; gap: 0"
                 >
                   <li>
-                    Has AUX Input and Can Connect to AUX Input of Sound Systems
+                    Ha Ingresso AUX e Può Connettersi all'Ingresso AUX dei
+                    Sistemi Audio
                   </li>
-                  <li>Small and Lightweight Dimensions</li>
+                  <li>Dimensioni Compatte e Leggere</li>
                 </ul>
               </div>
               <div class="prod-reg">
@@ -1087,7 +1260,7 @@
                 <span><span class="flag">🇪🇺</span> Europe</span>
                 <span><span class="flag">🇹🇷</span> Turkey</span>
                 <span style="color: #6b7680; font-size: 0.75rem"
-                  >Internationally Registered</span
+                  >Registrato Internazionalmente</span
                 >
               </div>
             </div>
@@ -1099,84 +1272,92 @@
         <div class="container">
           <div class="prod-inner" style="align-items: flex-start">
             <div class="prod-image-col" style="position: sticky; top: 90px">
-              <img src="Buskit-Bat.png" alt="Buskit-Bat" />
+              <img src="./pics/Buskit-Bat.png" alt="Buskit-Bat" />
               <div class="prod-color-badge" style="background: #1a6b2a"></div>
             </div>
             <div class="prod-content">
               <div class="section-label">
-                <span class="blink-1s"> High-Capacity Battery</span>
+                <span class="blink-1s"> Batteria ad Alta Capacità</span>
               </div>
               <h2 class="prod-name">Buskit-Bat</h2>
               <!-- <p class="prod-tagline">Triple Power Supply for Every Performance</p> -->
               <div class="prod-why">
-                This device is a lightweight, compact, high-capacity portable battery that can supply 12V, 9V and 5V with voltage polarity reversal capability. It can be used to power all music performance-related audio equipment including amplifiers, pedals, and more.
+                Questo dispositivo è una batteria portatile leggera, compatta e
+                ad alta capacità che può fornire 12V, 9V e 5V con capacità di
+                inversione della polarità di tensione. Può essere utilizzato per
+                alimentare tutte le apparecchiature audio relative alle
+                esibizioni musicali inclusi amplificatori, pedali e altro.
               </div>
 
               <!-- Voltage Cards -->
               <div class="bat-voltage-cards">
                 <div class="bat-vcard" style="--vc: #f07a3a">
                   <div class="bat-vcard-volt">5V</div>
-                  <div class="bat-vcard-label">USB · Device Charging</div>
+                  <div class="bat-vcard-label">USB · Ricarica Dispositivo</div>
                 </div>
                 <div class="bat-vcard" style="--vc: #3b6cb7">
                   <div class="bat-vcard-volt">9V</div>
-                  <div class="bat-vcard-label">Effect Pedal · Mixer</div>
+                  <div class="bat-vcard-label">Pedale Effetti · Mixer</div>
                 </div>
                 <div class="bat-vcard" style="--vc: #1a6b2a">
                   <div class="bat-vcard-volt">12V</div>
-                  <div class="bat-vcard-label">Preamp · Amplifier</div>
+                  <div class="bat-vcard-label">
+                    Preamplificatore · Amplificatore
+                  </div>
                 </div>
               </div>
 
               <!-- Polarity Indicator -->
               <div class="bat-polarity-demo">
-                <div class="bat-polarity-title">⚡ Output Polarity Reversal</div>
+                <div class="bat-polarity-title">
+                  ⚡ Inversione Polarità di Uscita
+                </div>
                 <div class="bat-polarity-row">
                   <div class="bat-polarity-box">
                     <span class="bat-pol-plus">+</span>
-                    <span class="bat-pol-label">Center Positive</span>
+                    <span class="bat-pol-label">Centro Positivo</span>
                     <span class="bat-pol-minus">−</span>
-                    <span class="bat-pol-desc">Center Positive</span>
+                    <span class="bat-pol-desc">Centro Positivo</span>
                   </div>
                   <div class="bat-polarity-arrow">⇄</div>
                   <div class="bat-polarity-box bat-polarity-box--alt">
                     <span class="bat-pol-minus">−</span>
-                    <span class="bat-pol-label">Center Negative</span>
+                    <span class="bat-pol-label">Centro Negativo</span>
                     <span class="bat-pol-plus">+</span>
-                    <span class="bat-pol-desc">Center Negative</span>
+                    <span class="bat-pol-desc">Centro Negativo</span>
                   </div>
                 </div>
               </div>
 
               <div class="prod-grid">
                 <div class="prod-box">
-                  <h4>Features</h4>
+                  <h4>Caratteristiche</h4>
                   <ul>
-                    <li>5V Output — USB-A</li>
-                    <li>9V Output — DC Jack</li>
-                    <li>12V Output — DC Jack</li>
-                    <li>Change Polarity of Each Output</li>
-                    <li>USB-C Input Charging</li>
+                    <li>Uscita 5V — USB-A</li>
+                    <li>Uscita 9V — DC Jack</li>
+                    <li>Uscita 12V — DC Jack</li>
+                    <li>Cambio Polarità di Ogni Uscita</li>
+                    <li>Ricarica Ingresso USB-C</li>
                   </ul>
                 </div>
                 <div class="prod-box">
-                  <h4>Applications</h4>
+                  <h4>Applicazioni</h4>
                   <ul>
-                    <li>Powering Effect Pedals</li>
-                    <li>Powering Buskit Preamp</li>
-                    <li>Performance Without Mains Power</li>
+                    <li>Alimentazione Pedali Effetti</li>
+                    <li>Alimentazione Preamplificatore Buskit</li>
+                    <li>Esibizione Senza Alimentazione di Rete</li>
                   </ul>
                 </div>
               </div>
               <div class="prod-box" style="margin-bottom: 1rem">
-                <h4>Benefits</h4>
+                <h4>Vantaggi</h4>
                 <ul
                   style="display: grid; grid-template-columns: 1fr 1fr; gap: 0"
                 >
-                  <li>Three Independent Voltages</li>
-                  <li>Changeable Polarity</li>
-                  <li>Small and Lightweight</li>
-                  <li>Compatible with Most Devices</li>
+                  <li>Tre Tensioni Indipendenti</li>
+                  <li>Polarità Modificabile</li>
+                  <li>Piccolo e Leggero</li>
+                  <li>Compatibile con la Maggior Parte dei Dispositivi</li>
                 </ul>
               </div>
               <div class="prod-reg">
@@ -1184,7 +1365,7 @@
                 <span><span class="flag">🇪🇺</span> Europe</span>
                 <span><span class="flag">🇹🇷</span> Turkey</span>
                 <span style="color: #6b7680; font-size: 0.75rem"
-                  >Internationally Registered</span
+                  >Registrato Internazionalmente</span
                 >
               </div>
             </div>
@@ -1197,41 +1378,44 @@
       <div class="container">
         <div class="prod-inner">
           <div class="prod-image-col">
-            <img src="Buskit-MonEXP.png" alt="Buskit Monitoring" />
+            <img src="./pics/Buskit-MonEXP.png" alt="Buskit Monitoring" />
             <div class="prod-color-badge" style="background: #3a6b35"></div>
           </div>
           <div class="prod-content">
             <div class="section-label">
               <span class="blink-1s">
-                Monitoring Output Count Expansion Module</span
+                Modulo di Espansione Uscite Monitoraggio</span
               >
             </div>
 
             <h2 class="prod-name">Buskit MonEXP</h2>
             <!-- <p class="prod-tagline">Amplify and Shape Sound — Before the Amp</p> -->
             <div class="prod-why">
-              This module is also an expansion module used to increase the number of monitoring outputs.
+              Questo modulo è un modulo di espansione utilizzato per aumentare
+              il numero di uscite di monitoraggio.
             </div>
             <div class="prod-grid">
               <div class="prod-box">
-                <h4>Features</h4>
+                <h4>Caratteristiche</h4>
                 <ul>
-                  <li>Has One Input from the Monitoring Device and Four Outputs</li>
-                  <li>No Power or Battery Required</li>
+                  <li>
+                    Has One Input from the Monitoring Device and Four Outputs
+                  </li>
+                  <li>Nessuna Alimentazione o Batteria Necessaria</li>
                 </ul>
               </div>
               <div class="prod-box">
-                <h4>Applications</h4>
+                <h4>Applicazioni</h4>
                 <ul>
-                  <li>Compatible with All Instruments</li>
+                  <li>Compatibile con Tutti gli Strumenti</li>
                 </ul>
               </div>
             </div>
             <div class="prod-box" style="margin-bottom: 1rem">
-              <h4>Benefits</h4>
+              <h4>Vantaggi</h4>
               <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 0">
-                <li>Increasing the Number of Headphone Outputs</li>
-                <li>Small and Lightweight Dimensions</li>
+                <li>Aumento del Numero di Uscite Cuffie</li>
+                <li>Dimensioni Compatte e Leggere</li>
               </ul>
             </div>
             <div class="prod-reg">
@@ -1257,11 +1441,15 @@
     >
       <div class="container">
         <div class="section-label">
-          <span class="blink-1s"> Why Buskit</span>
+          <span class="blink-1s"> Perché Buskit</span>
         </div>
-        <h2 class="section-title">Real Problems, Practical Solutions</h2>
+        <h2 class="section-title">Problemi Reali, Soluzioni Pratiche</h2>
         <p class="section-desc" style="text-align: justify">
-          Every musician — whether for private or public, solo or group performances — needs equipment that provides the right facilities for their situation. The Buskit device collection meets all their needs effectively and efficiently.
+          Ogni musicista — che si tratti di esibizioni private o pubbliche,
+          soliste o di gruppo — ha bisogno di attrezzatura che fornisca le
+          giuste strutture per la propria situazione. La collezione di
+          dispositivi Buskit soddisfa tutte le loro esigenze in modo efficace ed
+          efficiente.
         </p>
 
         <div class="why-grid">
@@ -1269,52 +1457,63 @@
           <div class="why-card why-card-problems">
             <div class="why-card-header">
               <div class="why-card-icon">⚠️</div>
-              <h3>Existing Problems</h3>
+              <h3>Problemi Esistenti</h3>
             </div>
             <ul class="why-list">
               <li>
                 <span class="dot"></span>
                 <span
                   ><strong
-                    >Dependence on Mains Power or Heavy, Bulky Batteries</strong
+                    >Dipendenza dall'Alimentazione di Rete o da Batterie Pesanti
+                    e Ingombranti</strong
                   ></span
                 >
               </li>
               <li>
                 <span class="dot"></span>
                 <span
-                  ><strong>Limited Number of Amplifier Inputs</strong></span
+                  ><strong
+                    >Numero Limitato di Ingressi Amplificatore</strong
+                  ></span
                 >
               </li>
               <li>
                 <span class="dot"></span>
                 <span
                   ><strong
-                    >Live Performance for More Than Two People Requires Multiple Amplifiers</strong
+                    >Esibizione dal Vivo per Più di Due Persone Richiede Più
+                    Amplificatori</strong
                   >
                 </span>
               </li>
               <li>
                 <span class="dot"></span>
-                <span><strong> Need for an Audio Monitoring System</strong> </span>
+                <span
+                  ><strong
+                    >Necessità di un Sistema di Monitoraggio Audio</strong
+                  >
+                </span>
               </li>
               <li>
                 <span class="dot"></span>
                 <span
                   ><strong
-                    >Need to Drill Instruments to Install Under-Bridge Microphones</strong
+                    >Necessità di Forare gli Strumenti per Installare Microfoni
+                    Sotto il Ponte</strong
                   ></span
                 >
               </li>
               <li>
                 <span class="dot"></span>
-                <span><strong>Lack of an Integrated Ecosystem</strong></span>
+                <span
+                  ><strong>Mancanza di un Ecosistema Integrato</strong></span
+                >
               </li>
               <li>
                 <span class="dot"></span>
                 <span
                   ><strong
-                    >Inadequate Audio Balance in Group Rehearsals
+                    >Bilanciamento Audio Inadeguato nelle Prove di Gruppo
                   </strong></span
                 >
               </li>
@@ -1322,7 +1521,8 @@
                 <span class="dot"></span>
                 <span
                   ><strong
-                    >Need for EQ to Adjust Treble and Bass of Instrument or Vocalist
+                    >Necessità di EQ per Regolare Alti e Bassi dello Strumento o
+                    del Cantante
                   </strong></span
                 >
               </li>
@@ -1330,7 +1530,8 @@
                 <span class="dot"></span>
                 <span
                   ><strong
-                    >Ability to Connect Any Audio Equipment to the Performance
+                    >Possibilità di Connettere Qualsiasi Apparecchiatura Audio
+                    all'Esibizione
                   </strong></span
                 >
               </li>
@@ -1338,7 +1539,7 @@
                 <span class="dot"></span>
                 <span
                   ><strong
-                    >Inability to Use Amateur Amplifiers
+                    >Impossibilità di Utilizzare Amplificatori Amatoriali
                   </strong></span
                 >
               </li>
@@ -1349,94 +1550,130 @@
           <div class="why-card why-card-solutions">
             <div class="why-card-header">
               <div class="why-card-icon">✅</div>
-              <h3>Buskit Ecosystem Solution</h3>
+              <h3>Soluzione dell'Ecosistema Buskit</h3>
             </div>
             <ul class="why-list">
               <li>
                 <span class="dot"></span>
                 <span
                   ><strong>
-                    Offering Two Audio Mixer Models with Unique Capabilities</strong
+                    Offerta di Due Modelli di Mixer Audio con Capacità
+                    Uniche</strong
                   >
-                  For every taste and every need, a device has been designed to mix all audio input sources together without quantity limitations and produce a clear sound at the output.</span
+                  Per ogni gusto e ogni esigenza, è stato progettato un
+                  dispositivo per mixare tutte le sorgenti audio insieme senza
+                  limitazioni di quantità e produrre un suono chiaro in
+                  uscita.</span
                 >
               </li>
               <li>
                 <span class="dot"></span>
                 <span
-                  ><strong> Equipped with Rechargeable Built-in Battery</strong> — Most Buskit products are designed with USB-C rechargeable batteries; perform anywhere in the city without needing mains power.</span
+                  ><strong> Dotato di Batteria Integrata Ricaricabile</strong> —
+                  La maggior parte dei prodotti Buskit è progettata con batterie
+                  ricaricabili USB-C; esibisciti ovunque in città senza bisogno
+                  di alimentazione di rete.</span
                 >
               </li>
               <li>
                 <span class="dot"></span>
                 <span
-                  ><strong> Small, Pocket-Sized and Lightweight</strong> The entire multi-person system can be carried by hand and its weight barely reaches one kilogram.</span
+                  ><strong> Piccolo, Tascabile e Leggero</strong> L'intero
+                  sistema multi-persona può essere trasportato a mano e il suo
+                  peso raggiunge a malapena un chilogrammo.</span
                 >
               </li>
               <li>
                 <span class="dot"></span>
                 <span
-                  ><strong>Modular and Expandable Architecture</strong> Depending on needs, modules appropriate to the work level can be used, and when expanding, expansion modules can be purchased to develop the devices.</span
+                  ><strong>Architettura Modulare ed Espandibile</strong> A
+                  seconda delle esigenze, possono essere utilizzati moduli
+                  appropriati al livello di lavoro, e quando si espande, è
+                  possibile acquistare moduli di espansione per sviluppare i
+                  dispositivi.</span
                 >
               </li>
               <li>
                 <span class="dot"></span>
                 <span
-                  ><strong> Equipped with Audio Monitoring System </strong> Audio monitoring capability plays a fundamental role in improving performance quality.</span
+                  ><strong> Dotato di Sistema di Monitoraggio Audio </strong> La
+                  capacità di monitoraggio audio svolge un ruolo fondamentale
+                  nel miglioramento della qualità dell'esibizione.</span
                 >
               </li>
               <li>
                 <span class="dot"></span>
                 <span
-                  ><strong> Equipped with Up to 8-Band Audio EQ</strong> A range of two-band, 5-band and 8-band equalizers are available in the Buskit device collection, playing a fundamental role in shaping the sound of an instrument or vocalist.</span
+                  ><strong> Dotato di EQ Audio fino a 8 Bande</strong> Una gamma
+                  di equalizzatori a due bande, 5 bande e 8 bande è disponibile
+                  nella collezione di dispositivi Buskit, svolgendo un ruolo
+                  fondamentale nel modellare il suono di uno strumento o di un
+                  cantante.</span
                 >
               </li>
               <li>
                 <span class="dot"></span>
                 <span
                   ><strong>
-                    No Need to Drill Instruments or Install Under-Bridge Microphones</strong
+                    Nessuna Necessità di Forare gli Strumenti o Installare
+                    Microfoni Sotto il Ponte</strong
                   ></span
                 >
               </li>
               <li>
                 <span class="dot"></span>
                 <span
-                  ><strong>One Ecosystem, One Standard</strong> — All Buskit products are compatible with each other; from the smallest Mic Interface to the Mixer, they all speak the same language.</span
+                  ><strong>Un Ecosistema, Uno Standard</strong> — Tutti i
+                  prodotti Buskit sono compatibili tra loro; dalla più piccola
+                  Interfaccia Mic al Mixer, parlano tutti lo stesso
+                  linguaggio.</span
                 >
               </li>
               <li>
                 <span class="dot"></span>
                 <span
-                  ><strong>Using Amateur Amplifiers</strong> — Given the capabilities of the Buskit collection, connecting instruments to the AUX inputs of amplifiers is also possible, so a large group can be set up using just one ordinary amateur amplifier.</span
+                  ><strong>Utilizzo di Amplificatori Amatoriali</strong> — Date
+                  le capacità della collezione Buskit, è anche possibile
+                  collegare strumenti agli ingressi AUX degli amplificatori,
+                  quindi è possibile allestire un grande gruppo utilizzando solo
+                  un comune amplificatore amatoriale.</span
                 >
               </li>
               <li>
                 <span class="dot"></span>
                 <span>
                   <strong>
-                    Equipped with System to Connect to AUX Input of Any Sound System —</strong
-                  >This capability allows any type of audio device to be used to connect an instrument or the full group's sound output.
+                    Dotato di Sistema per Connettersi all'Ingresso AUX di
+                    Qualsiasi Sistema Audio —</strong
+                  >Questa capacità consente di utilizzare qualsiasi tipo di
+                  dispositivo audio per connettere uno strumento o l'uscita
+                  audio dell'intero gruppo.
                 </span>
               </li>
               <li>
                 <span class="dot"></span>
                 <span>
                   <strong>
-                    Equipped with System for Direct Recording of Mixed Output Audio on Mobile Phone
+                    Dotato di Sistema per la Registrazione Diretta dell'Audio di
+                    Uscita Mixato su Telefono Cellulare
                   </strong>
                 </span>
               </li>
               <li>
                 <span class="dot"></span>
                 <span>
-                  <strong> Equipped with High-Gain, Low-Noise Preamp</strong>
+                  <strong>
+                    Dotato di Preamplificatore ad Alto Guadagno e Basso
+                    Rumore</strong
+                  >
                 </span>
               </li>
             </ul>
 
             <div class="why-quote">
-              Buskit is the only brand in the world that has designed and registered a fully modular and battery-powered audio ecosystem specifically for street musicians.
+              Buskit è l'unico marchio al mondo che ha progettato e registrato
+              un ecosistema audio completamente modulare e alimentato a batteria
+              specificamente per i musicisti di strada.
             </div>
           </div>
         </div>
@@ -1446,16 +1683,18 @@
     <section class="bk-section" id="look">
       <div
         class="dynamic-glow-bg bk-container"
-        style="height: auto"
+        style="height: auto; padding: 2rem"
       >
         <p class="section-label">
-          <span class="blink-1s"> Buskit Environmental Diagram</span>
+          <span class="blink-1s"> Diagramma Ambientale Buskit</span>
         </p>
-        <h2 class="bk-title-md">Multiple Modular Inputs/Outputs</h2>
+        <h2 class="bk-title-md">Ingressi/Uscite Modulari Multipli</h2>
         <p class="bk-subtitle" style="margin-bottom: 0">
-          The Buskit collection is flexible, modular and capable of connecting to most standard inputs and outputs in the music world.
+          La collezione Buskit è flessibile, modulare e capace di connettersi
+          alla maggior parte degli ingressi e delle uscite standard nel mondo
+          della musica.
         </p>
-        <img class="diagram" src="diagram.svg" alt="diagram" />
+        <img class="diagram" src="./pics/diagram.png" alt="diagram" />
       </div>
     </section>
 
@@ -1475,25 +1714,31 @@
       >
         <!-- Header -->
         <p class="section-label">
-          <span class="blink-1s"> Audio Ecosystem</span>
+          <span class="blink-1s"> Ecosistema Audio</span>
         </p>
-        <h2 class="section-title">Every Element Exactly in <span>Its </span>Place</h2>
+        <h2 class="section-title">
+          Ogni Elemento Esattamente al <span>Suo </span>Posto
+        </h2>
         <p class="bk-subtitle">
-          BUSKIT devices are designed for any instrument and any performance condition — from studio to street. Diverse inputs, professional processing, and flexible outputs in one integrated ecosystem.
+          I dispositivi BUSKIT sono progettati per qualsiasi strumento e
+          qualsiasi condizione di esibizione — dallo studio alla strada.
+          Ingressi diversificati, elaborazione professionale e uscite flessibili
+          in un ecosistema integrato.
         </p>
 
         <!-- Flow: Inputs (2-col grid) → then Core + Outputs side by side -->
         <div class="bk-flow-new">
           <!-- INPUTS ROW — 2-column grid -->
           <div class="bk-inputs-section">
-            <p class="bk-col-label" style="padding-right: 40px">Inputs</p>
+            <p class="bk-col-label" style="padding-right: 40px">Ingressi</p>
             <div class="bk-input-grid">
               <div class="bk-input-card">
                 <div class="bk-input-icon ic-blue">🎹</div>
                 <div class="bk-input-text">
-                  <p class="bk-input-name">Electronic Instruments</p>
+                  <p class="bk-input-name">Strumenti Elettronici</p>
                   <p class="bk-input-desc">
-                    Electric Piano, Amp Output, Preamps of Other Instruments
+                    Pianoforte Elettrico, Uscita Amplificatore, Preamplificatori
+                    di Altri Strumenti
                   </p>
                 </div>
                 <span class="bk-badge badge-line">Line</span>
@@ -1502,8 +1747,10 @@
               <div class="bk-input-card">
                 <div class="bk-input-icon ic-blue">🔊</div>
                 <div class="bk-input-text">
-                  <p class="bk-input-name">Sound Systems</p>
-                  <p class="bk-input-desc">Direct Output from Mixer or PA System</p>
+                  <p class="bk-input-name">Sistemi Audio</p>
+                  <p class="bk-input-desc">
+                    Uscita Diretta dal Mixer o Sistema PA
+                  </p>
                 </div>
                 <span class="bk-badge badge-line">Line</span>
               </div>
@@ -1511,9 +1758,9 @@
               <div class="bk-input-card">
                 <div class="bk-input-icon ic-teal">🎙</div>
                 <div class="bk-input-text">
-                  <p class="bk-input-name">Dynamic Microphone</p>
+                  <p class="bk-input-name">Microfono Dinamico</p>
                   <p class="bk-input-desc">
-                    Direct Connection Without Auxiliary Module
+                    Connessione Diretta Senza Modulo Ausiliario
                   </p>
                 </div>
                 <span class="bk-badge badge-mic">Mic</span>
@@ -1522,8 +1769,10 @@
               <div class="bk-input-card">
                 <div class="bk-input-icon ic-teal">🎚</div>
                 <div class="bk-input-text">
-                  <p class="bk-input-name">Condenser Microphone</p>
-                  <p class="bk-input-desc">Via Microphone Interface Module</p>
+                  <p class="bk-input-name">Microfono a Condensatore</p>
+                  <p class="bk-input-desc">
+                    Tramite Modulo Interfaccia Microfono
+                  </p>
                 </div>
                 <span class="bk-badge badge-mic">Condenser</span>
               </div>
@@ -1546,9 +1795,10 @@
                   🎸
                 </div>
                 <div class="bk-input-text">
-                  <p class="bk-input-name">Piezo Pickup / Under-Bridge</p>
+                  <p class="bk-input-name">Pickup Piezo / Sotto il Ponte</p>
                   <p class="bk-input-desc">
-                    High-Gain, Low-Noise Preamp — 2 to 7-Band EQ
+                    Preamplificatore ad Alto Guadagno e Basso Rumore — EQ da 2 a
+                    7 Bande
                   </p>
                 </div>
                 <span class="bk-badge badge-piezo">Piezo</span>
@@ -1557,9 +1807,9 @@
               <div class="bk-input-card">
                 <div class="bk-input-icon ic-gold">➕</div>
                 <div class="bk-input-text">
-                  <p class="bk-input-name">LineEXP Module</p>
+                  <p class="bk-input-name">Modulo LineEXP</p>
                   <p class="bk-input-desc">
-                    Unlimited Input Expansion — No Technical Limit
+                    Espansione Ingressi Illimitata — Nessun Limite Tecnico
                   </p>
                 </div>
                 <span class="bk-badge badge-exp">Expandable</span>
@@ -1571,36 +1821,38 @@
           <div class="bk-core-outputs-row">
             <!-- CORE -->
             <div class="bk-core-col">
-              <p class="bk-col-label">Central Processing</p>
+              <p class="bk-col-label">Elaborazione Centrale</p>
               <div class="bk-core">
                 <div class="bk-core-logo">BUS<span>KIT</span></div>
-                <div class="bk-core-tagline">Professional Audio Ecosystem</div>
+                <div class="bk-core-tagline">
+                  Ecosistema Audio Professionale
+                </div>
                 <ul class="bk-core-features">
-                  <li>2 to 7-Band EQ (Depending on Model)</li>
-                  <li>Multi-Channel Stereo Mix</li>
-                  <li>Low-Noise Piezo Preamp</li>
-                  <li>Output Headphone Monitoring</li>
-                  <li>USB Rechargeable Built-in Battery</li>
-                  <li>Connection to Auxiliary Modules</li>
+                  <li>EQ da 2 a 7 Bande (a Seconda del Modello)</li>
+                  <li>Mix Stereo Multicanale</li>
+                  <li>Preamplificatore Piezo a Basso Rumore</li>
+                  <li>Monitoraggio Cuffie in Uscita</li>
+                  <li>Batteria Integrata Ricaricabile USB</li>
+                  <li>Connessione a Moduli Ausiliari</li>
                 </ul>
                 <div class="bk-core-divider"></div>
                 <div class="bk-bat-badge">
                   <strong>⚡ BUSKIT-bat</strong>
-                  A Revolution in Powering Audio Equipment
+                  Una Rivoluzione nell'Alimentazione delle Apparecchiature Audio
                 </div>
               </div>
             </div>
 
             <!-- OUTPUTS -->
             <div class="bk-outputs-col">
-              <p class="bk-col-label">Outputs</p>
+              <p class="bk-col-label">Uscite</p>
               <div class="bk-output-list">
                 <div class="bk-output-card">
                   <div class="bk-input-icon ic-coral">🔌</div>
                   <div class="bk-input-text">
-                    <p class="bk-input-name">Amplifier (Wired)</p>
+                    <p class="bk-input-name">Amplificatore (Con Filo)</p>
                     <p class="bk-input-desc">
-                      Standard Output to Any Amplifier
+                      Uscita Standard a Qualsiasi Amplificatore
                     </p>
                   </div>
                 </div>
@@ -1622,36 +1874,39 @@
                     📡
                   </div>
                   <div class="bk-input-text">
-                    <p class="bk-input-name">Wireless Module</p>
+                    <p class="bk-input-name">Modulo Wireless</p>
                     <p class="bk-input-desc">
-                      Enabling Wireless Connection from Instrument to Amplifier
+                      Abilitazione della Connessione Wireless dallo Strumento
+                      all'Amplificatore
                     </p>
                   </div>
                 </div>
                 <div class="bk-output-card">
                   <div class="bk-input-icon ic-coral">🔗</div>
                   <div class="bk-input-text">
-                    <p class="bk-input-name">AUX Output</p>
+                    <p class="bk-input-name">Uscita AUX</p>
                     <p class="bk-input-desc">
-                      Connection to AUX In of Existing Audio Equipment
+                      Connessione all'Ingresso AUX delle Apparecchiature Audio
+                      Esistenti
                     </p>
                   </div>
                 </div>
                 <div class="bk-output-card">
                   <div class="bk-input-icon ic-green">🎧</div>
                   <div class="bk-input-text">
-                    <p class="bk-input-name">Monitoring</p>
+                    <p class="bk-input-name">Monitoraggio</p>
                     <p class="bk-input-desc">
-                      Direct Listening of Output Mix for the Musician
+                      Ascolto Diretto del Mix di Uscita per il Musicista
                     </p>
                   </div>
                 </div>
                 <div class="bk-output-card">
                   <div class="bk-input-icon ic-green">🎧</div>
                   <div class="bk-input-text">
-                    <p class="bk-input-name">Recording Mixed Audio</p>
+                    <p class="bk-input-name">Registrazione Audio Mixato</p>
                     <p class="bk-input-desc">
-                      Ability to Record Output Mix Directly on Mobile Phone
+                      Possibilità di Registrare il Mix di Uscita Direttamente
+                      sul Telefono Cellulare
                     </p>
                   </div>
                 </div>
@@ -1664,7 +1919,7 @@
         <!-- Specs Strip — directly below bk-container, outside bk-flow-new -->
         <div style="margin-top: 40px; margin-bottom: 40px; padding: 0 40px">
           <p class="bk-col-label" style="margin-bottom: 20px">
-            Key Features
+            Caratteristiche Principali
           </p>
           <div class="bk-features-grid">
             <!-- ستون راست: Multi-Band EQ + Wireless Connectivity -->
@@ -1672,18 +1927,20 @@
               <div class="bk-spec-card">
                 <div class="bk-spec-icon">🎛</div>
                 <div>
-                  <p class="bk-spec-name">Multi-Band EQ</p>
+                  <p class="bk-spec-name">EQ Multi-Banda</p>
                   <p class="bk-spec-desc">
-                    2 to 7-Band EQ depending on device model, for precise sound shaping
+                    EQ da 2 a 7 Bande a seconda del modello del dispositivo, per
+                    una modellazione precisa del suono
                   </p>
                 </div>
               </div>
               <div class="bk-spec-card">
                 <div class="bk-spec-icon">📡</div>
                 <div>
-                  <p class="bk-spec-name">Wireless Connectivity</p>
+                  <p class="bk-spec-name">Connettività Wireless</p>
                   <p class="bk-spec-desc">
-                    Wireless Communication Module to Separate Instrument from Amplifier
+                    Modulo di Comunicazione Wireless per Separare lo Strumento
+                    dall'Amplificatore
                   </p>
                 </div>
               </div>
@@ -1695,10 +1952,15 @@
                 <div class="bk-monitor-icon">🎧</div>
                 <div class="bk-monitor-text">
                   <h3 class="bk-monitor-title">
-                    Monitoring <span>Professional</span> In the Moment of Performance
+                    Monitoraggio <span>Professionale</span> nel Momento
+                    dell'Esibizione
                   </h3>
                   <p class="bk-monitor-desc">
-                    Musicians can hear the mixed output directly through headphones — without delay, without intermediary. This capability plays a vital role in improving performance quality and allows the musician to control their sound in the moment.
+                    I musicisti possono sentire l'uscita mixata direttamente
+                    attraverso le cuffie — senza ritardi, senza intermediari.
+                    Questa capacità svolge un ruolo vitale nel miglioramento
+                    della qualità dell'esibizione e consente al musicista di
+                    controllare il proprio suono nel momento.
                   </p>
                 </div>
               </div>
@@ -1709,18 +1971,20 @@
               <div class="bk-spec-card">
                 <div class="bk-spec-icon">⚡</div>
                 <div>
-                  <p class="bk-spec-name">Built-in Battery</p>
+                  <p class="bk-spec-name">Batteria Integrata</p>
                   <p class="bk-spec-desc">
-                    Charge via USB — Perform Without Mains Power
+                    Ricarica tramite USB — Esibisciti Senza Alimentazione di
+                    Rete
                   </p>
                 </div>
               </div>
               <div class="bk-spec-card">
                 <div class="bk-spec-icon">➕</div>
                 <div>
-                  <p class="bk-spec-name">Expandable</p>
+                  <p class="bk-spec-name">Espandibile</p>
                   <p class="bk-spec-desc">
-                    Input Expansion via LineEXP Module — No Technical Limit
+                    Espansione Ingressi tramite Modulo LineEXP — Nessun Limite
+                    Tecnico
                   </p>
                 </div>
               </div>
@@ -1736,11 +2000,11 @@
     <section class="con-container">
       <div class="bk-container">
         <p class="section-label" id="con-mixer" style="scroll-margin-top: 70px">
-          <span class="blink-1s">Buskit Mixer Sample Connections</span>
+          <span class="blink-1s">Esempi di Connessione Mixer Buskit</span>
         </p>
         <img
           class="diagram"
-          src="Buskit-Mixer-diagram.png"
+          src="./pics/Buskit-Mixer-diagram.png"
           alt="diagram"
           style="width: 950px; display: block; margin-bottom: 3rem"
         />
@@ -1750,11 +2014,11 @@
           id="con-minimixer"
           style="scroll-margin-top: 70px"
         >
-          <span class="blink-1s">Buskit Mini Mixer Sample Connections</span>
+          <span class="blink-1s">Esempi di Connessione Mini Mixer Buskit</span>
         </p>
         <img
           class="diagram"
-          src="Buskit-miniMixer.diagram.png"
+          src="./pics/Buskit-miniMixer.diagram.png"
           alt="diagram"
           style="width: 950px; display: block; margin-bottom: 3rem"
         />
@@ -1765,11 +2029,13 @@
           id="con-microPA"
           style="scroll-margin-top: 70px"
         >
-          <span class="blink-1s"> Buskit Micro Preamp Sample Connections</span>
+          <span class="blink-1s">
+            Esempi di Connessione Micro Preamplificatore Buskit</span
+          >
         </p>
         <img
           class="diagram"
-          src="Buskit-microPA.diagram.png"
+          src="./pics/Buskit-microPA.diagram.png"
           alt="diagram"
           style="width: 250px; display: block; margin: 0 auto 3rem auto"
         />
@@ -1780,32 +2046,36 @@
           id="con-miniPA"
           style="scroll-margin-top: 70px"
         >
-          <span class="blink-1s">Mini Preamp Sample Connections</span>
+          <span class="blink-1s"
+            >Esempi di Connessione Mini Preamplificatore</span
+          >
         </p>
         <img
           class="diagram"
-          src="Buskit-miniPreAmp-diagram.png"
+          src="./pics/Buskit-miniPreAmp-diagram.png"
           alt="diagram"
           style="width: 450px; display: block; margin: 0 auto 3rem auto"
         />
 
         <!-- Fifth Image -->
         <p class="section-label" id="con-PA" style="scroll-margin-top: 70px">
-          <span class="blink-1s">Preamp Sample Connections</span>
+          <span class="blink-1s">Esempi di Connessione Preamplificatore</span>
         </p>
         <img
           class="diagram"
-          src="Buskit-PreAmp-diagram.png"
+          src="./pics/Buskit-PreAmp-diagram.png"
           alt="diagram"
           style="width: 450px; display: block; margin: 0 auto 3rem auto"
         />
         <!-- Sixth Image -->
         <p class="section-label" id="con-Mon" style="scroll-margin-top: 70px">
-          <span class="blink-1s">Buskit Monitoring Sample Connections</span>
+          <span class="blink-1s"
+            >Esempi di Connessione Monitoraggio Buskit</span
+          >
         </p>
         <img
           class="diagram"
-          src="Buskit-Monitoring-diagram.png"
+          src="./pics/Buskit-Monitoring-diagram.png"
           alt="diagram"
           style="width: 950px; display: block; margin-bottom: 3rem"
         />
@@ -1817,26 +2087,31 @@
       <div class="container">
         <div class="reg-banner fade-in">
           <div class="section-label" style="margin-right: auto">
-            <span class="blink-1s"> Global Registration</span>
+            <span class="blink-1s"> Registrazione Globale</span>
           </div>
-          <h2 style="text-align: center">Buskit is Registered on Three Continents</h2>
+          <h2 style="text-align: center">
+            Buskit è Registrato su Tre Continenti
+          </h2>
           <p style="text-align: center">
-            All Buskit products are officially registered and legally protected in America, Europe and Turkey.
+            Tutti i prodotti Buskit sono ufficialmente registrati e legalmente
+            protetti in America, Europa e Turchia.
           </p>
           <div class="reg-flags">
             <div class="reg-flag-item">
               <span class="flag-emoji">🇺🇸</span>
-              <strong>United States of America</strong>
-              <span>United States Patent & Trademark Office</span>
+              <strong>Stati Uniti d'America</strong>
+              <span>Ufficio Brevetti e Marchi degli Stati Uniti</span>
             </div>
             <div class="reg-flag-item">
               <span class="flag-emoji">🇪🇺</span>
-              <strong>European Union</strong>
-              <span>European Union Intellectual Property Office</span>
+              <strong>Unione Europea</strong>
+              <span
+                >Ufficio della Proprietà Intellettuale dell'Unione Europea</span
+              >
             </div>
             <div class="reg-flag-item">
               <span class="flag-emoji">🇹🇷</span>
-              <strong>Turkey</strong>
+              <strong>Turchia</strong>
               <span>Türk Patent ve Marka Kurumu</span>
             </div>
           </div>
@@ -1848,16 +2123,21 @@
     <section id="store" class="store-section">
       <div class="container">
         <div class="section-label">
-          <span class="blink-1s"> Store</span>
+          <span class="blink-1s"> Negozio</span>
         </div>
-        <h2 class="section-title">Buskit Products</h2>
+        <h2 class="section-title">Prodotti Buskit</h2>
         <p class="section-desc">
-          Complete Audio Ecosystem for Live Musicians — From Simple to Professional
+          Ecosistema Audio Completo per Musicisti dal Vivo — Dal Semplice al
+          Professionale
         </p>
 
         <div class="store-grid">
           <div class="store-card">
-            <img class="store-card-img" src="Buskit-Go.png" alt="Buskit Go" />
+            <img
+              class="store-card-img"
+              src="./pics/Buskit-Go.png"
+              alt="Buskit Go"
+            />
             <div class="store-card-info">
               <div class="store-card-name">Buskit Go</div>
               <div class="store-card-price"><span>USD</span>25</div>
@@ -1868,18 +2148,18 @@
                 data-name="Buskit Go"
                 data-price="25"
                 data-img="Buskit-Go.png"
-                >Add to Cart</a
+                >Aggiungi al Carrello</a
               >
             </div>
           </div>
           <div class="store-card">
             <img
               class="store-card-img"
-              src="Buskit-MonEXP.png"
+              src="./pics/Buskit-MonEXP.png"
               alt="Buskit-MonEXP"
             />
             <div class="store-card-info">
-              <div class="store-card-name">Monitor Expansion</div>
+              <div class="store-card-name">Espansione Monitor</div>
               <div class="store-card-price"><span>USD</span>10</div>
               <a
                 href="#"
@@ -1888,18 +2168,18 @@
                 data-name="Monitor Expansion"
                 data-price="10"
                 data-img="Buskit-MonEXP.png"
-                >Add to Cart</a
+                >Aggiungi al Carrello</a
               >
             </div>
           </div>
           <div class="store-card">
             <img
               class="store-card-img"
-              src="Buskit-HPmodule.png"
+              src="./pics/Buskit-HPmodule.png"
               alt="HP Module"
             />
             <div class="store-card-info">
-              <div class="store-card-name">Headphone Module</div>
+              <div class="store-card-name">Modulo Cuffie</div>
               <div class="store-card-price"><span>USD</span>15</div>
               <a
                 href="#"
@@ -1908,14 +2188,14 @@
                 data-name="Headphone Module"
                 data-price="15"
                 data-img="Buskit-HPmodule.png"
-                >Add to Cart</a
+                >Aggiungi al Carrello</a
               >
             </div>
           </div>
           <div class="store-card">
             <img
               class="store-card-img"
-              src="Buskit-miniPA.png"
+              src="./pics/Buskit-miniPA.png"
               alt="mini PreAmp"
             />
             <div class="store-card-info">
@@ -1928,14 +2208,14 @@
                 data-name="mini PreAmp"
                 data-price="30"
                 data-img="Buskit-miniPA.png"
-                >Add to Cart</a
+                >Aggiungi al Carrello</a
               >
             </div>
           </div>
           <div class="store-card">
             <img
               class="store-card-img"
-              src="Buskit-LineEXP.png"
+              src="./pics/Buskit-LineEXP.png"
               alt="LineEXP"
             />
             <div class="store-card-info">
@@ -1948,14 +2228,14 @@
                 data-name="Line Expansion"
                 data-price="10"
                 data-img="Buskit-LineEXP.png"
-                >Add to Cart</a
+                >Aggiungi al Carrello</a
               >
             </div>
           </div>
           <div class="store-card">
             <img
               class="store-card-img"
-              src="Buskit-MicInterface.png"
+              src="./pics/Buskit-MicInterface.png"
               alt="Mic Interface"
             />
             <div class="store-card-info">
@@ -1968,14 +2248,14 @@
                 data-name="Mic Interface"
                 data-price="10"
                 data-img="Buskit-MicInterface.png"
-                >Add to Cart</a
+                >Aggiungi al Carrello</a
               >
             </div>
           </div>
           <div class="store-card">
             <img
               class="store-card-img"
-              src="Buskit-MiniMixer.png"
+              src="./pics/Buskit-MiniMixer.png"
               alt="Mini Mixer"
             />
             <div class="store-card-info">
@@ -1988,7 +2268,7 @@
                 data-name="Mini Mixer"
                 data-price="40"
                 data-img="Buskit-MiniMixer.png"
-                >Add to Cart</a
+                >Aggiungi al Carrello</a
               >
             </div>
           </div>
@@ -1996,7 +2276,7 @@
           <div class="store-card">
             <img
               class="store-card-img"
-              src="Buskit-Mixer.png"
+              src="./pics/Buskit-Mixer.png"
               alt="Buskit-Mixer"
             />
             <div class="store-card-info">
@@ -2009,12 +2289,16 @@
                 data-name="Mixer"
                 data-price="50"
                 data-img="Buskit-Mixer.png"
-                >Add to Cart</a
+                >Aggiungi al Carrello</a
               >
             </div>
           </div>
           <div class="store-card">
-            <img class="store-card-img" src="Buskit-PreAmp.png" alt="Preamp" />
+            <img
+              class="store-card-img"
+              src="./pics/Buskit-PreAmp.png"
+              alt="Preamp"
+            />
             <div class="store-card-info">
               <div class="store-card-name">Preamp</div>
               <div class="store-card-price"><span>USD</span>199</div>
@@ -2025,18 +2309,18 @@
                 data-name="Preamp"
                 data-price="199"
                 data-img="Buskit-PreAmp.png"
-                >Add to Cart</a
+                >Aggiungi al Carrello</a
               >
             </div>
           </div>
           <div class="store-card">
             <img
               class="store-card-img"
-              src="Buskit-bat.png"
+              src="./pics/Buskit-bat.png"
               alt="Buskit battery"
             />
             <div class="store-card-info">
-              <div class="store-card-name">Battery</div>
+              <div class="store-card-name">Batteria</div>
               <div class="store-card-price"><span>USD</span>65</div>
               <a
                 href="#"
@@ -2045,18 +2329,18 @@
                 data-name="Battery"
                 data-price="65"
                 data-img="Buskit-bat.png"
-                >Add to Cart</a
+                >Aggiungi al Carrello</a
               >
             </div>
           </div>
           <div class="store-card">
             <img
               class="store-card-img"
-              src="Buskit-Monitoring.png"
+              src="./pics/Buskit-Monitoring.png"
               alt="Buskit Monitoring"
             />
             <div class="store-card-info">
-              <div class="store-card-name">Monitoring module</div>
+              <div class="store-card-name">Modulo di Monitoraggio</div>
               <div class="store-card-price"><span>USD</span>50</div>
               <a
                 href="#"
@@ -2065,7 +2349,7 @@
                 data-name="Monitoring module"
                 data-price="50"
                 data-img="Buskit-Monitoring.png"
-                >Add to Cart</a
+                >Aggiungi al Carrello</a
               >
             </div>
           </div>
@@ -2079,13 +2363,14 @@
     <section id="contact" class="contact-page">
       <div class="contact-hero">
         <div>
-          <div class="contact-hero-label" style="text-align: auto">
-            Contact Me
-          </div>
+          <div class="section-label" style="text-align: auto">Contattami</div>
         </div>
-        <h1 style="text-align: center">Let's <span>Talk</span></h1>
+        <h1 style="text-align: center; margin-top: 20px">
+          Let's <span>Talk</span>
+        </h1>
         <p>
-          For consultation, orders, collaboration, or any question about Buskit products, I am waiting for your message.
+          Per consulenze, ordini, collaborazioni o qualsiasi domanda sui
+          prodotti Buskit, sono in attesa del tuo messaggio.
         </p>
       </div>
 
@@ -2093,7 +2378,7 @@
         <!-- Right Column: Contact Info -->
         <div class="contact-info">
           <div class="contact-info-block">
-            <div class="contact-info-block-title">Direct Contact</div>
+            <div class="contact-info-block-title">Contatto Diretto</div>
 
             <a href="tel & whatsapp:+905312691609" class="contact-info-item">
               <div class="contact-info-icon">
@@ -2105,7 +2390,7 @@
               </div>
               <div class="contact-info-text">
                 <strong dir="ltr">+90 5312691609</strong>
-                <span>Phone Number</span>
+                <span>Numero di Telefono</span>
               </div>
             </a>
 
@@ -2118,7 +2403,7 @@
               </div>
               <div class="contact-info-text">
                 <strong dir="ltr">amoeyan.music@gmail.com</strong>
-                <span>Email Address</span>
+                <span>Indirizzo Email</span>
               </div>
             </a>
           </div>
@@ -2200,30 +2485,30 @@
         <!-- Left Column: Form -->
         <div class="contact-form-wrap">
           <div class="form-header">
-            <div class="form-label-tag">Message Me</div>
-            <h2>How Can I Help You?</h2>
-            <p>Your message will be answered within 24 hours.</p>
+            <div class="section-label">Scrivimi</div>
+            <h2 style="margin-top: 20px">Come Posso Aiutarti?</h2>
+            <p>Il tuo messaggio riceverà risposta entro 24 ore.</p>
           </div>
 
           <form id="contactForm" novalidate>
             <div class="form-group">
-              <label for="subject">Subject</label>
+              <label for="subject">Oggetto</label>
               <input
                 type="text"
                 id="subject"
                 name="subject"
-                placeholder="E.g.: Product order, collaboration, technical question..."
+                placeholder="Es.: Ordine prodotto, collaborazione, domanda tecnica..."
               />
             </div>
 
             <div class="form-row">
               <div class="form-group" style="margin-bottom: 0">
-                <label for="fullname">Full Name</label>
+                <label for="fullname">Nome Completo</label>
                 <input
                   type="text"
                   id="fullname"
                   name="fullname"
-                  placeholder="Your full name"
+                  placeholder="Il tuo nome completo"
                 />
               </div>
               <div class="form-group" style="margin-bottom: 0">
@@ -2239,7 +2524,7 @@
             </div>
 
             <div class="form-group" style="margin-top: 14px">
-              <label for="message">Message</label>
+              <label for="message">Messaggio</label>
               <textarea
                 id="message"
                 name="message"
@@ -2262,10 +2547,10 @@
     </section>
 
     <footer>
-      <img src="LOGO.png" alt="Buskit" />
-      <p>© 2025 Buskit — Everything You Need for a Live Performance</p>
+      <img src="./pics/LOGO.png" alt="Buskit" />
+      <p>© 2025 Buskit — Tutto il Necessario per un'Esibizione dal Vivo</p>
       <p style="margin-top: 0.5rem; font-size: 0.75rem">
-        Registered in America · Europe · Turkey
+        Registrato in America · Europa · Turchia
       </p>
     </footer>
 
@@ -2304,7 +2589,7 @@
 
           if (!subject || !fullname || !email || !message) {
             status.className = "form-status error";
-            status.innerHTML = "⚠️ Please fill in all fields.";
+            status.innerHTML = "⚠️ Si prega di compilare tutti i campi.";
             status.style.display = "flex";
             return;
           }
@@ -2368,7 +2653,7 @@
 
     <aside id="cartDrawer" class="cart-drawer">
       <div class="cart-drawer-header">
-        <h3>Shopping Cart</h3>
+        <h3>Carrello della Spesa</h3>
         <button id="cartCloseBtn" class="cart-close-btn" aria-label="Close">
           &times;
         </button>
@@ -2376,7 +2661,7 @@
       <div id="cartItems" class="cart-items"></div>
       <div class="cart-drawer-footer">
         <div class="cart-total-row">
-          <span>Total</span>
+          <span>Totale</span>
           <strong id="cartTotal">$0</strong>
         </div>
         <button id="cartCheckoutBtn" class="btn-submit cart-checkout-btn">
@@ -2391,7 +2676,7 @@
     <div id="checkoutOverlay" class="cart-overlay"></div>
     <div id="checkoutModal" class="checkout-modal">
       <div class="checkout-modal-header">
-        <h3>Complete Purchase Information</h3>
+        <h3>Completa le Informazioni di Acquisto</h3>
         <button id="checkoutCloseBtn" class="cart-close-btn" aria-label="Close">
           &times;
         </button>
@@ -2403,16 +2688,16 @@
         <form id="checkoutForm" novalidate>
           <div class="form-row">
             <div class="form-group" style="margin-bottom: 0">
-              <label for="co-fullname">Full Name</label>
+              <label for="co-fullname">Nome Completo</label>
               <input
                 type="text"
                 id="co-fullname"
                 name="fullname"
-                placeholder="Full name"
+                placeholder="Nome completo"
               />
             </div>
             <div class="form-group" style="margin-bottom: 0">
-              <label for="co-phone">Phone Number</label>
+              <label for="co-phone">Numero di Telefono</label>
               <input
                 type="tel"
                 id="co-phone"
@@ -2424,11 +2709,11 @@
           </div>
 
           <div class="form-group" style="margin-top: 14px">
-            <label for="co-address">Full Address</label>
+            <label for="co-address">Indirizzo Completo</label>
             <textarea
               id="co-address"
               name="address"
-              placeholder="Exact address for delivery"
+              placeholder="Indirizzo esatto per la consegna"
             ></textarea>
           </div>
 
@@ -2453,13 +2738,13 @@
             id="co-codeGroup"
             style="margin-top: 14px; display: none"
           >
-            <label for="co-code">Verification Code Sent to Email</label>
+            <label for="co-code">Codice di Verifica Inviato via Email</label>
             <div class="email-verify-row">
               <input
                 type="text"
                 id="co-code"
                 name="code"
-                placeholder="6-digit code"
+                placeholder="Codice a 6 cifre"
                 dir="ltr"
                 inputmode="numeric"
               />
@@ -2471,7 +2756,7 @@
               id="co-emailVerified"
               class="verified-badge"
               style="display: none"
-              >✅ Email Verified</span
+              >✅ Email Verificata</span
             >
           </div>
 
@@ -2536,15 +2821,15 @@
             const row = document.createElement("div");
             row.className = "cart-item";
             row.innerHTML = `
-              <img src="${item.img}" alt="${item.name}" class="cart-item-img" />
+              <img src="'./pics/'+${item.img}" alt="${item.name}" class="cart-item-img" />
               <div class="cart-item-info">
-                <div class="cart-item-name">${item.name}</div>
-                <div class="cart-item-price">${fmtPrice(item.price)}</div>
+                <div class="cart-item-name">'./pics/'+${item.name}</div>
+                <div class="cart-item-price">'./pics/'+${fmtPrice(item.price)}</div>
                 <div class="cart-item-qty">
                   <button class="qty-btn" data-action="dec" data-id="${item.id}">−</button>
-                  <span class="qty-value">${item.qty}</span>
+                  <span class="qty-value">'./pics/'+${item.qty}</span>
                   <button class="qty-btn" data-action="inc" data-id="${item.id}">+</button>
-                  <button class="cart-remove-btn" data-action="remove" data-id="${item.id}">Remove</button>
+                  <button class="cart-remove-btn" data-action="remove" data-id="${item.id}">Rimuovi</button>
                 </div>
               </div>
             `;
@@ -2631,7 +2916,7 @@
           // Build order summary
           const summaryEl = document.getElementById("checkoutOrderSummary");
           let total = 0;
-          let html = '<div class="checkout-summary-title">Your Order</div>';
+          let html = '<div class="checkout-summary-title">Il Tuo Ordine</div>';
           cart.forEach((item) => {
             total += item.price * item.qty;
             html += `<div class="checkout-summary-row">
@@ -2640,7 +2925,7 @@
             </div>`;
           });
           html += `<div class="checkout-summary-row checkout-summary-total">
-            <span>Total</span><span>${fmtPrice(total)}</span>
+            <span>Totale</span><span>${fmtPrice(total)}</span>
           </div>`;
           summaryEl.innerHTML = html;
 
@@ -2693,7 +2978,7 @@
           verifiedBadge.style.display = "none";
 
           sendCodeBtn.disabled = true;
-          sendCodeBtn.textContent = "Sending...";
+          sendCodeBtn.textContent = "Invio in corso...";
 
           try {
             // In real environment: send code via EmailJS
@@ -2721,13 +3006,13 @@
           }
 
           sendCodeBtn.disabled = false;
-          sendCodeBtn.textContent = "Resend code";
+          sendCodeBtn.textContent = "Reinvia codice";
         });
 
         verifyCodeBtn.addEventListener("click", function () {
           const entered = codeInput.value.trim();
           if (!generatedCode) {
-            showStatus("⚠️ Request the verification code first.", "error");
+            showStatus("⚠️ Richiedere prima il codice di verifica.", "error");
             return;
           }
           if (entered === generatedCode) {
@@ -2736,7 +3021,7 @@
             showStatus("✅ Email با موفقیت تایید شد.", "success");
           } else {
             emailVerified = false;
-            showStatus("⚠️ The entered code is incorrect.", "error");
+            showStatus("⚠️ Il codice inserito non è corretto.", "error");
           }
         });
 
@@ -2754,7 +3039,7 @@
             const email = emailInput.value.trim();
 
             if (!fullname || !phone || !address || !email) {
-              showStatus("⚠️ Please complete all fields.", "error");
+              showStatus("⚠️ Si prega di compilare tutti i campi.", "error");
               return;
             }
             if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
@@ -2777,7 +3062,7 @@
 
             const submitBtn = document.getElementById("co-submitBtn");
             submitBtn.disabled = true;
-            submitBtn.textContent = "Placing order...";
+            submitBtn.textContent = "Ordine in corso...";
 
             let total = 0;
             let itemsList = "";
@@ -2814,7 +3099,7 @@
                 );
               }
               showStatus(
-                "✅ Your order was placed successfully and tracking information has been sent.",
+                "✅ Il tuo ordine è stato effettuato con successo e le informazioni di tracciamento sono state inviate.",
                 "success",
               );
               localStorage.removeItem(CART_KEY);
@@ -2833,7 +3118,7 @@
             }
 
             submitBtn.disabled = false;
-            submitBtn.textContent = "Finalize Order";
+            submitBtn.textContent = "Finalizza Ordine";
           });
 
         // Initial render
@@ -2941,6 +3226,25 @@
             });
           });
       });
+    </script>
+    <!-- اسکریپت custom language dropdown -->
+    <script>
+      (function () {
+        var langWidget = document.getElementById("customLang");
+        var langBtn = document.getElementById("langBtn");
+        var langMenu = document.getElementById("langMenu");
+        if (!langWidget || !langBtn) return;
+
+        langBtn.addEventListener("click", function (e) {
+          e.stopPropagation();
+          langWidget.classList.toggle("open");
+        });
+        document.addEventListener("click", function (e) {
+          if (!langWidget.contains(e.target)) {
+            langWidget.classList.remove("open");
+          }
+        });
+      })();
     </script>
   </body>
 </html>

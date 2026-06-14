@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="tr" dir="ltr">
+<html lang="de" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Buskit — Canlı Performans için İhtiyacınız Olan Her Şey</title>
+    <title>Buskit — Alles, was Sie für einen Live-Auftritt brauchen</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&family=Oswald:wght@400;600;700&display=swap"
       rel="stylesheet"
@@ -38,8 +38,8 @@
 
     <style id="gradient-overrides">
       /* ══════════════════════════════════════════════
-         Neden Buskit bölümü (#why)
-         Daha belirgin mavi–turuncu gradyan
+         بخش Why Buskit (#why)
+         More vivid blue–orange gradient
       ══════════════════════════════════════════════ */
       .why-section {
         background:
@@ -67,8 +67,8 @@
       }
 
       /* ══════════════════════════════════════════════
-         Bir Bakışta bölümü (.bk-section #look)
-         Altın–mor gradyan
+         بخش At a Glance (.bk-section #look)
+         Golden–purple gradient
       ══════════════════════════════════════════════ */
       .bk-section {
         background:
@@ -99,7 +99,7 @@
           #000000;
       }
       /* ══════════════════════════════════════════════
-         Ürünler — her birinin kendi rozet rengi
+         Products — هر کدام رنگ badge Placeش
       ══════════════════════════════════════════════ */
       #prod-go {
         background:
@@ -189,8 +189,8 @@
       }
 
       /* ══════════════════════════════════════════════
-         Patent tescil bölümü (#registration)
-         Gümüş–mavi gradyan
+         بخش ثبت Patent (#registration)
+         Silver–blue gradient
       ══════════════════════════════════════════════ */
       #registration {
         background:
@@ -213,8 +213,8 @@
       }
 
       /* ══════════════════════════════════════════════
-         Mağaza bölümü (#store)
-         Sıcak turuncu gradyan
+         بخش Store (#store)
+         Warm orange gradient
       ══════════════════════════════════════════════ */
       .store-section {
         background:
@@ -244,41 +244,39 @@
   </head>
   <body>
     <nav>
-      <a href="#" class="nav-logo"><img src="LOGO.png" alt="Buskit Logo" /></a>
+      <a href="#" class="nav-logo"
+        ><img src="./pics/LOGO.png" alt="Buskit Logo"
+      /></a>
 
       <div class="nav-overlay" id="navOverlay"></div>
 
-      <button class="nav-hamburger" id="navHamburger" aria-label="Menü">
-        <span></span><span></span><span></span>
-      </button>
-
       <ul class="nav-links">
-        <li><a href="#home">Ana Sayfa</a></li>
-        <li><a href="#aboutme">Hakkımda </a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#aboutme">Über Mich </a></li>
         <li class="has-dropdown">
           <a href="javascript:void(0)">Buskit</a>
           <ul class="dropdown-menu">
             <li>
               <a href="#why">
                 <span class="prod-dot" style="background: #e67e22"></span>
-                Neden?
+                Warum?
               </a>
             </li>
             <li>
               <a href="#look">
                 <span class="prod-dot" style="background: #2980b9"></span>
-                Bir Bakışta
+                Auf einen Blick
               </a>
             </li>
 
             <li>
               <a href="#ecosystem">
                 <span class="prod-dot" style="background: #e6a800"></span>
-                Ekosistem
+                Ökosystem
               </a>
             </li>
             <li class="has-dropdown">
-              <a href="javascript:void(0)">Bağlantı Şemaları</a>
+              <a href="javascript:void(0)">Anschlussdiagramme</a>
               <ul class="dropdown-menu">
                 <li>
                   <a href="#con-mixer"
@@ -322,7 +320,7 @@
         </li>
 
         <li class="has-dropdown">
-          <a href="javascript:void(0)">Ürünler</a>
+          <a href="javascript:void(0)">Produkte</a>
           <ul class="dropdown-menu">
             <li>
               <a href="#prod-go"
@@ -393,9 +391,116 @@
         </li>
 
         <li><a href="#registration">Patent</a></li>
-        <li><a href="#store">Mağaza</a></li>
-        <li><a href="#contact">Benimle İletişim</a></li>
+        <li><a href="#store">Shop</a></li>
+        <li><a href="#contact">Kontakt</a></li>
       </ul>
+
+      <!-- Language Selector -->
+      <div class="lang-wrapper">
+        <div class="custom-lang" id="customLang">
+          <button class="custom-lang-btn" id="langBtn" type="button">
+            <img
+              class="flag-icon"
+              src="https://flagcdn.com/w20/gb.png"
+              alt="GB"
+              width="20"
+              height="14"
+            />
+            <span id="langLabel">Deutsch</span>
+            <span class="lang-arrow">▾</span>
+          </button>
+          <div class="custom-lang-menu" id="langMenu">
+            <a href="index.html"
+              ><img
+                class="flag-icon"
+                src="https://flagcdn.com/w20/ir.png"
+                alt="IR"
+                width="20"
+                height="14"
+              />
+              فارسی</a
+            >
+            <a href="indexEn.html"
+              ><img
+                class="flag-icon"
+                src="https://flagcdn.com/w20/gb.png"
+                alt="GB"
+                width="20"
+                height="14"
+              />
+              English</a
+            >
+            <a href="indexTr.html"
+              ><img
+                class="flag-icon"
+                src="https://flagcdn.com/w20/tr.png"
+                alt="TR"
+                width="20"
+                height="14"
+              />
+              Türkçe</a
+            >
+            <a href="indexAr.html"
+              ><img
+                class="flag-icon"
+                src="https://flagcdn.com/w20/sa.png"
+                alt="SA"
+                width="20"
+                height="14"
+              />
+              العربية</a
+            >
+            <a href="indexEs.html"
+              ><img
+                class="flag-icon"
+                src="https://flagcdn.com/w20/es.png"
+                alt="ES"
+                width="20"
+                height="14"
+              />
+              Español</a
+            >
+            <a href="indexDe.html"
+              ><img
+                class="flag-icon"
+                src="https://flagcdn.com/w20/de.png"
+                alt="DE"
+                width="20"
+                height="14"
+              />
+              Deutsch</a
+            >
+            <a href="indexIt.html"
+              ><img
+                class="flag-icon"
+                src="https://flagcdn.com/w20/it.png"
+                alt="IT"
+                width="20"
+                height="14"
+              />
+              Italiano</a
+            >
+          </div>
+
+          <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+      <!-- hidden select برای سازگاری با اسکریپت قدیمی -->
+      <select
+        id="lang-select"
+        onchange="location = this.value"
+        style="display: none"
+      >
+        <option value="index.html">🇮🇷 فارسی</option>
+        <option value="indexEn.html">🇬🇧 English</option>
+        <option value="indexTr.html">🇹🇷 Türkçe</option>
+        <option value="indexAr.html">🇸🇦 العربية</option>
+        <option value="indexEs.html">🇪🇸 Español</option>
+        <option value="indexDe.html" selected>🇩🇪 Deutsch</option>
+        <option value="indexIt.html">🇮🇹 Italiano</option>
+      </select>
     </nav>
 
     <!-- HERO -->
@@ -407,97 +512,97 @@
       <!-- Street Performance SVG Illustration -->
 
       <div class="hero-content">
-        <!-- <div class="hero-eyebrow">Müzisyenler için Profesyonel Ses Ekosistemi</div> -->
-        <img src="LOGO.png" alt="Buskit" class="hero-logo" />
+        <!-- <div class="hero-eyebrow">Professional Audio Ecosystem for Musicians</div> -->
+        <img src="./pics/LOGO.png" alt="Buskit" class="hero-logo" />
         <h1 class="hero-tagline blink-1s">
-          Bir <span>Canlı Performans için </span> İhtiyacınız Olan Her Şey
+          Alles für einen <span>Live-Auftritt</span>, was Sie brauchen
         </h1>
       </div>
 
-      <!-- 🌟 Ürünler Marki -->
+      <!-- 🌟 مارکی Products -->
       <div class="product-marquee-container" dir="ltr">
         <div class="product-marquee-track">
-          <!-- Birinci Set -->
+          <!-- First Set -->
           <div class="marquee-item">
-            <img src="Buskit-Go.png" alt="Buskit Go" />
+            <img src="./pics/Buskit-Go.png" alt="Buskit Go" />
             <span>micro PreAmp</span>
           </div>
           <div class="marquee-item">
-            <img src="Buskit-HPmodule.png" alt="Headphone Module" />
+            <img src="./pics/Buskit-HPmodule.png" alt="Headphone Module" />
             <span>Headphone Module</span>
           </div>
           <div class="marquee-item">
-            <img src="Buskit-LineEXP.png" alt="Line EXPansion" />
+            <img src="./pics/Buskit-LineEXP.png" alt="Line EXPansion" />
             <span>Line EXPansion</span>
           </div>
           <div class="marquee-item">
-            <img src="Buskit-MicInterface.png" alt="Mic Interface" />
+            <img src="./pics/Buskit-MicInterface.png" alt="Mic Interface" />
             <span>Mic Interface</span>
           </div>
           <div class="marquee-item">
-            <img src="Buskit-Mixer.png" alt="Mixer" />
+            <img src="./pics/Buskit-Mixer.png" alt="Mixer" />
             <span>Mixer</span>
           </div>
           <div class="marquee-item">
-            <img src="Buskit-MiniMixer.png" alt="mini Mixer" />
+            <img src="./pics/Buskit-MiniMixer.png" alt="mini Mixer" />
             <span>Mini Mixer</span>
           </div>
           <div class="marquee-item">
-            <img src="Buskit-miniPA.png" alt="mini PreAmp" />
+            <img src="./pics/Buskit-miniPA.png" alt="mini PreAmp" />
             <span>mini PreAmp</span>
           </div>
           <div class="marquee-item">
-            <img src="Buskit-PreAmp.png" alt="Pre Amp" />
+            <img src="./pics/Buskit-PreAmp.png" alt="Pre Amp" />
             <span>Pre Amp</span>
           </div>
           <div class="marquee-item">
-            <img src="Buskit-Monitoring.png" alt="Monitoring" />
+            <img src="./pics/Buskit-Monitoring.png" alt="Monitoring" />
             <span>Monitoring</span>
           </div>
           <div class="marquee-item">
-            <img src="Buskit-bat.png" alt="Battery" />
+            <img src="./pics/Buskit-bat.png" alt="Battery" />
             <span>Battery</span>
           </div>
 
-          <!-- Sonsuz döngü için ikinci set -->
+          <!-- Second set for infinite loop -->
           <div class="marquee-item">
-            <img src="Buskit-Go.png" alt="Buskit Go" />
+            <img src="./pics/Buskit-Go.png" alt="Buskit Go" />
             <span>micro PreAmp</span>
           </div>
           <div class="marquee-item">
-            <img src="Buskit-HPmodule.png" alt="Headphone Module" />
+            <img src="./pics/Buskit-HPmodule.png" alt="Headphone Module" />
             <span>Headphone Module</span>
           </div>
           <div class="marquee-item">
-            <img src="Buskit-LineEXP.png" alt="Line EXPansion" />
+            <img src="./pics/Buskit-LineEXP.png" alt="Line EXPansion" />
             <span>Line EXPansion</span>
           </div>
           <div class="marquee-item">
-            <img src="Buskit-MicInterface.png" alt="Mic Interface" />
+            <img src="./pics/Buskit-MicInterface.png" alt="Mic Interface" />
             <span>Mic Interface</span>
           </div>
           <div class="marquee-item">
-            <img src="Buskit-Mixer.png" alt="Mixer" />
+            <img src="./pics/Buskit-Mixer.png" alt="Mixer" />
             <span>Mixer</span>
           </div>
           <div class="marquee-item">
-            <img src="Buskit-MiniMixer.png" alt="mini Mixer" />
+            <img src="./pics/Buskit-MiniMixer.png" alt="mini Mixer" />
             <span>Mini Mixer</span>
           </div>
           <div class="marquee-item">
-            <img src="Buskit-miniPA.png" alt="mini PreAmp" />
+            <img src="./pics/Buskit-miniPA.png" alt="mini PreAmp" />
             <span>mini PreAmp</span>
           </div>
           <div class="marquee-item">
-            <img src="Buskit-PreAmp.png" alt="Pre Amp" />
+            <img src="./pics/Buskit-PreAmp.png" alt="Pre Amp" />
             <span>Pre Amp</span>
           </div>
           <div class="marquee-item">
-            <img src="Buskit-Monitoring.png" alt="Monitoring" />
+            <img src="./pics/Buskit-Monitoring.png" alt="Monitoring" />
             <span>Monitoring</span>
           </div>
           <div class="marquee-item">
-            <img src="Buskit-bat.png" alt="Battery" />
+            <img src="./pics/Buskit-bat.png" alt="Battery" />
             <span>Battery</span>
           </div>
         </div>
@@ -505,24 +610,36 @@
       <!-- marquee -->
     </section>
 
-    <!----------------------------- Hakkımda ------------------>
+    <!----------------------------- About Me ------------------>
     <section class="about-minimal" id="aboutme">
       <div class="about-container">
         <div class="about-content">
           <span class="section-label">
-            <span class="blink-1s"> Hakkımda</span>
+            <span class="blink-1s"> Über Mich</span>
           </span>
-          <h2 class="about-heading">Müzik, Ses ve Elektroniğin Buluşması</h2>
+          <h2 class="about-heading">
+            Die Fusion von Musik, Klang und Elektronik
+          </h2>
+
+          <p class="about-text">
+            Seit mehr als vier Jahrzehnten bin ich in die Welt des Spielens
+            aller Arten von Musikinstrumenten eingetaucht — Perkussion,
+            melodisch und harmonisch — sowie technische Elektronikentwicklung.
+            Mein Fokus lag immer darauf, Werkzeuge zu schaffen, die die Grenze
+            zwischen Technologie und Kunst verwischen.
+          </p>
+          <p class="about-text">
+            Heute, als Musiker mit einem tiefen Verständnis der Mängel
+            elektronischer Geräte und den einzigartigen Fähigkeiten, die für
+            Live- Auftritte benötigt werden — insbesondere Straßenmusiker oder
+            Proben kleiner Gruppen — kombinierte ich diese drei Bereiche, um
+            eine Sammlung modularer Geräte zu schaffen, die alle Mängel von
+            Live-Auftritten beheben, und ich nannte dieses Ökosystem Buskit.
+          </p>
         </div>
-        <p class="about-text">
-          Dört on yılı aşkın süredir vurmalı, melodik ve armonik çalgılar dahil her türlü müzik aleti icrasının yanı sıra teknik elektronik mühendisliği alanında da derinlemesine yer aldım. Odağım her zaman teknoloji ile sanat arasındaki sınırı bulanıklaştıran araçlar yaratmak olmuştur.
-        </p>
-        <p class="about-text">
-          Bugün, sokak müzisyenleri ve küçük grup provası için gereken özgün yeteneklere sahip elektronik ekipmanlardaki eksiklikleri derinden anlayan bir müzisyen olarak; bu üç alanı birleştirerek canlı performansların tüm eksikliklerini gidermek için modüler bir cihazlar topluluğu yarattım ve bu ekosisteme Buskit adını verdim.
-        </p>
         <div class="about-image-zone">
           <div class="image-wrapper">
-            <img src="bg-rec.jpeg" alt="Artistik Portre" />
+            <img src="./pics/bg-rec.jpeg" alt="Artistic Portrait" />
           </div>
         </div>
       </div>
@@ -534,59 +651,64 @@
         <div class="container">
           <div class="prod-inner">
             <div class="prod-image-col">
-              <img src="Buskit-Go.png" alt="Buskit Go" />
+              <img src="./pics/Buskit-Go.png" alt="Buskit Go" />
               <div class="prod-color-badge" style="background: #8b5e3c"></div>
             </div>
             <div class="prod-content">
               <div class="section-label">
-                <span class="blink-1s"> Mikro Preamp</span>
+                <span class="blink-1s"> Micro Preamp</span>
               </div>
               <h2 class="prod-name">Buskit microPA</h2>
-              <!-- <p class="prod-tagline">Cep Cihazı</p> -->
+              <!-- <p class="prod-tagline">Pocket Device</p> -->
               <div class="prod-why">
-                Bu cihaz, akustik sazları veya mikrofonları ses sistemlerine bağlamak için kullanılabilen, düşük gürültülü ve yüksek kazançlı küçük bir preamp için mümkün olan minimumdur.
+                Dieses Gerät ist die kleinstmögliche Form eines kompakten
+                Vorverstärkers — rauscharm mit hoher Verstärkung — über den
+                akustische Instrumente oder Mikrofone an Soundsysteme
+                angeschlossen werden können.
               </div>
               <div class="prod-grid">
                 <div class="prod-box">
-                  <h4>Özellikler</h4>
+                  <h4>Funktionen</h4>
                   <ul>
-                    <li>Analog Ses Kontrolü</li>
-                    <li>Kablosuz Modüle Bağlanabilirlik</li>
-                    <li>Ses Sistemlerinin Aux Portuna Bağlanabilirlik</li>
-                    <li>6,3 mm Giriş ve Çıkış</li>
-                    <li>LED Düşük Şarj Göstergesi</li>
-                    <li>LED Güç Göstergesi</li>
-                    <li>9V Pilli LED</li>
-                    <li>Maksimum 15dB Çıkış Kazancı</li>
-                    <li>Açma/Kapama Düğmesi</li>
+                    <li>Analoge Lautstärkeregelung</li>
+                    <li>Kabellose Modulkonnektivität</li>
+                    <li>Anschluss an den AUX-Eingang von Soundsystemen</li>
+                    <li>6,3mm Ein- und Ausgang</li>
+                    <li>LED-Batteriestandsanzeige</li>
+                    <li>LED-Betriebsanzeige</li>
+                    <li>LED mit 9V-Batterie</li>
+                    <li>Maximale Ausgangsleistung 15dB</li>
+                    <li>Ein-/Ausschalter</li>
                   </ul>
                 </div>
                 <div class="prod-box">
-                  <h4>Kullanım Alanları</h4>
+                  <h4>Anwendungen</h4>
                   <ul>
-                    <li>Akustik Sazı Elektriğe Dönüştürme</li>
-                    <li>Açık Havada Prova</li>
-                    <li>Seyahat ve Tur</li>
-                    <li>Küçük Performanslar</li>
+                    <li>
+                      Umwandlung von akustischen in elektrische Instrumente
+                    </li>
+                    <li>Outdoor-Übung</li>
+                    <li>Reise und Tour</li>
+                    <li>Kleine Auftritte</li>
                   </ul>
                 </div>
               </div>
               <div class="prod-box" style="margin-bottom: 1rem">
-                <h4>Avantajlar</h4>
+                <h4>Vorteile</h4>
                 <ul
                   style="display: grid; grid-template-columns: 1fr 1fr; gap: 0"
                 >
-                  <li>Küçük Boyutlar</li>
-                  <li>Düşük Ağırlık</li>
-                  <li>Saza Delik Açmaya Gerek Yok</li>
+                  <li>Kompakte Maße</li>
+                  <li>Geringes Gewicht</li>
+                  <li>Kein Bohren im Instrumentenkorpus erforderlich</li>
                 </ul>
               </div>
               <div class="prod-reg">
-                <span><span class="flag">🇺🇸</span> Amerika</span>
-                <span><span class="flag">🇪🇺</span> Avrupa</span>
-                <span><span class="flag">🇹🇷</span> Türkiye</span>
+                <span><span class="flag">🇺🇸</span> America</span>
+                <span><span class="flag">🇪🇺</span> Europe</span>
+                <span><span class="flag">🇹🇷</span> Turkey</span>
                 <span style="color: #6b7680; font-size: 0.75rem"
-                  >Uluslararası Tescillidir</span
+                  >International Registriert</span
                 >
               </div>
             </div>
@@ -599,56 +721,63 @@
         <div class="container">
           <div class="prod-inner">
             <div class="prod-image-col">
-              <img src="Buskit-HPmodule.png" alt="Buskit Headphone Module" />
+              <img
+                src="./pics/Buskit-HPmodule.png"
+                alt="Buskit Headphone Module"
+              />
               <div class="prod-color-badge" style="background: #e6a800"></div>
             </div>
             <div class="prod-content">
               <div class="section-label">
-                <span class="blink-1s"> Kulaklık Modülü</span>
+                <span class="blink-1s"> Kopfhörer-Modul</span>
               </div>
 
-              <h2 class="prod-name">Buskit Headphone Module</h2>
-              <!-- <p class="prod-tagline">Kendi Sesini Duy — Net ve Gecikmesiz</p> -->
+              <h2 class="prod-name">Buskit Kopfhörer-Modul</h2>
+              <!-- <p class="prod-tagline">Hear Your Own Sound — Clear and Latency-Free</p> -->
               <div class="prod-why">
-                Bu modül, izleme modülü ile kulaklık arasında arayüz görevi gören bir kulaklık sinyal amplifikatörüdür; müzisyenin kulaklığına gelen sesi ayarlamasına olanak tanır.
+                Dieses Modul ist ein Kopfhörersignalverstärker, der als
+                Schnittstelle zwischen dem Monitoring-Modul und Kopfhörern dient
+                und es dem Musiker ermöglicht, den Ton in seinen Kopfhörern
+                anzupassen.
               </div>
               <div class="prod-grid">
                 <div class="prod-box">
-                  <h4>Özellikler</h4>
+                  <h4>Funktionen</h4>
                   <ul>
-                    <li>3,5 mm Kulaklık Jakı</li>
-                    <li>Bağımsız Ses Kontrolü</li>
-                    <li>Ayrı Giriş ve Güç Anahtarı</li>
-                    <li>9V Pilli</li>
+                    <li>3,5mm Kopfhörerbuchse</li>
+                    <li>Unabhängige Lautstärkeregelung</li>
+                    <li>Separater Eingangs- und Netzschalter</li>
+                    <li>Mit 9V-Batterie ausgestattet</li>
                   </ul>
                 </div>
                 <div class="prod-box">
-                  <h4>Kullanım Alanları</h4>
+                  <h4>Anwendungen</h4>
                   <ul>
-                    <li>Performans Sırasında İzleme</li>
-                    <li>Düşük Sesle Prova</li>
+                    <li>Monitoring während des Auftritts</li>
+                    <li>Üben bei geringer Lautstärke</li>
                     <li>
-                      Buskit Mikser veya Mini Mikserin Çıkış Sesini Kulaklıkla Dinleme
+                      Ausgangssignal des Buskit Mixers oder Mini-Mixers über
+                      Kopfhörer hören
                     </li>
                   </ul>
                 </div>
               </div>
               <div class="prod-box" style="margin-bottom: 1rem">
-                <h4>Avantajlar</h4>
+                <h4>Vorteile</h4>
                 <ul
                   style="display: grid; grid-template-columns: 1fr 1fr; gap: 0"
                 >
-                  <li>Gecikmesiz (Sıfır Gecikme)</li>
-                  <li>Ses Seviyesi Değiştirme İmkânı</li>
-                  <li>Küçük ve Cebe Sığar</li>
+                  <li>Null Latenz</li>
+                  <li>Möglichkeit zur Lautstärkeregelung</li>
+                  <li>Klein und Taschenformat</li>
                 </ul>
               </div>
               <div class="prod-reg">
-                <span><span class="flag">🇺🇸</span> Amerika</span>
-                <span><span class="flag">🇪🇺</span> Avrupa</span>
-                <span><span class="flag">🇹🇷</span> Türkiye</span>
+                <span><span class="flag">🇺🇸</span> America</span>
+                <span><span class="flag">🇪🇺</span> Europe</span>
+                <span><span class="flag">🇹🇷</span> Turkey</span>
                 <span style="color: #6b7680; font-size: 0.75rem"
-                  >Uluslararası Tescillidir</span
+                  >International Registriert</span
                 >
               </div>
             </div>
@@ -661,54 +790,56 @@
         <div class="container">
           <div class="prod-inner">
             <div class="prod-image-col">
-              <img src="Buskit-LineEXP.png" alt="Buskit LineEXP" />
+              <img src="./pics/Buskit-LineEXP.png" alt="Buskit LineEXP" />
               <div class="prod-color-badge" style="background: #7b2fbe"></div>
             </div>
             <div class="prod-content">
               <div class="section-label">
-                <span class="blink-1s"> Line Giriş Genişletici</span>
+                <span class="blink-1s"> Leitungseingang-Erweiter</span>
               </div>
               <h2 class="prod-name">Buskit LineEXP</h2>
               <!-- <p class="prod-tagline">
-                Dört Hat, Bir Cihaz — Sonsuz Genişleme
+                Four Lines in One Device — Endless Expansion
               </p> -->
               <div class="prod-why">
-                Bu modül aracılığıyla Buskit mikser veya mini mikserin giriş sayısı artırılabilir. Ayrıca bu modülleri zincirleme bağlayarak girişleri daha da çoğaltmak mümkündür.
+                Through this module, the number of inputs on the Buskit mixer or
+                mini mixer can be increased. It is also possible to daisy-chain
+                these modules to add even more inputs.
               </div>
               <div class="prod-grid">
                 <div class="prod-box">
-                  <h4>Özellikler</h4>
+                  <h4>Funktionen</h4>
                   <ul>
-                    <li>4 Bağımsız Line Girişi</li>
-                    <li>Genişletme için Expansion Port</li>
-                    <li>Bir Ana 6,3 mm Çıkış</li>
-                    <li>Elektrik ve Pil Gerektirmez</li>
+                    <li>4 Unabhängige Leitungseingänge</li>
+                    <li>Erweiterungsport für Skalierung</li>
+                    <li>Ein Hauptausgang 6,3mm</li>
+                    <li>Keine Stromversorgung oder Batterie erforderlich</li>
                   </ul>
                 </div>
                 <div class="prod-box">
-                  <h4>Kullanım Alanları</h4>
+                  <h4>Anwendungen</h4>
                   <ul>
-                    <li>Giriş Sayısını Artırma</li>
-                    <li>Çok Kişilik Grup Performansı</li>
+                    <li>Erhöhung der Anzahl der Eingänge</li>
+                    <li>Mehrpersonen-Bandauftritt</li>
                   </ul>
                 </div>
               </div>
               <div class="prod-box" style="margin-bottom: 1rem">
-                <h4>Avantajlar</h4>
+                <h4>Vorteile</h4>
                 <ul
                   style="display: grid; grid-template-columns: 1fr 1fr; gap: 0"
                 >
-                  <li>Girişlerin Bağımsızlığı</li>
-                  <li>Genişletilebilir</li>
-                  <li>Elektrik ve Pil Gerektirmez</li>
+                  <li>Unabhängigkeit der Eingänge</li>
+                  <li>Erweiterbar</li>
+                  <li>Keine Stromversorgung oder Batterie erforderlich</li>
                 </ul>
               </div>
               <div class="prod-reg">
-                <span><span class="flag">🇺🇸</span> Amerika</span>
-                <span><span class="flag">🇪🇺</span> Avrupa</span>
-                <span><span class="flag">🇹🇷</span> Türkiye</span>
+                <span><span class="flag">🇺🇸</span> America</span>
+                <span><span class="flag">🇪🇺</span> Europe</span>
+                <span><span class="flag">🇹🇷</span> Turkey</span>
                 <span style="color: #6b7680; font-size: 0.75rem"
-                  >Uluslararası Tescillidir</span
+                  >International Registriert</span
                 >
               </div>
             </div>
@@ -721,49 +852,56 @@
         <div class="container">
           <div class="prod-inner">
             <div class="prod-image-col">
-              <img src="Buskit-MicInterface.png" alt="Buskit Mic Interface" />
+              <img
+                src="./pics/Buskit-MicInterface.png"
+                alt="Buskit Mic Interface"
+              />
               <div class="prod-color-badge" style="background: #e0387a"></div>
             </div>
             <div class="prod-content">
               <div class="section-label">
-                <span class="blink-1s"> Kondenser Mikrofon Arayüzü</span>
+                <span class="blink-1s"> Kondensatormikrofon-Schnittstelle</span>
               </div>
               <h2 class="prod-name">Buskit Mic Interface</h2>
-              <!-- <p class="prod-tagline">Vokal Sesini Her Zamankinden Daha Net Duy</p> -->
+              <!-- <p class="prod-tagline">Hear the Vocalist Clearer Than Ever</p> -->
               <div class="prod-why">
-                Bu cihaz, kondenser mikrofon ile Buskit ekosistemi arasında arayüz görevi görür.
+                Dieses Gerät dient als Schnittstelle zwischen einem
+                Kondensatormikrofon und dem Buskit-Ökosystem.
               </div>
               <div class="prod-grid">
                 <div class="prod-box">
-                  <h4>Özellikler</h4>
+                  <h4>Funktionen</h4>
                   <ul>
-                    <li>3,5 mm Mikrofon Girişi</li>
-                    <li>Buskit için Line Çıkışı</li>
-                    <li>1,5V Pilli</li>
+                    <li>3,5mm Mikrofoneingang</li>
+                    <li>Leitungsausgang für Buskit</li>
+                    <li>Mit 1,5V-Batterie ausgestattet</li>
                   </ul>
                 </div>
                 <div class="prod-box">
-                  <h4>Kullanım Alanları</h4>
+                  <h4>Anwendungen</h4>
                   <ul>
-                    <li>Kondenser Mikrofonu Buskit'e Bağlama İmkânı</li>
+                    <li>
+                      Ermöglicht den Anschluss von Kondensatormikrofonen an
+                      Buskit
+                    </li>
                   </ul>
                 </div>
               </div>
               <div class="prod-box" style="margin-bottom: 1rem">
-                <h4>Avantajlar</h4>
+                <h4>Vorteile</h4>
                 <ul
                   style="display: grid; grid-template-columns: 1fr 1fr; gap: 0"
                 >
-                  <li>Çok Düşük Gürültü</li>
-                  <li>Küçük Boyutlar</li>
+                  <li>Sehr Geringes Rauschen</li>
+                  <li>Kompakte Maße</li>
                 </ul>
               </div>
               <div class="prod-reg">
-                <span><span class="flag">🇺🇸</span> Amerika</span>
-                <span><span class="flag">🇪🇺</span> Avrupa</span>
-                <span><span class="flag">🇹🇷</span> Türkiye</span>
+                <span><span class="flag">🇺🇸</span> America</span>
+                <span><span class="flag">🇪🇺</span> Europe</span>
+                <span><span class="flag">🇹🇷</span> Turkey</span>
                 <span style="color: #6b7680; font-size: 0.75rem"
-                  >Uluslararası Tescillidir</span
+                  >International Registriert</span
                 >
               </div>
             </div>
@@ -776,67 +914,77 @@
         <div class="container">
           <div class="prod-inner">
             <div class="prod-image-col">
-              <img src="Buskit-MiniMixer.png" alt="Buskit Mini Mixer" />
+              <img src="./pics/Buskit-MiniMixer.png" alt="Buskit Mini Mixer" />
               <div class="prod-color-badge" style="background: #1a6bb5"></div>
             </div>
             <div class="prod-content">
               <div class="section-label">
-                <span class="blink-1s"> Mini Mikser</span>
+                <span class="blink-1s"> Mini Mixer</span>
               </div>
               <h2 class="prod-name">Buskit Mini Mixer</h2>
-              <!-- <p class="prod-tagline">İki Bantlı EQ Kontrolü — Sesi Şekillendir</p> -->
+              <!-- <p class="prod-tagline">Two-Band EQ Control — Shape Your Sound</p> -->
               <div class="prod-why">
-                Bu cihaz, doğrudan üç farklı ses kaynağı girişine izin veren yüksek kaliteli ve yüksek kazançlı güçlü bir ses mikseridir; LineEXP modülü yardımıyla giriş sayısı artırılabilir. 5 bantlı EQ'ya sahiptir ve şarj edilebilir dahili pille çalışır.
+                Dieses Gerät ist ein leistungsstarker Audio-Mixer mit hoher
+                Qualität und hoher Verstärkung, der direkt drei verschiedene
+                Audioquellen akzeptiert, und mit Hilfe des LineEXP-Moduls kann
+                die Eingangsanzahl erhöht werden. Es hat einen 5-Band-EQ und
+                eine wiederaufladbare eingebaute Batterie.
               </div>
               <div class="prod-grid">
                 <div class="prod-box">
-                  <h4>Özellikler</h4>
+                  <h4>Funktionen</h4>
                   <ul>
                     <li>
-                      Her Biri Bağımsız Sinyal Ses Kontrolüne Sahip İki 5 Bantlı EQ
+                      Mit zwei 5-Band-EQs mit unabhängiger Signal-
+                      Lautstärkeregelung ausgestattet
                     </li>
-                    <li>Düşük Bant EQ: 120, 500, 1500, 3000, 6000 Hz</li>
+                    <li>Tiefband-EQ: 120, 500, 1500, 3000, 6000 Hz</li>
                     <li>
-                      İki Piezo Girişi, Bir Line Girişi ve Bir AUX Girişi Mevcut
+                      Zwei Piezo-Eingänge, Ein Leitungseingang und Ein
+                      AUX-Eingang
                     </li>
-                    <li>Her İki Preamp için Gain ve Drive Ses Kontrolü</li>
-                    <li>Amfi ve AUX Çıkışı</li>
-                    <li>Altyapı Kaydı Girişi İmkânı</li>
                     <li>
-                      Buskit Monitör Modülü ile İzleme İmkânı
+                      Verstärkungs- und Drive-Lautstärkeregelung für beide
+                      Vorverstärker
                     </li>
-                    <li>Kulaklık Modülü Aracılığıyla Kulaklığa Bağlanma İmkânı</li>
+                    <li>Verstärker- und AUX-Ausgang</li>
+                    <li>Backing-Track-Eingangskapazität</li>
                     <li>
-                      Dinamik veya Kondenser Mikrofon Bağlama İmkânı (Mikrofon Modülü ile)
+                      Monitoring-Fähigkeit mit dem Buskit-Monitoring-Modul
                     </li>
-                    <li>USB-C 5V/1A Şarj</li>
+                    <li>Kopfhöreranschluss über Kopfhörer-Modul</li>
+                    <li>
+                      Dynamisches oder Kondensatormikrofon-Anschluss (mit
+                      Mikrofon-Modul)
+                    </li>
+                    <li>USB-C 5V/1A Laden</li>
                   </ul>
                 </div>
                 <div class="prod-box">
-                  <h4>Kullanım Alanları</h4>
+                  <h4>Anwendungen</h4>
                   <ul>
-                    <li>Grup Prova Terminalinde Kullanım</li>
-                    <li>Sokak Performanslarında Kullanım</li>
+                    <li>Verwendung beim Gruppenüben</li>
+                    <li>Verwendung bei Straßenauftritten</li>
                   </ul>
                 </div>
               </div>
               <div class="prod-box" style="margin-bottom: 1rem">
-                <h4>Avantajlar</h4>
+                <h4>Vorteile</h4>
                 <ul
                   style="display: grid; grid-template-columns: 1fr 1fr; gap: 0"
                 >
-                  <li>Küçük ve Hafif Boyutlar</li>
-                  <li>EQ ile Donatılmış İki Ayrı Preamp Girişi</li>
-                  <li>Şarj Edilebilir Dahili Pil</li>
-                  <li>Giriş Sayısını Artırma Özelliği</li>
+                  <li>Kompakte und Leichte Maße</li>
+                  <li>Zwei Separate Vorverstärker-Eingänge mit EQ</li>
+                  <li>Wiederaufladbare Eingebaute Batterie</li>
+                  <li>Kapazität zur Eingangsanzahl-Erweiterung</li>
                 </ul>
               </div>
               <div class="prod-reg">
-                <span><span class="flag">🇺🇸</span> Amerika</span>
-                <span><span class="flag">🇪🇺</span> Avrupa</span>
-                <span><span class="flag">🇹🇷</span> Türkiye</span>
+                <span><span class="flag">🇺🇸</span> America</span>
+                <span><span class="flag">🇪🇺</span> Europe</span>
+                <span><span class="flag">🇹🇷</span> Turkey</span>
                 <span style="color: #6b7680; font-size: 0.75rem"
-                  >Uluslararası Tescillidir</span
+                  >International Registriert</span
                 >
               </div>
             </div>
@@ -849,62 +997,70 @@
         <div class="container">
           <div class="prod-inner">
             <div class="prod-image-col">
-              <img src="Buskit-Mixer.png" alt="Buskit Mixer" />
+              <img src="./pics/Buskit-Mixer.png" alt="Buskit Mixer" />
               <div class="prod-color-badge" style="background: #8b1a1a"></div>
             </div>
             <div class="prod-content">
               <div class="section-label">
-                <span class="blink-1s"> Mikser + Monitör</span>
+                <span class="blink-1s"> Mixer + Monitoring</span>
               </div>
               <h2 class="prod-name">Buskit Mixer</h2>
-              <!-- <p class="prod-tagline">8 Bantlı EQ · Sokakta Stüdyo Sesi</p> -->
+              <!-- <p class="prod-tagline">8-Band EQ · Studio Sound on the Street</p> -->
               <div class="prod-why">
-                Bu cihaz, küçük boyutlarına karşın olağanüstü performans sunar ve monitör sistemi ile çıkış sesi kaydı dahil canlı bir performansın ihtiyaç duyduğu her şeyi bünyesinde barındırır. EQ'su profesyonel 8 bantlıdır.
+                Trotz seiner geringen Größe hat dieses Gerät außergewöhnliche
+                Leistung und beinhaltet alles, was ein Live-Auftritt braucht —
+                von einem Monitoring-System bis zur Audioaufnahme am Ausgang.
+                Sein EQ ist ein professionelles 8-Band.
               </div>
               <div class="prod-grid">
                 <div class="prod-box">
-                  <h4>Özellikler</h4>
+                  <h4>Funktionen</h4>
                   <ul>
-                    <li>8 Bantlı EQ: 75–8000 Hz</li>
-                    <li>Preamp için Gain ve Drive Ses Kontrolü</li>
+                    <li>8-Band-EQ: 75–8000 Hz</li>
                     <li>
-                      Monitör Expansion Modülü ile Monitör Hatları Artırılabilir Dahili Monitör Sistemi
+                      Verstärkungs- und Drive-Lautstärkeregelung für
+                      Vorverstärker
                     </li>
-                    <li>Preamp, AUX, 2 Line Girişleri</li>
                     <li>
-                      Giriş Sayısını Artırmak için LineEXP Modülüne Bağlanabilirlik
+                      Eingebautes Monitoring-System mit erweiterbaren
+                      Monitor-Leitungen über Monitor-Erweiterungsmodul
                     </li>
-                    <li>USB-C 5V/2A Şarj</li>
+                    <li>Vorverstärker, AUX, 2 Leitungseingänge</li>
+                    <li>
+                      LineEXP-Modul-Konnektivität zur Erhöhung der
+                      Eingangsanzahl
+                    </li>
+                    <li>USB-C 5V/2A Laden</li>
                   </ul>
                 </div>
                 <div class="prod-box">
-                  <h4>Kullanım Alanları</h4>
+                  <h4>Anwendungen</h4>
                   <ul>
-                    <li>Çok Kişilik Canlı Grup</li>
-                    <li>Profesyonel Sokak PA</li>
-                    <li>Küçük Stadyum Performansı</li>
-                    <li>Etkinlik ve Festival</li>
+                    <li>Live-Mehrpersonen-Band</li>
+                    <li>Professionelle Straßen-PA</li>
+                    <li>Kleinstadion-Auftritt</li>
+                    <li>Veranstaltung und Festival</li>
                   </ul>
                 </div>
               </div>
               <div class="prod-box" style="margin-bottom: 1rem">
-                <h4>Avantajlar</h4>
+                <h4>Vorteile</h4>
                 <ul
                   style="display: grid; grid-template-columns: 1fr 1fr; gap: 0"
                 >
-                  <li>Profesyonel 8 Bantlı EQ</li>
-                  <li>Şarj Edilebilir Dahili Pil</li>
-                  <li>Dahili Monitör Sistemi</li>
-                  <li>Küçük ve Hafif Boyutlar</li>
-                  <li>Giriş Artırma İmkânı</li>
+                  <li>Professioneller 8-Band-EQ</li>
+                  <li>Wiederaufladbare Eingebaute Batterie</li>
+                  <li>Eingebautes Monitoring-System</li>
+                  <li>Kompakte und Leichte Maße</li>
+                  <li>Eingangs-Erweiterungskapazität</li>
                 </ul>
               </div>
               <div class="prod-reg">
-                <span><span class="flag">🇺🇸</span> Amerika</span>
-                <span><span class="flag">🇪🇺</span> Avrupa</span>
-                <span><span class="flag">🇹🇷</span> Türkiye</span>
+                <span><span class="flag">🇺🇸</span> America</span>
+                <span><span class="flag">🇪🇺</span> Europe</span>
+                <span><span class="flag">🇹🇷</span> Turkey</span>
                 <span style="color: #6b7680; font-size: 0.75rem"
-                  >Uluslararası Tescillidir</span
+                  >International Registriert</span
                 >
               </div>
             </div>
@@ -917,55 +1073,64 @@
         <div class="container">
           <div class="prod-inner">
             <div class="prod-image-col">
-              <img src="Buskit-Monitoring.png" alt="Buskit Monitoring" />
+              <img src="./pics/Buskit-Monitoring.png" alt="Buskit Monitoring" />
               <div class="prod-color-badge" style="background: #d4600a"></div>
             </div>
             <div class="prod-content">
               <div class="section-label">
-                <span class="blink-1s"> Ses İzleme</span>
+                <span class="blink-1s"> Audio-Monitoring</span>
               </div>
               <h2 class="prod-name">Buskit Monitoring</h2>
               <!-- <p class="prod-tagline">
-                Ekosistem Kontrol Merkezi — Dört Monitör, Bir Çıkış
+                مرکز کنترل Ecosystem — چهار مانیتور، یک خروجی
               </p> -->
               <div class="prod-why">
-                Bu cihaz, herhangi bir ses sisteminin çıkışına bağlanabilen ve 4 hat çıkışında kulaklık bağlantısı sağlayan bir ses akımı amplifikatörüdür. Monitör Expansion Modülü ile bu sayı iki katına veya daha fazlasına çıkarılabilir.
+                Dieses Gerät ist ein Audio-Stromverstärker, der an den Ausgang
+                jedes Soundsystems angeschlossen werden kann und am Ausgang eine
+                4-leitige Kopfhörerkonnektivität bietet. Mit dem
+                Monitoring-Erweiterungsmodul kann diese Anzahl verdoppelt oder
+                mehr werden.
               </div>
               <div class="prod-grid">
                 <div class="prod-box">
-                  <h4>Özellikler</h4>
+                  <h4>Funktionen</h4>
                   <ul>
-                    <li>4 Monitör Çıkışı (MON 1-4)</li>
-                    <li>Potansiyometre ile Çıkış Seviyesi Kontrolü</li>
-                    <li>6,3 mm Giriş ve Çıkış</li>
-                    <li>BAT LOW/CHARGE/POWER Göstergeleri</li>
-                    <li>USB-C 5V/2A Şarj</li>
+                    <li>4 Monitor-Ausgänge (MON 1-4)</li>
+                    <li>Ausgangspegel-Regelung mit Potentiometer</li>
+                    <li>6,3mm Ein- und Ausgang</li>
+                    <li>BAT LOW/CHARGE/POWER Anzeigen</li>
+                    <li>USB-C 5V/2A Laden</li>
                   </ul>
                 </div>
                 <div class="prod-box">
-                  <h4>Kullanım Alanları</h4>
+                  <h4>Anwendungen</h4>
                   <ul>
-                    <li>Herhangi Bir Ses Çıkışını Kulaklığa Bağlama Özelliği</li>
-                    <li>Dört Kişilik (veya Daha Fazla) İzleme</li>
+                    <li>
+                      Möglichkeit, jeden Audio-Ausgang an Kopfhörer
+                      anzuschließen
+                    </li>
+                    <li>Vier-Personen (oder mehr) Monitoring</li>
                   </ul>
                 </div>
               </div>
               <div class="prod-box" style="margin-bottom: 1rem">
-                <h4>Avantajlar</h4>
+                <h4>Vorteile</h4>
                 <ul
                   style="display: grid; grid-template-columns: 1fr 1fr; gap: 0"
                 >
-                  <li>Küçük ve Hafif Boyutlar</li>
-                  <li>Herhangi Bir Ses Sistemini Kulaklığa Bağlama İmkânı</li>
-                  <li>Şarj Edilebilir Dahili Pil</li>
+                  <li>Kompakte und Leichte Maße</li>
+                  <li>
+                    Ermöglicht jedem Soundsystem den Anschluss an Kopfhörer
+                  </li>
+                  <li>Wiederaufladbare Eingebaute Batterie</li>
                 </ul>
               </div>
               <div class="prod-reg">
-                <span><span class="flag">🇺🇸</span> Amerika</span>
-                <span><span class="flag">🇪🇺</span> Avrupa</span>
-                <span><span class="flag">🇹🇷</span> Türkiye</span>
+                <span><span class="flag">🇺🇸</span> America</span>
+                <span><span class="flag">🇪🇺</span> Europe</span>
+                <span><span class="flag">🇹🇷</span> Turkey</span>
                 <span style="color: #6b7680; font-size: 0.75rem"
-                  >Uluslararası Tescillidir</span
+                  >International Registriert</span
                 >
               </div>
             </div>
@@ -978,56 +1143,60 @@
         <div class="container">
           <div class="prod-inner">
             <div class="prod-image-col">
-              <img src="Buskit-PreAmp.png" alt="Buskit PreAmp" />
+              <img src="./pics/Buskit-PreAmp.png" alt="Buskit PreAmp" />
               <div class="prod-color-badge" style="background: #3a6b35"></div>
             </div>
             <div class="prod-content">
               <div class="section-label">
-                <span class="blink-1s"> Preamp</span>
+                <span class="blink-1s"> Vorverstärker</span>
               </div>
 
-              <h2 class="prod-name">Buskit Preamp</h2>
-              <!-- <p class="prod-tagline">Sesi Güçlendirin ve Şekillendirin — Amfiden Önce</p> -->
+              <h2 class="prod-name">Buskit Vorverstärker</h2>
+              <!-- <p class="prod-tagline">Amplify and Shape Sound — Before the Amp</p> -->
               <div class="prod-why">
-                Bu cihaz 5 bantlı EQ'ya sahip bir preamptır. Gürültüsü çok düşük, kazancı ise çok yüksektir. Ayrıca şarj edilebilir dahili pille de donatılmıştır.
+                Dieses Gerät ist ein Vorverstärker mit einem 5-Band-EQ. Sein
+                Rauschen ist sehr gering und seine Verstärkung ist sehr hoch. Es
+                ist auch mit einer wiederaufladbaren eingebauten Batterie
+                ausgestattet.
               </div>
               <div class="prod-grid">
                 <div class="prod-box">
-                  <h4>Özellikler</h4>
+                  <h4>Funktionen</h4>
                   <ul>
-                    <li>5 Bantlı EQ: 120–6000 Hz</li>
-                    <li>Drive ve Gain Kontrolü</li>
-                    <li>AMP OUT Çıkışı</li>
-                    <li>AUX Giriş ve Çıkışı</li>
-                    <li>Altyapı Kaydı Çalma İmkânı</li>
-                    <li>USB-C Şarj</li>
+                    <li>5-Band-EQ: 120–6000 Hz</li>
+                    <li>Mit Drive- und Verstärkungs-Regelung ausgestattet</li>
+                    <li>AMP OUT-Ausgang</li>
+                    <li>AUX-Ein- und Ausgang</li>
+                    <li>Backing-Track-Wiedergabekapazität</li>
+                    <li>USB-C Laden</li>
                   </ul>
                 </div>
                 <div class="prod-box">
-                  <h4>Kullanım Alanları</h4>
+                  <h4>Anwendungen</h4>
                   <ul>
-                    <li>Tüm Çalgılara Bağlanabilir</li>
+                    <li>Kompatibel mit Allen Instrumenten</li>
                   </ul>
                 </div>
               </div>
               <div class="prod-box" style="margin-bottom: 1rem">
-                <h4>Avantajlar</h4>
+                <h4>Vorteile</h4>
                 <ul
                   style="display: grid; grid-template-columns: 1fr 1fr; gap: 0"
                 >
-                  <li>Hassas 5 Bantlı EQ</li>
+                  <li>Präziser 5-Band-EQ</li>
                   <li>
-                    AUX Girişine Sahip ve Ses Sistemlerinin AUX Girişine Bağlanabilir
+                    Hat AUX-Eingang und kann an den AUX-Eingang von
+                    Soundsystemen angeschlossen werden
                   </li>
-                  <li>Küçük ve Hafif Boyutlar</li>
+                  <li>Kompakte und Leichte Maße</li>
                 </ul>
               </div>
               <div class="prod-reg">
-                <span><span class="flag">🇺🇸</span> Amerika</span>
-                <span><span class="flag">🇪🇺</span> Avrupa</span>
-                <span><span class="flag">🇹🇷</span> Türkiye</span>
+                <span><span class="flag">🇺🇸</span> America</span>
+                <span><span class="flag">🇪🇺</span> Europe</span>
+                <span><span class="flag">🇹🇷</span> Turkey</span>
                 <span style="color: #6b7680; font-size: 0.75rem"
-                  >Uluslararası Tescillidir</span
+                  >International Registriert</span
                 >
               </div>
             </div>
@@ -1039,55 +1208,58 @@
         <div class="container">
           <div class="prod-inner">
             <div class="prod-image-col">
-              <img src="Buskit-MiniPA.png" alt="Buskit mini PreAmp" />
+              <img src="./pics/Buskit-MiniPA.png" alt="Buskit mini PreAmp" />
               <div class="prod-color-badge" style="background: #3a6b35"></div>
             </div>
             <div class="prod-content">
               <div class="section-label">
-                <span class="blink-1s"> Mini Preamp</span>
+                <span class="blink-1s"> Mini-Vorverstärker</span>
               </div>
 
-              <h2 class="prod-name">Buskit Mini Preamp</h2>
-              <!-- <p class="prod-tagline">Sesi Güçlendirin ve Şekillendirin — Amfiden Önce</p> -->
+              <h2 class="prod-name">Buskit Mini-Vorverstärker</h2>
+              <!-- <p class="prod-tagline">Amplify and Shape Sound — Before the Amp</p> -->
               <div class="prod-why">
-                Bu cihaz, bas ve tiz için iki hatlı ton kontrolüne sahip bir preamptır. Gürültüsü çok düşük, kazancı ise çok yüksektir.
+                Dieses Gerät ist ein Vorverstärker mit einer Zweileiter-Bass-
+                und Höhen- Klangregelung. Sein Rauschen ist sehr gering und
+                seine Verstärkung ist sehr hoch.
               </div>
               <div class="prod-grid">
                 <div class="prod-box">
-                  <h4>Özellikler</h4>
+                  <h4>Funktionen</h4>
                   <ul>
-                    <li>Bas ve Tiz Ton Kontrolü</li>
-                    <li>Drive ve Gain Kontrolü</li>
-                    <li>AMP OUT Çıkışı</li>
-                    <li>AUX Giriş ve Çıkışı</li>
-                    <li>Altyapı Kaydı Çalma İmkânı</li>
-                    <li>9V Pil</li>
+                    <li>Bass- und Höhen-Klangregelung</li>
+                    <li>Mit Drive- und Verstärkungs-Regelung ausgestattet</li>
+                    <li>AMP OUT-Ausgang</li>
+                    <li>AUX-Ein- und Ausgang</li>
+                    <li>Backing-Track-Wiedergabekapazität</li>
+                    <li>9V-Batterie</li>
                   </ul>
                 </div>
                 <div class="prod-box">
-                  <h4>Kullanım Alanları</h4>
+                  <h4>Anwendungen</h4>
                   <ul>
-                    <li>Tüm Çalgılara Bağlanabilir</li>
+                    <li>Kompatibel mit Allen Instrumenten</li>
                   </ul>
                 </div>
               </div>
               <div class="prod-box" style="margin-bottom: 1rem">
-                <h4>Avantajlar</h4>
+                <h4>Vorteile</h4>
                 <ul
                   style="display: grid; grid-template-columns: 1fr 1fr; gap: 0"
                 >
                   <li>
-                    AUX Girişine Sahip ve Ses Sistemlerinin AUX Girişine Bağlanabilir
+                    Hat AUX-Eingang und kann an den AUX-Eingang von
+                    Soundsystemen angeschlossen werden
                   </li>
-                  <li>Küçük ve Hafif Boyutlar</li>
+                  <li>Kompakte und Leichte Maße</li>
                 </ul>
               </div>
               <div class="prod-reg">
-                <span><span class="flag">🇺🇸</span> Amerika</span>
-                <span><span class="flag">🇪🇺</span> Avrupa</span>
-                <span><span class="flag">🇹🇷</span> Türkiye</span>
+                <span><span class="flag">🇺🇸</span> America</span>
+                <span><span class="flag">🇪🇺</span> Europe</span>
+                <span><span class="flag">🇹🇷</span> Turkey</span>
                 <span style="color: #6b7680; font-size: 0.75rem"
-                  >Uluslararası Tescillidir</span
+                  >International Registriert</span
                 >
               </div>
             </div>
@@ -1099,92 +1271,96 @@
         <div class="container">
           <div class="prod-inner" style="align-items: flex-start">
             <div class="prod-image-col" style="position: sticky; top: 90px">
-              <img src="Buskit-Bat.png" alt="Buskit-Bat" />
+              <img src="./pics/Buskit-Bat.png" alt="Buskit-Bat" />
               <div class="prod-color-badge" style="background: #1a6b2a"></div>
             </div>
             <div class="prod-content">
               <div class="section-label">
-                <span class="blink-1s"> Yüksek Kapasiteli Pil</span>
+                <span class="blink-1s"> Hochkapazitätsbatterie</span>
               </div>
               <h2 class="prod-name">Buskit-Bat</h2>
-              <!-- <p class="prod-tagline">Her Performans için Üçlü Güç Kaynağı</p> -->
+              <!-- <p class="prod-tagline">Triple Power Supply for Every Performance</p> -->
               <div class="prod-why">
-                Bu cihaz, 12V, 9V ve 5V sağlayabilen ve voltaj polaritesini değiştirme özelliğine sahip, hafif ve kompakt yüksek kapasiteli taşınabilir bir pildir. Müzik performansıyla ilgili amfiler, pedallar ve diğer tüm ses ekipmanlarını çalıştırmak için kullanılabilir.
+                Dieses Gerät ist eine leichte, kompakte, hochkapazitive tragbare
+                Batterie, die 12V, 9V und 5V mit der Fähigkeit zur
+                Spannungspolungsumkehr liefern kann. Es kann verwendet werden,
+                um alle musikaufführungsbezogenen Audiogeräte zu versorgen,
+                einschließlich Verstärker, Pedale und mehr.
               </div>
 
-              <!-- Voltaj Kartları -->
+              <!-- Voltage Cards -->
               <div class="bat-voltage-cards">
                 <div class="bat-vcard" style="--vc: #f07a3a">
                   <div class="bat-vcard-volt">5V</div>
-                  <div class="bat-vcard-label">USB · Cihaz Şarjı</div>
+                  <div class="bat-vcard-label">USB · Gerät Laden</div>
                 </div>
                 <div class="bat-vcard" style="--vc: #3b6cb7">
                   <div class="bat-vcard-volt">9V</div>
-                  <div class="bat-vcard-label">Efekt Pedalı · Mikser</div>
+                  <div class="bat-vcard-label">Effektpedal · Mixer</div>
                 </div>
                 <div class="bat-vcard" style="--vc: #1a6b2a">
                   <div class="bat-vcard-volt">12V</div>
-                  <div class="bat-vcard-label">Preamp · Amfi</div>
+                  <div class="bat-vcard-label">Vorverstärker · Verstärker</div>
                 </div>
               </div>
 
-              <!-- Polarite Göstergesi -->
+              <!-- Polarity Indicator -->
               <div class="bat-polarity-demo">
-                <div class="bat-polarity-title">⚡ Çıkış Polarite Değişimi</div>
+                <div class="bat-polarity-title">⚡ Ausgangspolungsumkehr</div>
                 <div class="bat-polarity-row">
                   <div class="bat-polarity-box">
                     <span class="bat-pol-plus">+</span>
-                    <span class="bat-pol-label">Pozitif Merkez</span>
+                    <span class="bat-pol-label">Mitte Positiv</span>
                     <span class="bat-pol-minus">−</span>
-                    <span class="bat-pol-desc">Center Positive</span>
+                    <span class="bat-pol-desc">Mitte Positiv</span>
                   </div>
                   <div class="bat-polarity-arrow">⇄</div>
                   <div class="bat-polarity-box bat-polarity-box--alt">
                     <span class="bat-pol-minus">−</span>
-                    <span class="bat-pol-label">Negatif Merkez</span>
+                    <span class="bat-pol-label">Mitte Negativ</span>
                     <span class="bat-pol-plus">+</span>
-                    <span class="bat-pol-desc">Center Negative</span>
+                    <span class="bat-pol-desc">Mitte Negativ</span>
                   </div>
                 </div>
               </div>
 
               <div class="prod-grid">
                 <div class="prod-box">
-                  <h4>Özellikler</h4>
+                  <h4>Funktionen</h4>
                   <ul>
-                    <li>5V Çıkış — USB-A</li>
-                    <li>9V Çıkış — DC Jack</li>
-                    <li>12V Çıkış — DC Jack</li>
-                    <li>Her Çıkışın Polaritesini Değiştirme</li>
-                    <li>USB-C Giriş Şarjı</li>
+                    <li>5V-Ausgang — USB-A</li>
+                    <li>9V-Ausgang — DC-Buchse</li>
+                    <li>12V-Ausgang — DC-Buchse</li>
+                    <li>Polung jedes Ausgangs ändern</li>
+                    <li>USB-C Eingang Laden</li>
                   </ul>
                 </div>
                 <div class="prod-box">
-                  <h4>Kullanım Alanları</h4>
+                  <h4>Anwendungen</h4>
                   <ul>
-                    <li>Efekt Pedallarını Besleme</li>
-                    <li>Buskit Preamp'ı Besleme</li>
-                    <li>Şebeke Elektrtiği Olmadan Performans</li>
+                    <li>Stromversorgung von Effektpedalen</li>
+                    <li>Stromversorgung des Buskit-Vorverstärkers</li>
+                    <li>Auftritt Ohne Netzstrom</li>
                   </ul>
                 </div>
               </div>
               <div class="prod-box" style="margin-bottom: 1rem">
-                <h4>Avantajlar</h4>
+                <h4>Vorteile</h4>
                 <ul
                   style="display: grid; grid-template-columns: 1fr 1fr; gap: 0"
                 >
-                  <li>Üç Bağımsız Voltaj</li>
-                  <li>Değiştirilebilir Polarite</li>
-                  <li>Küçük ve Hafif</li>
-                  <li>Çoğu Cihazla Uyumlu</li>
+                  <li>Drei Unabhängige Spannungen</li>
+                  <li>Veränderbare Polung</li>
+                  <li>Klein und Leicht</li>
+                  <li>Kompatibel mit den Meisten Geräten</li>
                 </ul>
               </div>
               <div class="prod-reg">
-                <span><span class="flag">🇺🇸</span> Amerika</span>
-                <span><span class="flag">🇪🇺</span> Avrupa</span>
-                <span><span class="flag">🇹🇷</span> Türkiye</span>
+                <span><span class="flag">🇺🇸</span> America</span>
+                <span><span class="flag">🇪🇺</span> Europe</span>
+                <span><span class="flag">🇹🇷</span> Turkey</span>
                 <span style="color: #6b7680; font-size: 0.75rem"
-                  >Uluslararası Tescillidir</span
+                  >International Registriert</span
                 >
               </div>
             </div>
@@ -1197,49 +1373,52 @@
       <div class="container">
         <div class="prod-inner">
           <div class="prod-image-col">
-            <img src="Buskit-MonEXP.png" alt="Buskit Monitoring" />
+            <img src="./pics/Buskit-MonEXP.png" alt="Buskit Monitoring" />
             <div class="prod-color-badge" style="background: #3a6b35"></div>
           </div>
           <div class="prod-content">
             <div class="section-label">
               <span class="blink-1s">
-                Monitör Çıkış Sayısını Artırma Modülü</span
+                Monitoring-Ausgang Erweiterungsmodul</span
               >
             </div>
 
             <h2 class="prod-name">Buskit MonEXP</h2>
-            <!-- <p class="prod-tagline">Sesi Güçlendirin ve Şekillendirin — Amfiden Önce</p> -->
+            <!-- <p class="prod-tagline">Amplify and Shape Sound — Before the Amp</p> -->
             <div class="prod-why">
-              Bu modül de bir genişletme modülüdür ve monitör çıkış sayısını artırmak için kullanılır.
+              Dieses Modul ist auch ein Erweiterungsmodul zur Erhöhung der
+              Anzahl der Monitoring-Ausgänge.
             </div>
             <div class="prod-grid">
               <div class="prod-box">
-                <h4>Özellikler</h4>
+                <h4>Funktionen</h4>
                 <ul>
-                  <li>Monitör Cihazından Bir Giriş ve Dört Çıkışa Sahip</li>
-                  <li>Elektrik ve Pil Gerektirmez</li>
+                  <li>
+                    Has One Input from the Monitoring Device and Four Outputs
+                  </li>
+                  <li>Keine Stromversorgung oder Batterie erforderlich</li>
                 </ul>
               </div>
               <div class="prod-box">
-                <h4>Kullanım Alanları</h4>
+                <h4>Anwendungen</h4>
                 <ul>
-                  <li>Tüm Çalgılara Bağlanabilir</li>
+                  <li>Kompatibel mit Allen Instrumenten</li>
                 </ul>
               </div>
             </div>
             <div class="prod-box" style="margin-bottom: 1rem">
-              <h4>Avantajlar</h4>
+              <h4>Vorteile</h4>
               <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 0">
-                <li>Kulaklık Çıkış Sayısını Artırma</li>
-                <li>Küçük ve Hafif Boyutlar</li>
+                <li>Erhöhung der Anzahl der Kopfhörerausgänge</li>
+                <li>Kompakte und Leichte Maße</li>
               </ul>
             </div>
             <div class="prod-reg">
-              <span><span class="flag">🇺🇸</span> Amerika</span>
-              <span><span class="flag">🇪🇺</span> Avrupa</span>
-              <span><span class="flag">🇹🇷</span> Türkiye</span>
+              <span><span class="flag">🇺🇸</span> America</span>
+              <span><span class="flag">🇪🇺</span> Europe</span>
+              <span><span class="flag">🇹🇷</span> Turkey</span>
               <span style="color: #6b7680; font-size: 0.75rem"
-                >Uluslararası Tescillidir</span
+                >Internationally Registered</span
               >
             </div>
           </div>
@@ -1257,11 +1436,14 @@
     >
       <div class="container">
         <div class="section-label">
-          <span class="blink-1s"> Neden Buskit</span>
+          <span class="blink-1s"> Warum Buskit</span>
         </div>
-        <h2 class="section-title">Gerçek Sorunlar, Pratik Çözümler</h2>
+        <h2 class="section-title">Echte Probleme, Praktische Lösungen</h2>
         <p class="section-desc" style="text-align: justify">
-          Her müzisyen, ister özel ister kamusal, ister solo ister grup performansı için, koşullara göre ihtiyaç duyduğu kolaylıkları sağlayacak ekipmana ihtiyaç duyar. Buskit cihaz serisi, tüm bu ihtiyaçları etkili ve verimli bir şekilde karşılar.
+          Jeder Musiker — ob für private oder öffentliche, Solo- oder
+          Gruppenauftritte — benötigt Ausrüstung, die die richtigen
+          Einrichtungen für seine Situation bietet. Die Buskit-Gerätesammlung
+          erfüllt alle ihre Bedürfnisse effektiv und effizient.
         </p>
 
         <div class="why-grid">
@@ -1269,52 +1451,61 @@
           <div class="why-card why-card-problems">
             <div class="why-card-header">
               <div class="why-card-icon">⚠️</div>
-              <h3>Mevcut Sorunlar</h3>
+              <h3>Bestehende Probleme</h3>
             </div>
             <ul class="why-list">
               <li>
                 <span class="dot"></span>
                 <span
                   ><strong
-                    >Şebeke Elektriğine veya Ağır ve Hacimli Pillere Bağımlılık</strong
+                    >Abhängigkeit von Netzstrom oder Schweren, Sperrigen
+                    Batterien</strong
                   ></span
                 >
               </li>
               <li>
                 <span class="dot"></span>
                 <span
-                  ><strong>Amfilerdeki Sınırlı Giriş Sayısı</strong></span
+                  ><strong
+                    >Begrenzte Anzahl von Verstärkereingängen</strong
+                  ></span
                 >
               </li>
               <li>
                 <span class="dot"></span>
                 <span
                   ><strong
-                    >İkiden Fazla Kişilik Canlı Performans için Birden Fazla Amfi Gerekir</strong
+                    >Live-Auftritt für Mehr als Zwei Personen Erfordert Mehrere
+                    Verstärker</strong
                   >
                 </span>
               </li>
               <li>
                 <span class="dot"></span>
-                <span><strong> Ses İzleme Sistemi İhtiyacı</strong> </span>
+                <span
+                  ><strong>Bedarf an einem Audio-Monitoring-System</strong>
+                </span>
               </li>
               <li>
                 <span class="dot"></span>
                 <span
                   ><strong
-                    >Köprü Altı Mikrofon Takmak için Saza Delik Açma İhtiyacı</strong
+                    >Notwendigkeit, Instrumente zu Bohren, um Unter-Steg-
+                    Mikrofone zu Installieren</strong
                   ></span
                 >
               </li>
               <li>
                 <span class="dot"></span>
-                <span><strong>Entegre Ekosistem Eksikliği</strong></span>
+                <span
+                  ><strong>Mangel an einem Integrierten Ökosystem</strong></span
+                >
               </li>
               <li>
                 <span class="dot"></span>
                 <span
                   ><strong
-                    >Grup Provalarında Yetersiz Ses Dengesi
+                    >Unzureichende Audio-Balance bei Gruppenproben
                   </strong></span
                 >
               </li>
@@ -1322,7 +1513,8 @@
                 <span class="dot"></span>
                 <span
                   ><strong
-                    >Saz veya Vokal Tiz ve Bas Ayarı için EQ İhtiyacı
+                    >Bedarf an EQ zur Anpassung von Höhen und Bass von
+                    Instrument oder Sänger
                   </strong></span
                 >
               </li>
@@ -1330,7 +1522,8 @@
                 <span class="dot"></span>
                 <span
                   ><strong
-                    >Her Türlü Ses Ekipmanını Performansa Bağlama İmkânı
+                    >Möglichkeit, Beliebige Audio-Ausrüstung an den Auftritt
+                    Anzuschließen
                   </strong></span
                 >
               </li>
@@ -1338,7 +1531,7 @@
                 <span class="dot"></span>
                 <span
                   ><strong
-                    >Amatör Amfileri Kullanamama
+                    >Unfähigkeit, Amateuer-Verstärker zu Verwenden
                   </strong></span
                 >
               </li>
@@ -1349,117 +1542,157 @@
           <div class="why-card why-card-solutions">
             <div class="why-card-header">
               <div class="why-card-icon">✅</div>
-              <h3>Buskit Ekosistemi Çözümü</h3>
+              <h3>Buskit-Ökosystem-Lösung</h3>
             </div>
             <ul class="why-list">
               <li>
                 <span class="dot"></span>
                 <span
                   ><strong>
-                    Benzersiz Özelliklere Sahip İki Ses Mikseri Modeli Sunma</strong
+                    Angebot von Zwei Audio-Mixer-Modellen mit Einzigartigen
+                    Fähigkeiten</strong
                   >
-                  Her zevke ve her ihtiyaca yönelik bir cihaz tasarlanmış olup, sayı sınırlaması olmaksızın tüm ses girişlerini bir arada miksleyerek çıkışta net bir ses üretir.</span
-                >
-              </li>
-              <li>
-                <span class="dot"></span>
-                <span
-                  ><strong> Şarj Edilebilir Dahili Pil</strong> — Buskit ürünlerinin çoğu USB-C şarj edilebilir pille tasarlanmıştır; şehrin herhangi bir noktasında şebeke elektrtiğine ihtiyaç duymadan performans.</span
-                >
-              </li>
-              <li>
-                <span class="dot"></span>
-                <span
-                  ><strong> Küçük, Cebe Sığar ve Hafif Boyutlar</strong> Çok kişilik sistemin tamamı elle taşınabilir ve ağırlığı güçlükle bir kilograma ulaşır.</span
-                >
-              </li>
-              <li>
-                <span class="dot"></span>
-                <span
-                  ><strong>Modüler ve Genişletilebilir Mimari</strong> İhtiyaca göre çalışma düzeyine uygun modüller kullanılabilir; genişleme durumunda genişletme modülleri temin edilerek cihazlar geliştirilebilir.</span
-                >
-              </li>
-              <li>
-                <span class="dot"></span>
-                <span
-                  ><strong> Ses İzleme Sistemi ile Donatılmış </strong> Ses izleme özelliği, performans kalitesini artırmada temel bir rol oynar.</span
-                >
-              </li>
-              <li>
-                <span class="dot"></span>
-                <span
-                  ><strong> 8 Banda Kadar Ses EQ ile Donatılmış</strong> Buskit cihaz serisinde iki, beş ve sekiz bantlı EQ yelpazesi mevcuttur; bunlar saz veya vokal sesini şekillendirmede temel bir rol oynar.</span
+                  Für jeden Geschmack und jeden Bedarf wurde ein Gerät
+                  entwickelt, um alle Audio-Eingangsquellen ohne
+                  Mengenbeschränkungen zusammenzumischen und einen klaren Klang
+                  am Ausgang zu erzeugen.</span
                 >
               </li>
               <li>
                 <span class="dot"></span>
                 <span
                   ><strong>
-                    Saza Delik Açmaya ve Köprü Altı Mikrofon Takmaya Gerek Yok</strong
+                    Mit Wiederaufladbarer Eingebauter Batterie
+                    Ausgestattet</strong
+                  >
+                  — Die meisten Buskit-Produkte sind mit USB-C-wiederaufladbaren
+                  Batterien ausgestattet; treten Sie überall in der Stadt auf,
+                  ohne Netzstrom zu benötigen.</span
+                >
+              </li>
+              <li>
+                <span class="dot"></span>
+                <span
+                  ><strong> Klein, Taschenformat und Leicht</strong> Das gesamte
+                  Mehrpersonen-System kann von Hand getragen werden und sein
+                  Gewicht erreicht kaum ein Kilogramm.</span
+                >
+              </li>
+              <li>
+                <span class="dot"></span>
+                <span
+                  ><strong>Modulare und Erweiterbare Architektur</strong> Je
+                  nach Bedarf können dem Arbeitsniveau entsprechende Module
+                  verwendet werden, und bei der Erweiterung können
+                  Erweiterungsmodule gekauft werden, um die Geräte zu
+                  entwickeln.</span
+                >
+              </li>
+              <li>
+                <span class="dot"></span>
+                <span
+                  ><strong> Mit Audio-Monitoring-System Ausgestattet </strong>
+                  Die Audio-Monitoring-Fähigkeit spielt eine grundlegende Rolle
+                  bei der Verbesserung der Auftrittsqualität.</span
+                >
+              </li>
+              <li>
+                <span class="dot"></span>
+                <span
+                  ><strong> Mit bis zu 8-Band Audio-EQ Ausgestattet</strong>
+                  Eine Reihe von Zwei-Band-, 5-Band- und 8-Band-Equalizern sind
+                  in der Buskit-Gerätesammlung verfügbar und spielen eine
+                  grundlegende Rolle bei der Formung des Klangs eines
+                  Instruments oder Sängers.</span
+                >
+              </li>
+              <li>
+                <span class="dot"></span>
+                <span
+                  ><strong>
+                    Kein Bohren von Instrumenten oder Installieren von
+                    Unter-Steg- Mikrofonen Erforderlich</strong
                   ></span
                 >
               </li>
               <li>
                 <span class="dot"></span>
                 <span
-                  ><strong>Bir Ekosistem, Bir Standart</strong> — Tüm Buskit ürünleri birbiriyle uyumludur; en küçük Mic Interface'ten Mikser'e kadar hepsi aynı dili konuşur.</span
+                  ><strong>Ein Ökosystem, Ein Standard</strong> — Alle
+                  Buskit-Produkte sind miteinander kompatibel; von der kleinsten
+                  Mikrofon-Schnittstelle bis zum Mixer sprechen sie alle die
+                  gleiche Sprache.</span
                 >
               </li>
               <li>
                 <span class="dot"></span>
                 <span
-                  ><strong>Amatör Amfileri Kullanma</strong> — Buskit setinin özelliklerine göre, sazları amfilerin AUX girişlerine bağlamak da mümkündür; böylece büyük bir grup yalnızca tek bir sıradan amatör amfiyle kurulabilir.</span
+                  ><strong>Verwendung von Amateur-Verstärkern</strong> —
+                  Angesichts der Fähigkeiten der Buskit-Sammlung ist es auch
+                  möglich, Instrumente an die AUX-Eingänge von Verstärkern
+                  anzuschließen, sodass eine große Gruppe mit nur einem
+                  gewöhnlichen Amateur-Verstärker aufgestellt werden kann.</span
                 >
               </li>
               <li>
                 <span class="dot"></span>
                 <span>
                   <strong>
-                    Her Türlü Ses Sisteminin AUX Girişine Bağlanma Sistemi ile Donatılmış —</strong
-                  >Bu özellik, herhangi bir ses cihazının saz veya tüm grubun ses çıkışını bağlamak için kullanılmasına imkân tanır.
+                    Mit System zur Verbindung mit dem AUX-Eingang Jedes
+                    Soundsystems Ausgestattet —</strong
+                  >Diese Fähigkeit ermöglicht die Verwendung jeder Art von
+                  Audio-Gerät zur Verbindung eines Instruments oder des
+                  vollständigen Gruppen-Klangausgangs.
                 </span>
               </li>
               <li>
                 <span class="dot"></span>
                 <span>
                   <strong>
-                    Mikslenmiş Çıkış Sesini Doğrudan Cep Telefonuna Kaydetme Sistemi ile Donatılmış
+                    Mit System für die Direkte Aufnahme von Gemischtem Ausgang-
+                    Audio auf dem Mobiltelefon Ausgestattet
                   </strong>
                 </span>
               </li>
               <li>
                 <span class="dot"></span>
                 <span>
-                  <strong> Yüksek Kazançlı ve Düşük Gürültülü Preamp ile Donatılmış</strong>
+                  <strong>
+                    Mit Hochverstärkungs-, Rauscharmen Vorverstärker
+                    Ausgestattet</strong
+                  >
                 </span>
               </li>
             </ul>
 
             <div class="why-quote">
-              Buskit, sokak müzisyenleri için tamamen modüler ve pilli ses ekosistemini tasarlayıp tescil ettiren dünyadaki tek markadır.
+              Buskit ist die einzige Marke der Welt, die ein vollständig
+              modulares und batteriebetriebenes Audio-Ökosystem speziell für
+              Straßenmusiker entworfen und registriert hat.
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-----------------------------  Bir Bakışta ----------------->
+    <!-----------------------------  At a Glance ----------------->
     <section class="bk-section" id="look">
       <div
         class="dynamic-glow-bg bk-container"
-        style="height: auto"
+        style="height: auto; padding: 2rem"
       >
         <p class="section-label">
-          <span class="blink-1s"> Buskit Çevre Diyagramı</span>
+          <span class="blink-1s"> Buskit-Umgebungsdiagramm</span>
         </p>
-        <h2 class="bk-title-md">Çok Sayıda Modüler Giriş/Çıkış</h2>
+        <h2 class="bk-title-md">Mehrere Modulare Ein-/Ausgänge</h2>
         <p class="bk-subtitle" style="margin-bottom: 0">
-          Buskit serisi esnek, modüler olup müzik dünyasındaki standart giriş ve çıkışların çoğuna bağlanabilir.
+          Die Buskit-Sammlung ist flexibel, modular und in der Lage, sich mit
+          den meisten Standard-Ein- und Ausgängen in der Musikwelt zu verbinden.
         </p>
-        <img class="diagram" src="diagram.svg" alt="diagram" />
+        <img class="diagram" src="./pics/diagram.png" alt="diagram" />
       </div>
     </section>
 
-    <!-- EKOSİSTEM BÖLÜMÜ — bk-section çerçevesi yok -->
+    <!-- ECOSYSTEM SECTION — no bk-section wrapper -->
     <section
       style="
         background: #0e0f14;
@@ -1475,25 +1708,31 @@
       >
         <!-- Header -->
         <p class="section-label">
-          <span class="blink-1s"> Ses Ekosistemi</span>
+          <span class="blink-1s"> Audio-Ökosystem</span>
         </p>
-        <h2 class="section-title">Her Eleman Tam <span>Yerinde</span></h2>
+        <h2 class="section-title">
+          Jedes Element Genau an <span>Seinem </span>Platz
+        </h2>
         <p class="bk-subtitle">
-          BUSKIT cihazları her türlü saz ve her performans koşulu için tasarlanmıştır — stüdyodan sokağa. Çeşitli girişler, profesyonel işleme ve esnek çıkışlar tek bir entegre ekosistemde.
+          BUSKIT-Geräte sind für jedes Instrument und jede Auftrittsbedingung
+          konzipiert — vom Studio zur Straße. Vielfältige Eingänge,
+          professionelle Verarbeitung und flexible Ausgänge in einem
+          integrierten Ökosystem.
         </p>
 
         <!-- Flow: Inputs (2-col grid) → then Core + Outputs side by side -->
         <div class="bk-flow-new">
           <!-- INPUTS ROW — 2-column grid -->
           <div class="bk-inputs-section">
-            <p class="bk-col-label" style="padding-right: 40px">Girişler</p>
+            <p class="bk-col-label" style="padding-right: 40px">Eingänge</p>
             <div class="bk-input-grid">
               <div class="bk-input-card">
                 <div class="bk-input-icon ic-blue">🎹</div>
                 <div class="bk-input-text">
-                  <p class="bk-input-name">Elektronik Çalgılar</p>
+                  <p class="bk-input-name">Elektronische Instrumente</p>
                   <p class="bk-input-desc">
-                    Elektro Piyano, Amfi Çıkışı, Diğer Çalgıların Preampları
+                    E-Piano, Verstärkerausgang, Vorverstärker anderer
+                    Instrumente
                   </p>
                 </div>
                 <span class="bk-badge badge-line">Line</span>
@@ -1502,8 +1741,10 @@
               <div class="bk-input-card">
                 <div class="bk-input-icon ic-blue">🔊</div>
                 <div class="bk-input-text">
-                  <p class="bk-input-name">Ses Sistemleri</p>
-                  <p class="bk-input-desc">Mikser veya PA Sisteminden Doğrudan Çıkış</p>
+                  <p class="bk-input-name">Soundsysteme</p>
+                  <p class="bk-input-desc">
+                    Direktausgang von Mixer oder PA-System
+                  </p>
                 </div>
                 <span class="bk-badge badge-line">Line</span>
               </div>
@@ -1511,10 +1752,8 @@
               <div class="bk-input-card">
                 <div class="bk-input-icon ic-teal">🎙</div>
                 <div class="bk-input-text">
-                  <p class="bk-input-name">Dinamik Mikrofon</p>
-                  <p class="bk-input-desc">
-                    Ek Modül Gerektirmeden Doğrudan Bağlantı
-                  </p>
+                  <p class="bk-input-name">Dynamisches Mikrofon</p>
+                  <p class="bk-input-desc">Direktverbindung Ohne Hilfsmodul</p>
                 </div>
                 <span class="bk-badge badge-mic">Mic</span>
               </div>
@@ -1522,8 +1761,8 @@
               <div class="bk-input-card">
                 <div class="bk-input-icon ic-teal">🎚</div>
                 <div class="bk-input-text">
-                  <p class="bk-input-name">Kondenser Mikrofon</p>
-                  <p class="bk-input-desc">Mikrofon Arayüz Modülü Aracılığıyla</p>
+                  <p class="bk-input-name">Kondensatormikrofon</p>
+                  <p class="bk-input-desc">Über Mikrofon-Schnittstellenmodul</p>
                 </div>
                 <span class="bk-badge badge-mic">Condenser</span>
               </div>
@@ -1546,9 +1785,10 @@
                   🎸
                 </div>
                 <div class="bk-input-text">
-                  <p class="bk-input-name">Piezo Pickup / Köprü Altı</p>
+                  <p class="bk-input-name">Piezo-Tonabnehmer / Unter-Steg</p>
                   <p class="bk-input-desc">
-                    Yüksek Kazançlı, Düşük Gürültülü Preamp — 2 ila 7 Bantlı EQ
+                    Hochverstärkungs-, Rauscharmer Vorverstärker — 2 bis
+                    7-Band-EQ
                   </p>
                 </div>
                 <span class="bk-badge badge-piezo">Piezo</span>
@@ -1557,9 +1797,9 @@
               <div class="bk-input-card">
                 <div class="bk-input-icon ic-gold">➕</div>
                 <div class="bk-input-text">
-                  <p class="bk-input-name">LineEXP Modülü</p>
+                  <p class="bk-input-name">LineEXP-Modul</p>
                   <p class="bk-input-desc">
-                    Sınırsız Giriş Artırma — Teknik Sınır Yok
+                    Unbegrenzte Eingangs-Erweiterung — Kein Technisches Limit
                   </p>
                 </div>
                 <span class="bk-badge badge-exp">Expandable</span>
@@ -1571,36 +1811,38 @@
           <div class="bk-core-outputs-row">
             <!-- CORE -->
             <div class="bk-core-col">
-              <p class="bk-col-label">Merkezi İşleme</p>
+              <p class="bk-col-label">Zentrale Verarbeitung</p>
               <div class="bk-core">
                 <div class="bk-core-logo">BUS<span>KIT</span></div>
-                <div class="bk-core-tagline">Professional Audio Ecosystem</div>
+                <div class="bk-core-tagline">
+                  Professionelles Audio-Ökosystem
+                </div>
                 <ul class="bk-core-features">
-                  <li>2 ila 7 Bantlı EQ (Modele Göre)</li>
-                  <li>Çok Kanallı Stereo Miksleme</li>
-                  <li>Düşük Gürültülü Piezo Preamp</li>
-                  <li>Çıkış Kulaklık İzleme</li>
-                  <li>USB Şarjlı Dahili Pil</li>
-                  <li>Yan Modüllere Bağlantı</li>
+                  <li>2 bis 7-Band-EQ (Je nach Modell)</li>
+                  <li>Mehrkanaliger Stereo-Mix</li>
+                  <li>Rauscharmer Piezo-Vorverstärker</li>
+                  <li>Ausgangs-Kopfhörer-Monitoring</li>
+                  <li>USB Wiederaufladbare Eingebaute Batterie</li>
+                  <li>Verbindung zu Hilfsmodulen</li>
                 </ul>
                 <div class="bk-core-divider"></div>
                 <div class="bk-bat-badge">
                   <strong>⚡ BUSKIT-bat</strong>
-                  Ses Ekipmanı Güç Kaynağında Devrim
+                  Eine Revolution in der Stromversorgung von Audio-Ausrüstung
                 </div>
               </div>
             </div>
 
             <!-- OUTPUTS -->
             <div class="bk-outputs-col">
-              <p class="bk-col-label">Çıkışlar</p>
+              <p class="bk-col-label">Ausgänge</p>
               <div class="bk-output-list">
                 <div class="bk-output-card">
                   <div class="bk-input-icon ic-coral">🔌</div>
                   <div class="bk-input-text">
-                    <p class="bk-input-name">Amfi (Kablolu)</p>
+                    <p class="bk-input-name">Verstärker (Kabelgebunden)</p>
                     <p class="bk-input-desc">
-                      Herhangi Bir Amfiye Standart Çıkış
+                      Standard-Ausgang zu Jedem Verstärker
                     </p>
                   </div>
                 </div>
@@ -1622,36 +1864,38 @@
                     📡
                   </div>
                   <div class="bk-input-text">
-                    <p class="bk-input-name">Kablosuz Modül</p>
+                    <p class="bk-input-name">Wireless-Modul</p>
                     <p class="bk-input-desc">
-                      Saz ile Amfi Arasında Kablosuz İletişim Kurma
+                      Ermöglicht Kabellose Verbindung von Instrument zu
+                      Verstärker
                     </p>
                   </div>
                 </div>
                 <div class="bk-output-card">
                   <div class="bk-input-icon ic-coral">🔗</div>
                   <div class="bk-input-text">
-                    <p class="bk-input-name">AUX Çıkışı</p>
+                    <p class="bk-input-name">AUX-Ausgang</p>
                     <p class="bk-input-desc">
-                      Mevcut Ses Ekipmanlarının AUX Girişine Bağlantı
+                      Verbindung zum AUX-Eingang Vorhandener Audio-Ausrüstung
                     </p>
                   </div>
                 </div>
                 <div class="bk-output-card">
                   <div class="bk-input-icon ic-green">🎧</div>
                   <div class="bk-input-text">
-                    <p class="bk-input-name">İzleme</p>
+                    <p class="bk-input-name">Monitoring</p>
                     <p class="bk-input-desc">
-                      Müzisyen için Çıkış Miksini Doğrudan Duyma
+                      Direktes Hören des Ausgangs-Mix für den Musiker
                     </p>
                   </div>
                 </div>
                 <div class="bk-output-card">
                   <div class="bk-input-icon ic-green">🎧</div>
                   <div class="bk-input-text">
-                    <p class="bk-input-name">Mikslenmiş Sesi Kaydetme</p>
+                    <p class="bk-input-name">Gemischtes Audio Aufnehmen</p>
                     <p class="bk-input-desc">
-                      Çıkış Miksini Doğrudan Cep Telefonuna Kaydetme İmkânı
+                      Möglichkeit, den Ausgangs-Mix Direkt auf dem Mobiltelefon
+                      Aufzunehmen
                     </p>
                   </div>
                 </div>
@@ -1661,66 +1905,72 @@
           </div>
         </div>
 
-        <!-- Özellik Şeridi — bk-container altında, bk-flow-new dışında -->
+        <!-- Specs Strip — directly below bk-container, outside bk-flow-new -->
         <div style="margin-top: 40px; margin-bottom: 40px; padding: 0 40px">
-          <p class="bk-col-label" style="margin-bottom: 20px">
-            Temel Özellikler
-          </p>
+          <p class="bk-col-label" style="margin-bottom: 20px">Hauptmerkmale</p>
           <div class="bk-features-grid">
-            <!-- Sağ Sütun: Çok Bantlı EQ + Kablosuz Bağlantı -->
+            <!-- ستون راست: Multi-Band EQ + Wireless Connectivity -->
             <div class="bk-features-col-right">
               <div class="bk-spec-card">
                 <div class="bk-spec-icon">🎛</div>
                 <div>
-                  <p class="bk-spec-name">Çok Bantlı EQ</p>
+                  <p class="bk-spec-name">Mehrband-EQ</p>
                   <p class="bk-spec-desc">
-                    Cihaz modeline göre 2 ila 7 bantlı EQ, hassas ses şekillendirme için
+                    2 bis 7-Band-EQ je nach Gerätemodell, für präzise Klang-
+                    formung
                   </p>
                 </div>
               </div>
               <div class="bk-spec-card">
                 <div class="bk-spec-icon">📡</div>
                 <div>
-                  <p class="bk-spec-name">Kablosuz Bağlantı</p>
+                  <p class="bk-spec-name">Kabellose Konnektivität</p>
                   <p class="bk-spec-desc">
-                    Sazı Amfiden Ayırmak için Kablosuz İletişim Modülü
+                    Kabelloses Kommunikationsmodul zur Trennung von Instrument
+                    und Verstärker
                   </p>
                 </div>
               </div>
             </div>
 
-            <!-- Orta: Profesyonel İzleme -->
+            <!-- وسط: Monitoring Professional -->
             <div class="bk-features-col-monitor">
               <div class="bk-monitor bk-monitor-tall">
                 <div class="bk-monitor-icon">🎧</div>
                 <div class="bk-monitor-text">
                   <h3 class="bk-monitor-title">
-                    İzleme <span>Profesyonel</span> Anlık Performansta
+                    Monitoring <span>Professionell</span> im Moment des
+                    Auftritts
                   </h3>
                   <p class="bk-monitor-desc">
-                    Müzisyenler, çıkışın mikslenmiş sesini doğrudan kulaklıkla duyabilir — gecikmesiz, aracısız. Bu özellik, performans kalitesini artırmada hayati bir rol oynar ve müzisyenin anlık olarak kendi sesini kontrol etmesine imkân tanır.
+                    Musiker können den gemischten Ausgang direkt über Kopfhörer
+                    hören — ohne Verzögerung, ohne Vermittler. Diese Fähigkeit
+                    spielt eine wesentliche Rolle bei der Verbesserung der
+                    Auftrittsqualität und ermöglicht dem Musiker, seinen Klang
+                    im Moment zu kontrollieren.
                   </p>
                 </div>
               </div>
             </div>
 
-            <!-- Sol Sütun: Dahili Pil + Genişletilebilir -->
+            <!-- ستون چپ: Built-in Battery + Expandable -->
             <div class="bk-features-col-left">
               <div class="bk-spec-card">
                 <div class="bk-spec-icon">⚡</div>
                 <div>
-                  <p class="bk-spec-name">Dahili Pil</p>
+                  <p class="bk-spec-name">Eingebaute Batterie</p>
                   <p class="bk-spec-desc">
-                    USB ile Şarj — Şebeke Elektrtiğine İhtiyaç Duymadan Performans
+                    Laden über USB — Auftreten Ohne Netzstrom
                   </p>
                 </div>
               </div>
               <div class="bk-spec-card">
                 <div class="bk-spec-icon">➕</div>
                 <div>
-                  <p class="bk-spec-name">Genişletilebilir</p>
+                  <p class="bk-spec-name">Erweiterbar</p>
                   <p class="bk-spec-desc">
-                    LineEXP Modülü ile Giriş Artırma — Teknik Sınır Yok
+                    Eingangs-Erweiterung über LineEXP-Modul — Kein Technisches
+                    Limit
                   </p>
                 </div>
               </div>
@@ -1731,16 +1981,16 @@
     </section>
 
     <!-- class="dynamic-glow-bg bk-container" -->
-    <!-----------------------------  Bağlantı Şemaları- --------------->
-    <!-- Bağlantı Şemaları -->
+    <!-----------------------------  Connection Diagrams- --------------->
+    <!-- Connection Diagrams -->
     <section class="con-container">
       <div class="bk-container">
         <p class="section-label" id="con-mixer" style="scroll-margin-top: 70px">
-          <span class="blink-1s">Buskit Mikser Örnek Bağlantıları</span>
+          <span class="blink-1s">Buskit Mixer Beispielanschlüsse</span>
         </p>
         <img
           class="diagram"
-          src="Buskit-Mixer-diagram.png"
+          src="./pics/Buskit-Mixer-diagram.png"
           alt="diagram"
           style="width: 950px; display: block; margin-bottom: 3rem"
         />
@@ -1750,62 +2000,64 @@
           id="con-minimixer"
           style="scroll-margin-top: 70px"
         >
-          <span class="blink-1s">Buskit Mini Mikser Örnek Bağlantıları</span>
+          <span class="blink-1s">Buskit Mini Mixer Beispielanschlüsse</span>
         </p>
         <img
           class="diagram"
-          src="Buskit-miniMixer.diagram.png"
+          src="./pics/Buskit-miniMixer.diagram.png"
           alt="diagram"
           style="width: 950px; display: block; margin-bottom: 3rem"
         />
 
-        <!-- Üçüncü Görsel -->
+        <!-- Third Image -->
         <p
           class="section-label"
           id="con-microPA"
           style="scroll-margin-top: 70px"
         >
-          <span class="blink-1s"> Buskit Mikro Preamp Örnek Bağlantıları</span>
+          <span class="blink-1s">
+            Buskit Micro Vorverstärker Beispielanschlüsse</span
+          >
         </p>
         <img
           class="diagram"
-          src="Buskit-microPA.diagram.png"
+          src="./pics/Buskit-microPA.diagram.png"
           alt="diagram"
           style="width: 250px; display: block; margin: 0 auto 3rem auto"
         />
 
-        <!-- Dördüncü Görsel -->
+        <!-- Fourth Image -->
         <p
           class="section-label"
           id="con-miniPA"
           style="scroll-margin-top: 70px"
         >
-          <span class="blink-1s">Mini Preamp Örnek Bağlantıları</span>
+          <span class="blink-1s">Mini Vorverstärker Beispielanschlüsse</span>
         </p>
         <img
           class="diagram"
-          src="Buskit-miniPreAmp-diagram.png"
+          src="./pics/Buskit-miniPreAmp-diagram.png"
           alt="diagram"
           style="width: 450px; display: block; margin: 0 auto 3rem auto"
         />
 
-        <!-- Beşinci Görsel -->
+        <!-- Fifth Image -->
         <p class="section-label" id="con-PA" style="scroll-margin-top: 70px">
-          <span class="blink-1s">Preamp Örnek Bağlantıları</span>
+          <span class="blink-1s">Vorverstärker Beispielanschlüsse</span>
         </p>
         <img
           class="diagram"
-          src="Buskit-PreAmp-diagram.png"
+          src="./pics/Buskit-PreAmp-diagram.png"
           alt="diagram"
           style="width: 450px; display: block; margin: 0 auto 3rem auto"
         />
-        <!-- Altıncı Görsel -->
+        <!-- Sixth Image -->
         <p class="section-label" id="con-Mon" style="scroll-margin-top: 70px">
-          <span class="blink-1s">Buskit Monitör Örnek Bağlantıları</span>
+          <span class="blink-1s">Buskit Monitoring Beispielanschlüsse</span>
         </p>
         <img
           class="diagram"
-          src="Buskit-Monitoring-diagram.png"
+          src="./pics/Buskit-Monitoring-diagram.png"
           alt="diagram"
           style="width: 950px; display: block; margin-bottom: 3rem"
         />
@@ -1817,26 +2069,29 @@
       <div class="container">
         <div class="reg-banner fade-in">
           <div class="section-label" style="margin-right: auto">
-            <span class="blink-1s"> Dünya Genelinde Tescil</span>
+            <span class="blink-1s"> Globale Registrierung</span>
           </div>
-          <h2 style="text-align: center">Buskit Üç Kıtada Tescillidir</h2>
+          <h2 style="text-align: center">
+            Buskit ist auf Drei Kontinenten Registriert
+          </h2>
           <p style="text-align: center">
-            Tüm Buskit ürünleri Amerika, Avrupa ve Türkiye'de resmi olarak tescillenmiş ve yasal koruma altına alınmıştır.
+            Alle Buskit-Produkte sind offiziell registriert und rechtlich
+            geschützt in Amerika, Europa und der Türkei.
           </p>
           <div class="reg-flags">
             <div class="reg-flag-item">
               <span class="flag-emoji">🇺🇸</span>
-              <strong>Amerika Birleşik Devletleri</strong>
-              <span>United States Patent & Trademark Office</span>
+              <strong>Vereinigte Staaten von Amerika</strong>
+              <span>US-Patent- und Markenamt</span>
             </div>
             <div class="reg-flag-item">
               <span class="flag-emoji">🇪🇺</span>
-              <strong>Avrupa Birliği</strong>
-              <span>European Union Intellectual Property Office</span>
+              <strong>Europäische Union</strong>
+              <span>Amt der Europäischen Union für Geistiges Eigentum</span>
             </div>
             <div class="reg-flag-item">
               <span class="flag-emoji">🇹🇷</span>
-              <strong>Türkiye</strong>
+              <strong>Türkei</strong>
               <span>Türk Patent ve Marka Kurumu</span>
             </div>
           </div>
@@ -1848,16 +2103,21 @@
     <section id="store" class="store-section">
       <div class="container">
         <div class="section-label">
-          <span class="blink-1s"> Mağaza</span>
+          <span class="blink-1s"> Shop</span>
         </div>
-        <h2 class="section-title">Buskit Ürünleri</h2>
+        <h2 class="section-title">Buskit-Produkte</h2>
         <p class="section-desc">
-          Canlı Müzisyenler için Eksiksiz Ses Ekosistemi — Basitten Profesyonele
+          Vollständiges Audio-Ökosystem für Live-Musiker — Vom Einfachen zum
+          Professionellen
         </p>
 
         <div class="store-grid">
           <div class="store-card">
-            <img class="store-card-img" src="Buskit-Go.png" alt="Buskit Go" />
+            <img
+              class="store-card-img"
+              src="./pics/Buskit-Go.png"
+              alt="Buskit Go"
+            />
             <div class="store-card-info">
               <div class="store-card-name">Buskit Go</div>
               <div class="store-card-price"><span>USD</span>25</div>
@@ -1868,18 +2128,18 @@
                 data-name="Buskit Go"
                 data-price="25"
                 data-img="Buskit-Go.png"
-                >Sepete Ekle</a
+                >In den Warenkorb</a
               >
             </div>
           </div>
           <div class="store-card">
             <img
               class="store-card-img"
-              src="Buskit-MonEXP.png"
+              src="./pics/Buskit-MonEXP.png"
               alt="Buskit-MonEXP"
             />
             <div class="store-card-info">
-              <div class="store-card-name">Monitor Expansion</div>
+              <div class="store-card-name">Monitor-Erweiterung</div>
               <div class="store-card-price"><span>USD</span>10</div>
               <a
                 href="#"
@@ -1888,18 +2148,18 @@
                 data-name="Monitor Expansion"
                 data-price="10"
                 data-img="Buskit-MonEXP.png"
-                >Sepete Ekle</a
+                >In den Warenkorb</a
               >
             </div>
           </div>
           <div class="store-card">
             <img
               class="store-card-img"
-              src="Buskit-HPmodule.png"
+              src="./pics/Buskit-HPmodule.png"
               alt="HP Module"
             />
             <div class="store-card-info">
-              <div class="store-card-name">Headphone Module</div>
+              <div class="store-card-name">Kopfhörer-Modul</div>
               <div class="store-card-price"><span>USD</span>15</div>
               <a
                 href="#"
@@ -1908,14 +2168,14 @@
                 data-name="Headphone Module"
                 data-price="15"
                 data-img="Buskit-HPmodule.png"
-                >Sepete Ekle</a
+                >In den Warenkorb</a
               >
             </div>
           </div>
           <div class="store-card">
             <img
               class="store-card-img"
-              src="Buskit-miniPA.png"
+              src="./pics/Buskit-miniPA.png"
               alt="mini PreAmp"
             />
             <div class="store-card-info">
@@ -1928,14 +2188,14 @@
                 data-name="mini PreAmp"
                 data-price="30"
                 data-img="Buskit-miniPA.png"
-                >Sepete Ekle</a
+                >In den Warenkorb</a
               >
             </div>
           </div>
           <div class="store-card">
             <img
               class="store-card-img"
-              src="Buskit-LineEXP.png"
+              src="./pics/Buskit-LineEXP.png"
               alt="LineEXP"
             />
             <div class="store-card-info">
@@ -1948,14 +2208,14 @@
                 data-name="Line Expansion"
                 data-price="10"
                 data-img="Buskit-LineEXP.png"
-                >Sepete Ekle</a
+                >In den Warenkorb</a
               >
             </div>
           </div>
           <div class="store-card">
             <img
               class="store-card-img"
-              src="Buskit-MicInterface.png"
+              src="./pics/Buskit-MicInterface.png"
               alt="Mic Interface"
             />
             <div class="store-card-info">
@@ -1968,14 +2228,14 @@
                 data-name="Mic Interface"
                 data-price="10"
                 data-img="Buskit-MicInterface.png"
-                >Sepete Ekle</a
+                >In den Warenkorb</a
               >
             </div>
           </div>
           <div class="store-card">
             <img
               class="store-card-img"
-              src="Buskit-MiniMixer.png"
+              src="./pics/Buskit-MiniMixer.png"
               alt="Mini Mixer"
             />
             <div class="store-card-info">
@@ -1988,7 +2248,7 @@
                 data-name="Mini Mixer"
                 data-price="40"
                 data-img="Buskit-MiniMixer.png"
-                >Sepete Ekle</a
+                >In den Warenkorb</a
               >
             </div>
           </div>
@@ -1996,7 +2256,7 @@
           <div class="store-card">
             <img
               class="store-card-img"
-              src="Buskit-Mixer.png"
+              src="./pics/Buskit-Mixer.png"
               alt="Buskit-Mixer"
             />
             <div class="store-card-info">
@@ -2009,12 +2269,16 @@
                 data-name="Mixer"
                 data-price="50"
                 data-img="Buskit-Mixer.png"
-                >Sepete Ekle</a
+                >In den Warenkorb</a
               >
             </div>
           </div>
           <div class="store-card">
-            <img class="store-card-img" src="Buskit-PreAmp.png" alt="Preamp" />
+            <img
+              class="store-card-img"
+              src="./pics/Buskit-PreAmp.png"
+              alt="Preamp"
+            />
             <div class="store-card-info">
               <div class="store-card-name">Preamp</div>
               <div class="store-card-price"><span>USD</span>199</div>
@@ -2025,18 +2289,18 @@
                 data-name="Preamp"
                 data-price="199"
                 data-img="Buskit-PreAmp.png"
-                >Sepete Ekle</a
+                >In den Warenkorb</a
               >
             </div>
           </div>
           <div class="store-card">
             <img
               class="store-card-img"
-              src="Buskit-bat.png"
+              src="./pics/Buskit-bat.png"
               alt="Buskit battery"
             />
             <div class="store-card-info">
-              <div class="store-card-name">Battery</div>
+              <div class="store-card-name">Batterie</div>
               <div class="store-card-price"><span>USD</span>65</div>
               <a
                 href="#"
@@ -2045,18 +2309,18 @@
                 data-name="Battery"
                 data-price="65"
                 data-img="Buskit-bat.png"
-                >Sepete Ekle</a
+                >In den Warenkorb</a
               >
             </div>
           </div>
           <div class="store-card">
             <img
               class="store-card-img"
-              src="Buskit-Monitoring.png"
+              src="./pics/Buskit-Monitoring.png"
               alt="Buskit Monitoring"
             />
             <div class="store-card-info">
-              <div class="store-card-name">Monitoring module</div>
+              <div class="store-card-name">Monitoring-Modul</div>
               <div class="store-card-price"><span>USD</span>50</div>
               <a
                 href="#"
@@ -2065,7 +2329,7 @@
                 data-name="Monitoring module"
                 data-price="50"
                 data-img="Buskit-Monitoring.png"
-                >Sepete Ekle</a
+                >In den Warenkorb</a
               >
             </div>
           </div>
@@ -2079,21 +2343,22 @@
     <section id="contact" class="contact-page">
       <div class="contact-hero">
         <div>
-          <div class="contact-hero-label" style="text-align: auto">
-            Benimle İletişim
-          </div>
+          <div class="section-label" style="text-align: auto">Kontakt</div>
         </div>
-        <h1 style="text-align: center">Hadi <span>Konuşalım</span></h1>
+        <h1 style="text-align: center; margin-top: 20px">
+          Let's <span>Talk</span>
+        </h1>
         <p>
-          Danışmanlık, sipariş, iş birliği veya Buskit ürünlerine ilişkin herhangi bir sorunuz için mesajınızı bekliyorum.
+          Für Beratung, Bestellungen, Zusammenarbeit oder Fragen zu Buskit-
+          Produkten warte ich auf Ihre Nachricht.
         </p>
       </div>
 
       <div class="contact-body">
-        <!-- Sağ Sütun: İletişim Bilgileri -->
+        <!-- Right Column: Contact Info -->
         <div class="contact-info">
           <div class="contact-info-block">
-            <div class="contact-info-block-title">Doğrudan İletişim</div>
+            <div class="contact-info-block-title">Direkter Kontakt</div>
 
             <a href="tel & whatsapp:+905312691609" class="contact-info-item">
               <div class="contact-info-icon">
@@ -2105,7 +2370,7 @@
               </div>
               <div class="contact-info-text">
                 <strong dir="ltr">+90 5312691609</strong>
-                <span>Telefon Numarası</span>
+                <span>Telefonnummer</span>
               </div>
             </a>
 
@@ -2118,14 +2383,14 @@
               </div>
               <div class="contact-info-text">
                 <strong dir="ltr">amoeyan.music@gmail.com</strong>
-                <span>E-posta Adresi</span>
+                <span>E-Mail-Adresse</span>
               </div>
             </a>
           </div>
 
           <div class="contact-divider"></div>
 
-          <div class="social-title">Sosyal Medya</div>
+          <div class="social-title">Social Media</div>
           <div class="social-grid">
             <a href="#" class="social-btn youtube">
               <div class="social-icon">
@@ -2197,37 +2462,37 @@
           </div>
         </div>
 
-        <!-- Sol Sütun: Form -->
+        <!-- Left Column: Form -->
         <div class="contact-form-wrap">
           <div class="form-header">
-            <div class="form-label-tag">Bana Mesaj At</div>
-            <h2>Nasıl Yardımcı Olabilirim?</h2>
-            <p>Mesajınız 24 saat içinde yanıtlanacaktır.</p>
+            <div class="section-label">Schreib mir</div>
+            <h2 style="margin-top: 20px">Wie Kann Ich Ihnen Helfen?</h2>
+            <p>Ihre Nachricht wird innerhalb von 24 Stunden beantwortet.</p>
           </div>
 
           <form id="contactForm" novalidate>
             <div class="form-group">
-              <label for="subject">Konu</label>
+              <label for="subject">Betreff</label>
               <input
                 type="text"
                 id="subject"
                 name="subject"
-                placeholder="Örn: Ürün siparişi, iş birliği, teknik soru..."
+                placeholder="Z.B.: Produktbestellung, Zusammenarbeit, technische Frage..."
               />
             </div>
 
             <div class="form-row">
               <div class="form-group" style="margin-bottom: 0">
-                <label for="fullname">Ad ve Soyadı</label>
+                <label for="fullname">Vollständiger Name</label>
                 <input
                   type="text"
                   id="fullname"
                   name="fullname"
-                  placeholder="Tam adınız"
+                  placeholder="Ihr vollständiger Name"
                 />
               </div>
               <div class="form-group" style="margin-bottom: 0">
-                <label for="email">E-posta</label>
+                <label for="email">Email</label>
                 <input
                   type="email"
                   id="email"
@@ -2239,11 +2504,11 @@
             </div>
 
             <div class="form-group" style="margin-top: 14px">
-              <label for="message">Mesaj</label>
+              <label for="message">Nachricht</label>
               <textarea
                 id="message"
                 name="message"
-                placeholder="Mesajınızı buraya yazın..."
+                placeholder="Message Place را اینجا بنویسید..."
               ></textarea>
             </div>
 
@@ -2252,7 +2517,7 @@
                 <line x1="22" y1="2" x2="11" y2="13" />
                 <polygon points="22 2 15 22 11 13 2 9 22 2" />
               </svg>
-              Mesaj Gönder
+              Send Message
             </button>
 
             <div class="form-status" id="formStatus"></div>
@@ -2262,10 +2527,10 @@
     </section>
 
     <footer>
-      <img src="LOGO.png" alt="Buskit" />
-      <p>© 2025 Buskit — Canlı Performans için İhtiyacınız Olan Her Şey</p>
+      <img src="./pics/LOGO.png" alt="Buskit" />
+      <p>© 2025 Buskit — Alles, was Sie für einen Live-Auftritt brauchen</p>
       <p style="margin-top: 0.5rem; font-size: 0.75rem">
-        Amerika · Avrupa · Türkiye'de Tescillidir
+        Registriert in Amerika · Europa · Türkei
       </p>
     </footer>
 
@@ -2286,7 +2551,7 @@
     <!-- EmailJS SDK -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
-      // Public Key'inizi EmailJS kontrol panelinden alın
+      // Public Key Place را از EmailJS داشبورد بگیرید
       emailjs.init("YOUR_PUBLIC_KEY");
 
       document
@@ -2304,13 +2569,13 @@
 
           if (!subject || !fullname || !email || !message) {
             status.className = "form-status error";
-            status.innerHTML = "⚠️ Lütfen tüm alanları doldurun.";
+            status.innerHTML = "⚠️ Bitte füllen Sie alle Felder aus.";
             status.style.display = "flex";
             return;
           }
           if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
             status.className = "form-status error";
-            status.innerHTML = "⚠️ Geçerli bir e-posta adresi değil.";
+            status.innerHTML = "⚠️ Email Address معتبر نیست.";
             status.style.display = "flex";
             return;
           }
@@ -2329,24 +2594,24 @@
             });
             status.className = "form-status success";
             status.innerHTML =
-              "✅ Mesajınız başarıyla gönderildi. Kısa sürede yanıtlayacağım!";
+              "✅ Message شما با موفقیت ارسال شد. به زودی پاسخ می‌دهم!";
             status.style.display = "flex";
             document.getElementById("contactForm").reset();
           } catch (err) {
             const body = encodeURIComponent(
-              `Ad: ${fullname}\nE-posta: ${email}\n\n${message}`,
+              `نام: ${fullname}\nEmail: ${email}\n\n${message}`,
             );
             window.location.href = `mailto:amoeyan.music@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
           }
 
           btn.disabled = false;
-          btn.innerHTML = `<svg viewBox="0 0 24 24" style="stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Mesaj Gönder`;
+          btn.innerHTML = `<svg viewBox="0 0 24 24" style="stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Send Message`;
         });
     </script>
     <!-- ══════════════════════════════
          CART WIDGET
     ══════════════════════════════ -->
-    <button id="cartFab" class="cart-fab" aria-label="Alışveriş Sepeti">
+    <button id="cartFab" class="cart-fab" aria-label="Shopping Cart">
       <svg
         viewBox="0 0 24 24"
         fill="none"
@@ -2368,19 +2633,19 @@
 
     <aside id="cartDrawer" class="cart-drawer">
       <div class="cart-drawer-header">
-        <h3>Alışveriş Sepeti</h3>
-        <button id="cartCloseBtn" class="cart-close-btn" aria-label="Kapat">
+        <h3>Warenkorb</h3>
+        <button id="cartCloseBtn" class="cart-close-btn" aria-label="Close">
           &times;
         </button>
       </div>
       <div id="cartItems" class="cart-items"></div>
       <div class="cart-drawer-footer">
         <div class="cart-total-row">
-          <span>Genel Toplam</span>
+          <span>Gesamt</span>
           <strong id="cartTotal">$0</strong>
         </div>
         <button id="cartCheckoutBtn" class="btn-submit cart-checkout-btn">
-          Sipariş Ver ve Öde
+          Place Order and Pay
         </button>
       </div>
     </aside>
@@ -2391,8 +2656,8 @@
     <div id="checkoutOverlay" class="cart-overlay"></div>
     <div id="checkoutModal" class="checkout-modal">
       <div class="checkout-modal-header">
-        <h3>Satın Alma Bilgilerini Tamamla</h3>
-        <button id="checkoutCloseBtn" class="cart-close-btn" aria-label="Kapat">
+        <h3>Kaufinformationen Vervollständigen</h3>
+        <button id="checkoutCloseBtn" class="cart-close-btn" aria-label="Close">
           &times;
         </button>
       </div>
@@ -2403,16 +2668,16 @@
         <form id="checkoutForm" novalidate>
           <div class="form-row">
             <div class="form-group" style="margin-bottom: 0">
-              <label for="co-fullname">Ad ve Soyadı</label>
+              <label for="co-fullname">Vollständiger Name</label>
               <input
                 type="text"
                 id="co-fullname"
                 name="fullname"
-                placeholder="Tam ad"
+                placeholder="Vollständiger Name"
               />
             </div>
             <div class="form-group" style="margin-bottom: 0">
-              <label for="co-phone">Telefon Numarası</label>
+              <label for="co-phone">Telefonnummer</label>
               <input
                 type="tel"
                 id="co-phone"
@@ -2424,16 +2689,16 @@
           </div>
 
           <div class="form-group" style="margin-top: 14px">
-            <label for="co-address">Tam Adres</label>
+            <label for="co-address">Vollständige Adresse</label>
             <textarea
               id="co-address"
               name="address"
-              placeholder="Gönderim için tam adres"
+              placeholder="Genaue Lieferadresse"
             ></textarea>
           </div>
 
           <div class="form-group" style="margin-top: 14px">
-            <label for="co-email">E-posta</label>
+            <label for="co-email">Email</label>
             <div class="email-verify-row">
               <input
                 type="email"
@@ -2443,7 +2708,7 @@
                 dir="ltr"
               />
               <button type="button" id="co-sendCode" class="btn-secondary-sm">
-                Doğrulama Kodu Gönder
+                Send Verification Code
               </button>
             </div>
           </div>
@@ -2453,25 +2718,25 @@
             id="co-codeGroup"
             style="margin-top: 14px; display: none"
           >
-            <label for="co-code">E-postaya Gönderilen Doğrulama Kodu</label>
+            <label for="co-code">Per E-Mail Gesendeter Bestätigungscode</label>
             <div class="email-verify-row">
               <input
                 type="text"
                 id="co-code"
                 name="code"
-                placeholder="6 haneli kod"
+                placeholder="6-stelliger Code"
                 dir="ltr"
                 inputmode="numeric"
               />
               <button type="button" id="co-verifyCode" class="btn-secondary-sm">
-                Kodu Doğrula
+                Verify Code
               </button>
             </div>
             <span
               id="co-emailVerified"
               class="verified-badge"
               style="display: none"
-              >✅ E-posta Doğrulandı</span
+              >✅ E-Mail Bestätigt</span
             >
           </div>
 
@@ -2481,7 +2746,7 @@
             id="co-submitBtn"
             style="margin-top: 18px"
           >
-            Siparişi Kesinleştir
+            Finalize Order
           </button>
 
           <div class="form-status" id="checkoutStatus"></div>
@@ -2526,7 +2791,7 @@
 
           if (cart.length === 0) {
             itemsEl.innerHTML =
-              '<div class="cart-empty">Sepetiniz boş.</div>';
+              '<div class="cart-empty">Shopping Cart شما خالی است.</div>';
           }
 
           cart.forEach((item) => {
@@ -2536,15 +2801,15 @@
             const row = document.createElement("div");
             row.className = "cart-item";
             row.innerHTML = `
-              <img src="${item.img}" alt="${item.name}" class="cart-item-img" />
+              <img src="'./pics/'+${item.img}" alt="${item.name}" class="cart-item-img" />
               <div class="cart-item-info">
-                <div class="cart-item-name">${item.name}</div>
-                <div class="cart-item-price">${fmtPrice(item.price)}</div>
+                <div class="cart-item-name">'./pics/'+${item.name}</div>
+                <div class="cart-item-price">'./pics/'+${fmtPrice(item.price)}</div>
                 <div class="cart-item-qty">
                   <button class="qty-btn" data-action="dec" data-id="${item.id}">−</button>
-                  <span class="qty-value">${item.qty}</span>
+                  <span class="qty-value">'./pics/'+${item.qty}</span>
                   <button class="qty-btn" data-action="inc" data-id="${item.id}">+</button>
-                  <button class="cart-remove-btn" data-action="remove" data-id="${item.id}">Kaldır</button>
+                  <button class="cart-remove-btn" data-action="remove" data-id="${item.id}">Entfernen</button>
                 </div>
               </div>
             `;
@@ -2631,7 +2896,8 @@
           // Build order summary
           const summaryEl = document.getElementById("checkoutOrderSummary");
           let total = 0;
-          let html = '<div class="checkout-summary-title">Siparişiniz</div>';
+          let html =
+            '<div class="checkout-summary-title">Ihre Bestellung</div>';
           cart.forEach((item) => {
             total += item.price * item.qty;
             html += `<div class="checkout-summary-row">
@@ -2640,7 +2906,7 @@
             </div>`;
           });
           html += `<div class="checkout-summary-row checkout-summary-total">
-            <span>Genel Toplam</span><span>${fmtPrice(total)}</span>
+            <span>Gesamt</span><span>${fmtPrice(total)}</span>
           </div>`;
           summaryEl.innerHTML = html;
 
@@ -2684,7 +2950,7 @@
         sendCodeBtn.addEventListener("click", async function () {
           const email = emailInput.value.trim();
           if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-            showStatus("⚠️ Lütfen geçerli bir e-posta girin.", "error");
+            showStatus("⚠️ لطفاً یک Email معتبر وارد کنید.", "error");
             return;
           }
 
@@ -2693,10 +2959,10 @@
           verifiedBadge.style.display = "none";
 
           sendCodeBtn.disabled = true;
-          sendCodeBtn.textContent = "Gönderiliyor...";
+          sendCodeBtn.textContent = "Wird gesendet...";
 
           try {
-            // Gerçek ortamda: EmailJS aracılığıyla kod gönder
+            // In real environment: send code via EmailJS
             if (window.emailjs) {
               await emailjs.send("YOUR_SERVICE_ID", "YOUR_VERIFY_TEMPLATE_ID", {
                 from_email: FROM_EMAIL,
@@ -2706,7 +2972,7 @@
             }
             codeGroup.style.display = "block";
             showStatus(
-              "📧 E-postanıza 6 haneli bir doğrulama kodu gönderildi. (Test modunda: " +
+              "📧 یک کد تایید ۶ رقمی به Email شما ارسال شد. (در حالت تست: " +
                 generatedCode +
                 ")",
               "success",
@@ -2714,29 +2980,32 @@
           } catch (err) {
             codeGroup.style.display = "block";
             showStatus(
-              "📧 Doğrulama kodu (test modu, gerçek e-posta yapılandırılmamış): " +
+              "📧 کد تایید (حالت تست، ارسال Email واقعی پیکربندی نشده): " +
                 generatedCode,
               "success",
             );
           }
 
           sendCodeBtn.disabled = false;
-          sendCodeBtn.textContent = "Kodu tekrar gönder";
+          sendCodeBtn.textContent = "Code erneut senden";
         });
 
         verifyCodeBtn.addEventListener("click", function () {
           const entered = codeInput.value.trim();
           if (!generatedCode) {
-            showStatus("⚠️ Önce doğrulama kodunu isteyin.", "error");
+            showStatus(
+              "⚠️ Fordern Sie zuerst den Bestätigungscode an.",
+              "error",
+            );
             return;
           }
           if (entered === generatedCode) {
             emailVerified = true;
             verifiedBadge.style.display = "inline-block";
-            showStatus("✅ E-posta başarıyla doğrulandı.", "success");
+            showStatus("✅ Email با موفقیت تایید شد.", "success");
           } else {
             emailVerified = false;
-            showStatus("⚠️ Girilen kod hatalı.", "error");
+            showStatus("⚠️ Der eingegebene Code ist falsch.", "error");
           }
         });
 
@@ -2754,16 +3023,16 @@
             const email = emailInput.value.trim();
 
             if (!fullname || !phone || !address || !email) {
-              showStatus("⚠️ Lütfen tüm alanları doldurun.", "error");
+              showStatus("⚠️ Bitte alle Felder ausfüllen.", "error");
               return;
             }
             if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-              showStatus("⚠️ Geçerli bir e-posta adresi değil.", "error");
+              showStatus("⚠️ Email Address معتبر نیست.", "error");
               return;
             }
             if (!emailVerified) {
               showStatus(
-                "⚠️ Lütfen önce e-postanızı doğrulama koduyla onaylayın.",
+                "⚠️ لطفاً ابتدا Email Place را با کد تایید، تایید کنید.",
                 "error",
               );
               return;
@@ -2771,13 +3040,13 @@
 
             const cart = loadCart();
             if (cart.length === 0) {
-              showStatus("⚠️ Sepetiniz boş.", "error");
+              showStatus("⚠️ Shopping Cart شما خالی است.", "error");
               return;
             }
 
             const submitBtn = document.getElementById("co-submitBtn");
             submitBtn.disabled = true;
-            submitBtn.textContent = "Sipariş kaydediliyor...";
+            submitBtn.textContent = "Bestellung wird aufgegeben...";
 
             let total = 0;
             let itemsList = "";
@@ -2787,13 +3056,13 @@
             });
 
             const orderMessage =
-              `Buskit Mağazasından Yeni Sipariş\n\n` +
-              `Ad ve Soyadı: ${fullname}\n` +
-              `E-posta: ${email}\n` +
-              `Telefon Numarası: ${phone}\n` +
-              `Adres: ${address}\n\n` +
-              `Sipariş Kalemleri:\n${itemsList}\n` +
-              `Genel Toplam: ${fmtPrice(total)}`;
+              `سفارش جدید از Store Buskit\n\n` +
+              `Full Name: ${fullname}\n` +
+              `Email: ${email}\n` +
+              `Phone Number: ${phone}\n` +
+              `Address: ${address}\n\n` +
+              `Order Items:\n${itemsList}\n` +
+              `Total: ${fmtPrice(total)}`;
 
             try {
               if (window.emailjs) {
@@ -2814,7 +3083,7 @@
                 );
               }
               showStatus(
-                "✅ Siparişiniz başarıyla kaydedildi ve takip bilgileri gönderildi.",
+                "✅ Ihre Bestellung wurde erfolgreich aufgegeben und Tracking-Informationen wurden gesendet.",
                 "success",
               );
               localStorage.removeItem(CART_KEY);
@@ -2827,13 +3096,13 @@
               setTimeout(closeCheckout, 2500);
             } catch (err) {
               showStatus(
-                "⚠️ Otomatik sipariş gönderilemedi, lütfen iletişim bilgileri aracılığıyla bizimle iletişime geçin.",
+                "⚠️ ارسال Placeکار سفارش انجام نشد، لطفاً از طریق اطلاعات تماس با ما در ارتباط باشید.",
                 "error",
               );
             }
 
             submitBtn.disabled = false;
-            submitBtn.textContent = "Siparişi Kesinleştir";
+            submitBtn.textContent = "Bestellung Abschließen";
           });
 
         // Initial render
@@ -2861,7 +3130,7 @@
           navLinks.classList.remove("open");
           overlay.classList.remove("open");
           document.body.classList.remove("nav-open");
-          // Tüm açık dropdown'ları kapat
+          // Close all open dropdowns
           document
             .querySelectorAll(".nav-links .has-dropdown.open")
             .forEach(function (el) {
@@ -2874,10 +3143,10 @@
           navLinks.classList.contains("open") ? closeMenu() : openMenu();
         });
 
-        // Overlay'e tıklama (menünün arkası)
+        // Click on overlay (behind menu)
         overlay.addEventListener("click", closeMenu);
 
-        // کلیک روی هر Yerinde صفحه خارج از منو
+        // کلیک روی هر Its صفحه خارج از منو
         document.addEventListener("click", function (e) {
           if (window.innerWidth >= 992) return;
           if (!navLinks.classList.contains("open")) return;
@@ -2886,7 +3155,7 @@
           }
         });
 
-        // Mobilde birinci seviye dropdown
+        // First level dropdown on mobile
         document
           .querySelectorAll(".nav-links > li.has-dropdown > a")
           .forEach(function (link) {
@@ -2904,7 +3173,7 @@
             });
           });
 
-        // Mobilde ikinci seviye dropdown
+        // Second level dropdown on mobile
         document
           .querySelectorAll(".dropdown-menu li.has-dropdown > a")
           .forEach(function (link) {
@@ -2922,7 +3191,7 @@
             });
           });
 
-        // Son linke tıkladıktan sonra menüyü kapat + yumuşak kaydırma
+        // Close menu after clicking final link + smooth scroll
         document
           .querySelectorAll('.nav-links a[href^="#"]')
           .forEach(function (link) {
@@ -2941,6 +3210,25 @@
             });
           });
       });
+    </script>
+    <!-- اسکریپت custom language dropdown -->
+    <script>
+      (function () {
+        var langWidget = document.getElementById("customLang");
+        var langBtn = document.getElementById("langBtn");
+        var langMenu = document.getElementById("langMenu");
+        if (!langWidget || !langBtn) return;
+
+        langBtn.addEventListener("click", function (e) {
+          e.stopPropagation();
+          langWidget.classList.toggle("open");
+        });
+        document.addEventListener("click", function (e) {
+          if (!langWidget.contains(e.target)) {
+            langWidget.classList.remove("open");
+          }
+        });
+      })();
     </script>
   </body>
 </html>

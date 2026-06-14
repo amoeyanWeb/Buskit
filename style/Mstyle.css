@@ -301,10 +301,17 @@
 .contact-hero {
   position: relative;
   padding: 90px 24px 60px;
-  text-align: center;
   overflow: hidden;
-  text-align: right; /* به جای center */
-  padding-right: 10%; /* فاصله از راست */
+}
+
+.contact-hero.ltr {
+  text-align: left;
+  padding-left: 10%;
+}
+
+.contact-hero.rtl {
+  text-align: right;
+  padding-right: 10%;
 }
 
 .contact-hero::before {
@@ -354,6 +361,11 @@
   margin-bottom: 12px;
   line-height: 1.2;
 }
+
+.contact-page p {
+  text-align: start !important;
+}
+
 .contact-hero h1 span {
   color: var(--buskit-orange);
 }
@@ -362,7 +374,7 @@
   font-size: 1rem;
   font-weight: 300;
   max-width: 480px;
-  margin: 0 auto;
+  margin: 0;
   line-height: 1.8;
 }
 .contact-body {

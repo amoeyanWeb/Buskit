@@ -21,10 +21,6 @@
   padding: 6px;
   z-index: 1001;
   flex-shrink: 0;
-  position: absolute;
-  top: 50%;
-  left: 1rem;
-  transform: translateY(-50%);
 }
 .nav-hamburger span {
   display: block;
@@ -61,13 +57,21 @@
   }
   .lang-wrapper {
     grid-column: unset;
-    position: absolute;
+    position: absolute !important;
     top: 50%;
-    right: 1rem;
-    transform: translateY(-50%);
+    left: auto !important;
+    right: 1rem !important;
+    margin-top: -19px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
   .nav-hamburger {
-    display: flex;
+    display: flex !important;
+    position: fixed !important;
+    top: 8px;
+    left: 1rem !important;
+    right: auto !important;
   }
 
   .nav-links {
@@ -399,7 +403,7 @@
   .section-label::before,
   .contact-hero-label::before,
   .form-label-tag::before {
-    width: 28px !important;
+    width: calc(100vw - 100%) !important;
   }
   .section-title {
     font-size: 1.5rem !important;

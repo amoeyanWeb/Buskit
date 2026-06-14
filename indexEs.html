@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buskit — Todo lo que necesitas para una actuación en vivo</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&family=Oswald:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/style.css" class="css" />
+
+    <link rel="stylesheet" href="./style/Mstyle.css" class="css" />
+
+    <link rel="stylesheet" href="./style/mobile.css" class="css" />
+
+    <style id="contact-styles"></style>
+
+    <style id="marquee-fix">
+      @media (min-width: 769px) {
+        .hero {
+          overflow: visible !important;
+          padding-bottom: 140px !important;
+        }
+        .product-marquee-container {
+          position: absolute !important;
+          bottom: 24px !important;
+          top: auto !important;
+          left: 50% !important;
+          transform: translateX(-50%) !important;
+          width: 90% !important;
+          max-width: 1000px !important;
+        }
+      }
+    </style>
+
+    <style id="gradient-overrides">
+      /* ══════════════════════════════════════════════
+         بخش چرا باسکیت (#why)
+         گرادیانت آبی–نارنجی واضح‌تر
+      ══════════════════════════════════════════════ */
+      .why-section {
+        background:
+          radial-gradient(
+            ellipse 80% 100% at 20% 30%,
+            rgba(59, 108, 183, 0.68) 0%,
+            transparent 60%
+          ),
+          radial-gradient(
+            ellipse 60% 80% at 80% 70%,
+            rgba(240, 122, 58, 0.6) 0%,
+            transparent 55%
+          ),
+          radial-gradient(
+            ellipse 50% 70% at 80% 20%,
+            rgba(240, 79, 58, 0.6) 15%,
+            transparent 55%
+          ),
+          radial-gradient(
+            ellipse 50% 70% at 30% 60%,
+            rgba(58, 240, 67, 0.9) 0%,
+            transparent 55%
+          ),
+          #070707;
+      }
+
+      /* ══════════════════════════════════════════════
+         بخش در یک نگاه (.bk-section #look)
+         گرادیانت طلایی–بنفش
+      ══════════════════════════════════════════════ */
+      .bk-section {
+        background:
+          radial-gradient(
+            ellipse 70% 90% at 10% 10%,
+            rgba(200, 168, 75, 0.6) 10%,
+            transparent 60%
+          ),
+          radial-gradient(
+            ellipse 50% 60% at 90% 20%,
+            rgba(100, 60, 160, 0.65) 0%,
+            transparent 55%
+          ),
+          #0e0f14;
+      }
+      #ecosystem {
+        background:
+          radial-gradient(
+            ellipse 80% 100% at 20% 30%,
+            rgba(59, 108, 183, 0.68) 0%,
+            transparent 60%
+          ),
+          radial-gradient(
+            ellipse 50% 70% at 80% 10%,
+            rgba(33, 145, 39, 0.9) 5%,
+            transparent 70%
+          ),
+          #000000;
+      }
+      /* ══════════════════════════════════════════════
+         محصولات — هر کدام رنگ badge خودش
+      ══════════════════════════════════════════════ */
+      #prod-go {
+        background:
+          radial-gradient(
+            ellipse 85% 130% at 8% 50%,
+            rgba(139, 94, 60, 0.45) 0%,
+            transparent 60%
+          ),
+          radial-gradient(
+            ellipse 85% 130% at 50% 40%,
+            rgba(24, 140, 185, 0.45) 0%,
+            transparent 60%
+          ),
+          #0d1117;
+      }
+      #prod-hp {
+        background:
+          radial-gradient(
+            ellipse 85% 130% at 8% 50%,
+            rgba(230, 168, 0, 0.4) 0%,
+            transparent 60%
+          ),
+          #0d1117;
+      }
+      #prod-lineexp {
+        background:
+          radial-gradient(
+            ellipse 85% 130% at 8% 50%,
+            rgba(123, 47, 190, 0.45) 0%,
+            transparent 60%
+          ),
+          #0d1117;
+      }
+      #prod-mic {
+        background:
+          radial-gradient(
+            ellipse 85% 130% at 8% 50%,
+            rgba(224, 56, 122, 0.42) 0%,
+            transparent 60%
+          ),
+          #0d1117;
+      }
+      #prod-minimixer {
+        background:
+          radial-gradient(
+            ellipse 85% 130% at 8% 50%,
+            rgba(26, 107, 181, 0.45) 0%,
+            transparent 60%
+          ),
+          #0d1117;
+      }
+      #prod-scarlet {
+        background:
+          radial-gradient(
+            ellipse 85% 130% at 8% 50%,
+            rgba(180, 30, 30, 0.5) 0%,
+            transparent 60%
+          ),
+          #0d1117;
+      }
+      #prod-hub {
+        background:
+          radial-gradient(
+            ellipse 85% 130% at 8% 50%,
+            rgba(212, 96, 10, 0.45) 0%,
+            transparent 60%
+          ),
+          #0d1117;
+      }
+      #prod-preamp {
+        background:
+          radial-gradient(
+            ellipse 85% 130% at 8% 50%,
+            rgba(58, 107, 53, 0.45) 0%,
+            transparent 60%
+          ),
+          #0d1117;
+      }
+      #prod-bat {
+        background:
+          radial-gradient(
+            ellipse 85% 130% at 8% 50%,
+            rgba(26, 107, 42, 0.45) 0%,
+            transparent 60%
+          ),
+          #0d1117;
+      }
+
+      /* ══════════════════════════════════════════════
+         بخش ثبت پتنت (#registration)
+         گرادیانت نقره‌ای–آبی
+      ══════════════════════════════════════════════ */
+      #registration {
+        background:
+          radial-gradient(
+            ellipse 70% 100% at 50% 0%,
+            rgba(59, 108, 183, 0.62) 10%,
+            transparent 65%
+          ),
+          radial-gradient(
+            ellipse 70% 100% at 20% 90%,
+            rgba(248, 36, 54, 0.62) 10%,
+            transparent 65%
+          ),
+          radial-gradient(
+            ellipse 70% 100% at 80% 80%,
+            rgba(192, 248, 36, 0.32) 0%,
+            transparent 65%
+          ),
+          #0d1117;
+      }
+
+      /* ══════════════════════════════════════════════
+         بخش فروشگاه (#store)
+         گرادیانت نارنجی گرم
+      ══════════════════════════════════════════════ */
+      .store-section {
+        background:
+          radial-gradient(
+            ellipse 60% 80% at 50% 80%,
+            rgba(240, 122, 58, 0.52) 0%,
+            transparent 60%
+          ),
+          radial-gradient(
+            ellipse 40% 50% at 10% 50%,
+            rgba(20, 29, 160, 0.62) 10%,
+            transparent 50%
+          ),
+          radial-gradient(
+            ellipse 20% 80% at 70% 60%,
+            rgba(100, 204, 31, 0.62) 20%,
+            transparent 50%
+          ),
+          radial-gradient(
+            ellipse 40% 50% at 50% 20%,
+            rgba(198, 31, 204, 0.62) 20%,
+            transparent 90%
+          ),
+          #0d1117;
+      }
+    </style>
+  </head>
+</html>

@@ -770,7 +770,7 @@ nav {
   overflow: visible;
   padding-top: 120px;
   padding-bottom: 140px;
-  background-image: url("../main.webp");
+  background-image: url("../pics/main.webp");
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
@@ -778,7 +778,7 @@ nav {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url("../main.webp");
+  background-image: url("../pics/main.webp");
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
@@ -932,7 +932,7 @@ section {
   right: 100%;
   top: 50%;
   transform: translateY(-50%);
-  width: 100%;
+  width: calc(70vw - 100%);
   height: 1.5px;
   background: #ffe96a;
 }
@@ -1355,7 +1355,7 @@ footer img {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   gap: 80px;
-  align-items: center;
+  align-items: start;
 }
 .about-heading {
   font-size: 2.8rem;
@@ -1374,6 +1374,7 @@ footer img {
 .about-image-zone {
   display: flex;
   justify-content: center;
+  margin-top: 60px; /* ← این رو اضافه کن */
 }
 .image-wrapper {
   position: relative;
