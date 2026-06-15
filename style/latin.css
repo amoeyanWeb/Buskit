@@ -278,14 +278,15 @@ nav {
     direction: ltr !important;
   }
 
+  /* در LTR: همبرگر سمت چپ، lang-wrapper سمت راست */
   .nav-hamburger {
-    left: 1rem !important;
-    right: auto !important;
+    order: 1 !important;  /* چپ‌ترین آیتم در LTR flex */
   }
-
+  .nav-logo {
+    order: 2 !important;
+  }
   .lang-wrapper {
-    right: 1rem !important;
-    left: auto !important;
+    order: 3 !important; /* راست‌ترین آیتم */
   }
 
   .prod-content,

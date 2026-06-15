@@ -18,10 +18,12 @@
     <line x1="180" y1="60" x2="270" y2="60" stroke="rgba(255,255,255,0.7)" stroke-width="1.8" marker-end="url(#arrow)"/>
     <rect x="272" y="46" width="80" height="26" rx="6" fill="url(#grad-orange)"/>
     <text x="312" y="63" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="white">± 9V</text>
-    <line x1="180" y1="83" x2="270" y2="83" stroke="rgba(255,255,255,0.7)" stroke-width="1.8" marker-end="url(#arrow)"/>
-    <rect x="272" y="80" width="80" height="26" rx="6" fill="url(#grad-orange)"/>
-    <text x="312" y="97" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="white">± 12V</text>
-    <line x1="180" y1="106" x2="270" y2="106" stroke="rgba(255,255,255,0.7)" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+    <line x1="180" y1="86" x2="270" y2="86" stroke="rgba(255,255,255,0.7)" stroke-width="1.8" marker-end="url(#arrow)"/>
+    <rect x="272" y="75" width="80" height="26" rx="6" fill="url(#grad-orange)"/>
+    <text x="312" y="90" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="white">± 12V</text>
+
+    <line x1="180" y1="116" x2="270" y2="116" stroke="rgba(255,255,255,0.7)" stroke-width="1.8" marker-end="url(#arrow)"/>
     <rect x="272" y="103" width="80" height="26" rx="6" fill="url(#grad-orange)"/>
     <text x="312" y="120" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="white">+ 5V</text>
     <line x1="225" y1="60" x2="225" y2="116" stroke="rgba(255,255,255,0.25)" stroke-width="1" stroke-dasharray="3,3"/>

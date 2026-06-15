@@ -1,37 +1,87 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 230" width="470" height="230" style="background:#1a1a2e">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
   <defs>
-    <filter id="glow-blue" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <filter id="glow-green" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.5"/></filter>
-    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="rgba(255,255,255,0.7)"/></marker>
-    <linearGradient id="grad-blue" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#1d6ab8"/><stop offset="100%" style="stop-color:#0a3d7a"/></linearGradient>
-    <linearGradient id="grad-green" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#22c55e"/><stop offset="100%" style="stop-color:#15803d"/></linearGradient>
-    <linearGradient id="grad-dark" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#374151;stop-opacity:0.9"/><stop offset="100%" style="stop-color:#111827;stop-opacity:0.9"/></linearGradient>
-    <radialGradient id="knob-grad" cx="35%" cy="35%"><stop offset="0%" style="stop-color:#9ca3af"/><stop offset="100%" style="stop-color:#374151"/></radialGradient>
+    <style>
+      .bg { fill: #1a1926; }
+      .title { font-family: 'Arial Black', 'Impact', sans-serif; font-size: 26px; fill: #ffffff; letter-spacing: 2px; }
+      .label-text { font-family: 'Arial', sans-serif; font-weight: bold; font-size: 16px; fill: #ffffff; text-anchor: middle; dominant-baseline: middle; }
+      .in-text { font-family: 'Arial', sans-serif; font-weight: bold; font-size: 26px; fill: #ffffff; }
+      .gain-text { font-family: 'Arial', sans-serif; font-size: 18px; fill: #bfbfc2; text-anchor: middle; }
+      .line-arrow { stroke: #a3a8b4; stroke-width: 2; fill: none; }
+      .arrow-head { fill: #a3a8b4; }
+    </style>
+
+    <filter id="glow-blue" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glow-green" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <linearGradient id="body-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2d3545" />
+      <stop offset="100%" stop-color="#1b1f2b" />
+    </linearGradient>
+
+    <radialGradient id="knob-grad" cx="50%" cy="50%" r="50%" fx="30%" fy="30%">
+      <stop offset="0%" stop-color="#69748c" />
+      <stop offset="50%" stop-color="#3d4659" />
+      <stop offset="100%" stop-color="#222733" />
+    </radialGradient>
+
+    <linearGradient id="blue-btn" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1963c9" />
+      <stop offset="100%" stop-color="#0b3c8a" />
+    </linearGradient>
+
+    <linearGradient id="green-btn" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1cb053" />
+      <stop offset="100%" stop-color="#0d7a34" />
+    </linearGradient>
+
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" class="arrow-head" />
+    </marker>
   </defs>
-  <g transform="translate(30,20)">
-    <text x="0" y="22" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="white" letter-spacing="2">BUSKIT-MONITORING</text>
-    <rect x="80" y="38" width="130" height="90" rx="10" fill="url(#grad-dark)" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" filter="url(#shadow)"/>
-    <circle cx="145" cy="83" r="22" fill="url(#knob-grad)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
-    <line x1="145" y1="66" x2="145" y2="73" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-    <text x="145" y="118" text-anchor="middle" font-family="Arial" font-size="11" fill="rgba(255,255,255,0.6)">gain</text>
-    <line x1="20" y1="83" x2="78" y2="83" stroke="rgba(255,255,255,0.7)" stroke-width="2" marker-end="url(#arrow)"/>
-    <text x="0" y="87" font-family="Arial" font-size="13" font-weight="bold" fill="white">IN</text>
-    <line x1="210" y1="55" x2="310" y2="55" stroke="rgba(255,255,255,0.7)" stroke-width="1.8" marker-end="url(#arrow)"/>
-    <rect x="312" y="42" width="100" height="26" rx="6" fill="url(#grad-blue)" filter="url(#glow-blue)"/>
-    <text x="362" y="59" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="white">OUT</text>
-    <line x1="210" y1="70" x2="310" y2="70" stroke="rgba(255,255,255,0.7)" stroke-width="1.8" marker-end="url(#arrow)"/>
-    <rect x="312" y="76" width="100" height="26" rx="6" fill="url(#grad-green)" filter="url(#glow-green)"/>
-    <text x="362" y="93" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="white">MON 1</text>
-    <line x1="210" y1="83" x2="310" y2="83" stroke="rgba(255,255,255,0.7)" stroke-width="1.8" marker-end="url(#arrow)"/>
-    <rect x="312" y="110" width="100" height="26" rx="6" fill="url(#grad-green)" filter="url(#glow-green)"/>
-    <text x="362" y="127" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="white">MON 2</text>
-    <line x1="210" y1="96" x2="310" y2="96" stroke="rgba(255,255,255,0.7)" stroke-width="1.8" marker-end="url(#arrow)"/>
-    <rect x="312" y="144" width="100" height="26" rx="6" fill="url(#grad-green)" filter="url(#glow-green)"/>
-    <text x="362" y="161" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="white">MON 3</text>
-    <line x1="210" y1="110" x2="310" y2="110" stroke="rgba(255,255,255,0.7)" stroke-width="1.8" marker-end="url(#arrow)"/>
-    <rect x="312" y="178" width="100" height="26" rx="6" fill="url(#grad-green)" filter="url(#glow-green)"/>
-    <text x="362" y="195" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="white">MON 4</text>
-    <line x1="260" y1="55" x2="260" y2="191" stroke="rgba(255,255,255,0.3)" stroke-width="1.2" stroke-dasharray="3,3"/>
+
+  <rect width="800" height="450" class="bg" />
+
+  <text x="70" y="70" class="title">BUSKIT-MONITORING</text>
+
+  <text x="70" y="210" class="in-text">IN</text>
+  <line x1="105" y1="204" x2="190" y2="204" class="line-arrow" marker-end="url(#arrow)" />
+
+  <rect x="200" y="100" width="210" height="290" rx="18" fill="url(#body-grad)" stroke="#3f4b61" stroke-width="2" />
+
+  <g transform="translate(305, 190)">
+    <circle r="42" fill="#141720" opacity="0.4" />
+    <circle r="40" fill="url(#knob-grad)" stroke="#525d75" stroke-width="1.5" />
+    <line x1="0" y1="-22" x2="0" y2="-32" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
+    <text x="0" y="60" class="gain-text">gain</text>
+  </g>
+
+  <line x1="410" y1="120" x2="410" y2="370" stroke="#4d5666" stroke-width="2" stroke-dasharray="5,5" />
+
+  <g transform="translate(570, 0)">
+    <line x1="-160" y1="125" x2="-10" y2="125" class="line-arrow" marker-end="url(#arrow)" />
+    <rect x="0" y="105" width="170" height="40" rx="10" fill="url(#blue-btn)" filter="url(#glow-blue)" />
+    <text x="85" y="127" class="label-text">OUT</text>
+
+    <line x1="-160" y1="185" x2="-10" y2="185" class="line-arrow" marker-end="url(#arrow)" />
+    <rect x="0" y="165" width="170" height="40" rx="10" fill="url(#green-btn)" filter="url(#glow-green)" />
+    <text x="85" y="187" class="label-text">MON 1</text>
+
+    <line x1="-160" y1="245" x2="-10" y2="245" class="line-arrow" marker-end="url(#arrow)" />
+    <rect x="0" y="225" width="170" height="40" rx="10" fill="url(#green-btn)" filter="url(#glow-green)" />
+    <text x="85" y="247" class="label-text">MON 2</text>
+
+    <line x1="-160" y1="305" x2="-10" y2="305" class="line-arrow" marker-end="url(#arrow)" />
+    <rect x="0" y="285" width="170" height="40" rx="10" fill="url(#green-btn)" filter="url(#glow-green)" />
+    <text x="85" y="307" class="label-text">MON 3</text>
+
+    <line x1="-160" y1="365" x2="-10" y2="365" class="line-arrow" marker-end="url(#arrow)" />
+    <rect x="0" y="345" width="170" height="40" rx="10" fill="url(#green-btn)" filter="url(#glow-green)" />
+    <text x="85" y="367" class="label-text">MON 4</text>
   </g>
 </svg>

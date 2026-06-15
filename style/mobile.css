@@ -48,30 +48,40 @@
     padding: 0 1rem;
     height: 56px;
     position: fixed;
-    display: flex;
-    justify-content: center;
+    /* flex با space-between: لوگو یک طرف، lang+hamburger طرف دیگه */
+    display: flex !important;
+    justify-content: space-between !important;
     align-items: center;
+    /* grid رو خاموش می‌کنیم */
+    grid-template-columns: unset !important;
   }
   .nav-logo {
     grid-column: unset;
+    /* در RTL لوگو سمت راست flex (= چپ صفحه) */
+    order: 1;
+    flex-shrink: 0;
   }
   .lang-wrapper {
     grid-column: unset;
-    position: absolute !important;
-    top: 50%;
-    left: auto !important;
-    right: 1rem !important;
-    margin-top: -19px;
-    display: flex;
+    position: static !important;
+    top: auto !important;
+    margin-top: 0 !important;
+    display: flex !important;
     align-items: center;
     gap: 0.5rem;
+    /* در RTL آیتم آخر flex = سمت چپ صفحه؛ ما میخوایم سمت راست صفحه */
+    order: 2;
+    flex-shrink: 0;
   }
   .nav-hamburger {
     display: flex !important;
-    position: fixed !important;
-    top: 8px;
-    left: 1rem !important;
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
     right: auto !important;
+    /* بین lang و لوگو در RTL */
+    order: 3;
+    flex-shrink: 0;
   }
 
   .nav-links {
@@ -175,6 +185,16 @@
    ۳. زیر ۷۶۸px — تمام اصلاحات موبایل
 ───────────────────────────────────── */
 @media (max-width: 768px) {
+
+  /* ─── خط تزئینی section-label::before در موبایل مخفی می‌شود
+         تا روی SVGها یا سکشن‌های بعدی overflow نکند ─── */
+  .section-label::before,
+  .bk-col-label::before,
+  .contact-hero-label::before,
+  .form-label-tag::before {
+    display: none !important;
+  }
+
   /* --- Hero --- */
   .hero,
   .hero-section {
@@ -330,17 +350,22 @@
     padding-right: 0 !important;
   }
   #look .bk-container {
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
+    overflow-x: visible !important;
     padding: 24px 16px !important;
     width: 100% !important;
     max-width: 100% !important;
   }
   #look .diagram {
-    /* عکس دیاگرام را بدون فشرده‌سازی نگه دار تا اسکرول بشه */
-    max-width: none !important;
-    width: auto !important;
+    /* نصف اندازه اصلی روی موبایل */
+    max-width: 100% !important;
+    width: 100% !important;
     height: auto !important;
+    display: block !important;
+  }
+
+  /* overflow clip روی سکشن در یک نگاه — از بیرون‌زدن خط‌های pseudo-element جلوگیری می‌کند */
+  #look {
+    overflow: hidden !important;
   }
 
   /* گرید SVGهای ماژول‌ها: تک‌ستونه و تمام عرض */
@@ -348,13 +373,21 @@
     grid-template-columns: 1fr !important;
     width: 100% !important;
     max-width: 100% !important;
-    margin: 24px auto 0 !important;
+    margin: 24px auto 40px !important;
     padding: 0 16px !important;
     box-sizing: border-box !important;
+    position: relative !important;
+    z-index: 1 !important;
   }
   .buskit-diagrams-grid img {
     width: 100% !important;
     grid-column: auto !important;
+  }
+
+  /* خط چشمک‌زن لیبل اکوسیستم نباید از سکشن بیرون بزند و روی LineEXP بیفتد */
+  #ecosystem {
+    overflow: hidden !important;
+    position: relative !important;
   }
 
   /* --- شمایی از اتصالات: همه عکس‌ها نصف --- */
@@ -597,4 +630,3 @@
     flex-direction: column !important;
   }
 }
-
