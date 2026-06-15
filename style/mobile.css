@@ -320,14 +320,12 @@
     grid-row: auto !important;
   }
 
-  /* --- بخش «در یک نگاه»: اسکرول افقی برای دیاگرام بزرگ --- */
-  /* html باید overflow-x را آزاد بگذارد؛ فقط روی body قفل می‌ماند */
+  /* --- بخش «در یک نگاه»: اسکرول افقی فقط برای دیاگرام بزرگ --- */
   html {
     overflow-x: unset !important;
   }
   #look {
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
+    overflow-x: visible !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
@@ -335,13 +333,28 @@
     overflow-x: auto !important;
     -webkit-overflow-scrolling: touch !important;
     padding: 24px 16px !important;
-    width: max-content !important;
-    min-width: 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
   #look .diagram {
     /* عکس دیاگرام را بدون فشرده‌سازی نگه دار تا اسکرول بشه */
     max-width: none !important;
     width: auto !important;
+    height: auto !important;
+  }
+
+  /* گرید SVGهای ماژول‌ها: تک‌ستونه و تمام عرض */
+  .buskit-diagrams-grid {
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 24px auto 0 !important;
+    padding: 0 16px !important;
+    box-sizing: border-box !important;
+  }
+  .buskit-diagrams-grid img {
+    width: 100% !important;
+    grid-column: auto !important;
   }
 
   /* --- شمایی از اتصالات: همه عکس‌ها نصف --- */
@@ -584,3 +597,4 @@
     flex-direction: column !important;
   }
 }
+

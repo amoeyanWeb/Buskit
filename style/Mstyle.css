@@ -176,8 +176,8 @@
   /* فراخوانی ۳ انیمیشن مجزا با زمان‌بندی‌های مختلف برای ایجاد حس تصادفی بودن */
   animation:
     moveGlow1 5s ease-in-out infinite alternate,
-    moveGlow2 12s ease-in-out infinite alternate,
-    moveGlow3 8s ease-in-out infinite alternate;
+    moveGlow2 7s ease-in-out infinite alternate,
+    moveGlow3 9s ease-in-out infinite alternate;
 }
 
 /* ۳. تعریف انیمیشن‌ها برای تغییر موقعیت، ابعاد، رنگ و اپسیتی */
@@ -247,6 +247,7 @@
     --glow3-color: rgba(0, 255, 128, 0.2);
   }
 }
+
 /* ── New ecosystem flow layout ── */
 .bk-flow-new {
   display: flex;

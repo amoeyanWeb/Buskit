@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 200" width="490" height="200" style="background:#1a1a2e">
+  <defs>
+    <filter id="glow-purple" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="6" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.5"/></filter>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="rgba(255,255,255,0.7)"/></marker>
+    <linearGradient id="grad-purple" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#a855f7"/><stop offset="100%" style="stop-color:#6b21a8"/></linearGradient>
+    <linearGradient id="grad-cyan" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0ea5e9"/><stop offset="100%" style="stop-color:#0369a1"/></linearGradient>
+    <linearGradient id="grad-dark" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#374151;stop-opacity:0.9"/><stop offset="100%" style="stop-color:#111827;stop-opacity:0.9"/></linearGradient>
+    <radialGradient id="knob-grad" cx="35%" cy="35%"><stop offset="0%" style="stop-color:#9ca3af"/><stop offset="100%" style="stop-color:#374151"/></radialGradient>
+  </defs>
+  <g transform="translate(30,20)">
+    <text x="0" y="22" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="white" letter-spacing="2">BUSKIT-minPA</text>
+    <rect x="80" y="38" width="150" height="100" rx="10" fill="url(#grad-dark)" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" filter="url(#shadow)"/>
+    <circle cx="115" cy="70" r="16" fill="url(#knob-grad)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+    <line x1="115" y1="56" x2="115" y2="62" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="115" y="97" text-anchor="middle" font-family="Arial" font-size="10" fill="rgba(255,255,255,0.6)">bas</text>
+    <circle cx="155" cy="70" r="16" fill="url(#knob-grad)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+    <line x1="155" y1="56" x2="155" y2="62" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="155" y="97" text-anchor="middle" font-family="Arial" font-size="10" fill="rgba(255,255,255,0.6)">trb</text>
+    <circle cx="135" cy="115" r="14" fill="url(#knob-grad)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+    <line x1="135" y1="103" x2="135" y2="108" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="135" y="138" text-anchor="middle" font-family="Arial" font-size="10" fill="rgba(255,255,255,0.6)">drive</text>
+    <line x1="20" y1="65" x2="78" y2="65" stroke="rgba(255,255,255,0.7)" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="0" y="69" font-family="Arial" font-size="13" font-weight="bold" fill="white">IN</text>
+    <line x1="20" y1="100" x2="78" y2="100" stroke="rgba(255,255,255,0.7)" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="0" y="104" font-family="Arial" font-size="13" font-weight="bold" fill="white">Ai</text>
+    <line x1="230" y1="70" x2="310" y2="70" stroke="rgba(255,255,255,0.7)" stroke-width="1.8" marker-end="url(#arrow)"/>
+    <rect x="312" y="56" width="100" height="26" rx="6" fill="url(#grad-purple)" filter="url(#glow-purple)"/>
+    <text x="362" y="73" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="white">Amp</text>
+    <line x1="230" y1="105" x2="310" y2="105" stroke="rgba(255,255,255,0.7)" stroke-width="1.8" marker-end="url(#arrow)"/>
+    <rect x="312" y="91" width="100" height="26" rx="6" fill="url(#grad-cyan)"/>
+    <text x="362" y="108" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="white">Ao</text>
+  </g>
+</svg>
