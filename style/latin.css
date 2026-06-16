@@ -277,6 +277,16 @@ nav {
   section {
     direction: ltr !important;
   }
+  nav {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    direction: ltr !important;
+    padding: 0 1rem !important;
+    position: fixed !important;
+    width: 100% !important;
+  }
   /* هم‌راستاسازی هدر و چیدمان منعطف */
   .nav-container {
     display: flex !important;
@@ -288,8 +298,9 @@ nav {
   /* در LTR: همبرگر سمت چپ، lang-wrapper سمت راست */
   /* همبرگر منو در سمت چپ ترین حالت */
   .nav-hamburger {
+    display: flex !important;
     order: 1 !important;
-    margin-right: auto !important; /* ایجاد فاصله با لوگو */
+    margin: 0 !important;
   }
   /* لوگو در وسط */
   .nav-logo {
@@ -297,9 +308,12 @@ nav {
     position: absolute !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
+    margin: 0 !important;
   }
   .lang-wrapper {
-    order: 3 !important; /* راست‌ترین آیتم */
+    order: 3 !important;
+    margin: 0 !important;
+    display: block !important;
   }
 
   .prod-content,
@@ -326,29 +340,35 @@ nav {
     order: 3 !important;
     margin-left: auto !important;
   }
-
-  /* راست چین کردن متن های منوی بازشو موبایل برای زبان های لاتین */
+  /* اصلاح دقیق منوی بازشو در حالت چپ‌به‌راست */
+  /* اصلاح نهایی و مماس کردن کامل منو با هدر */
   .nav-links {
+    position: fixed !important;
+    top: 55px !important; /* این عدد دقیقاً منو را مماس با لبه پایینی هدر شما قرار می‌دهد */
+    left: 0 !important;
+    right: auto !important;
+    width: 260px !important;
+    height: calc(
+      100vh - 55px
+    ) !important; /* کسر دقیق ارتفاع هدر از کل طول صفحه موبایل */
+    background: #111318 !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    padding: 2rem !important;
+    margin: 0 !important;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5) !important;
+    display: flex !important;
+    direction: ltr !important;
     text-align: left !important;
-    direction: ltr !important;
-  }
-}
 
-/* ──────────────────────────────────────────────
-   14. MOBILE OVERRIDES
-   ────────────────────────────────────────────── */
-@media (max-width: 768px) {
-  body,
-  section {
-    direction: ltr !important;
+    /* پنهان‌سازی روان در پشت لبه سمت چپ صفحه */
+    transform: translateX(-100%) !important;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
   }
 
-  /* در LTR: همبرگر سمت چپ، lang-wrapper سمت راست */
-  .nav-hamburger {
-    order: 1 !important; /* چپ‌ترین آیتم در LTR flex */
+  /* انیمیشن باز شدن منو چسبیده به لبه چپ گوشی */
+  .nav-links.open {
+    transform: translateX(0) !important;
   }
-  .nav-logo {
-    order: 2 !important;
-  }
-  /* ... بقیه کدهای این بخش ... */
 }
