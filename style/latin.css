@@ -277,13 +277,26 @@ nav {
   section {
     direction: ltr !important;
   }
-
-  /* در LTR: همبرگر سمت چپ، lang-wrapper سمت راست */
-  .nav-hamburger {
-    order: 1 !important;  /* چپ‌ترین آیتم در LTR flex */
+  /* هم‌راستاسازی هدر و چیدمان منعطف */
+  .nav-container {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    direction: ltr !important; /* چپ به راست شدن هدر موبایل */
   }
+  /* در LTR: همبرگر سمت چپ، lang-wrapper سمت راست */
+  /* همبرگر منو در سمت چپ ترین حالت */
+  .nav-hamburger {
+    order: 1 !important;
+    margin-right: auto !important; /* ایجاد فاصله با لوگو */
+  }
+  /* لوگو در وسط */
   .nav-logo {
     order: 2 !important;
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
   }
   .lang-wrapper {
     order: 3 !important; /* راست‌ترین آیتم */
@@ -308,4 +321,34 @@ nav {
   .about-container {
     text-align: left !important;
   }
+  /* دکمه انتخاب زبان در سمت راست ترین حالت */
+  .custom-lang-wrapper {
+    order: 3 !important;
+    margin-left: auto !important;
+  }
+
+  /* راست چین کردن متن های منوی بازشو موبایل برای زبان های لاتین */
+  .nav-links {
+    text-align: left !important;
+    direction: ltr !important;
+  }
+}
+
+/* ──────────────────────────────────────────────
+   14. MOBILE OVERRIDES
+   ────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  body,
+  section {
+    direction: ltr !important;
+  }
+
+  /* در LTR: همبرگر سمت چپ، lang-wrapper سمت راست */
+  .nav-hamburger {
+    order: 1 !important; /* چپ‌ترین آیتم در LTR flex */
+  }
+  .nav-logo {
+    order: 2 !important;
+  }
+  /* ... بقیه کدهای این بخش ... */
 }
